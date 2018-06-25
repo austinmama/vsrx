@@ -1,0 +1,32 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="svrx" audience="network" href="/docs/infrastructure/svrx/about.html"}
+IBM Cloud Juniper vSRX Standard
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    about.md
+    [Explore Firewalls](../fortigate-10g/explore-firewalls.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    access-gateway-appliances.md
+    access-gateway-details.md
+    vsrx-basics.md
+    manage-vlans.md
+    firewalls.md
+    nat.md
+    routing.md
+    vpn.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    eap-limitations.md
+    [IBM Cloud IP Ranges](../hardware-firewall-dedicated/ips.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    vra-docs.md
+    getting-help.md
+    {: .navgroup-end}
