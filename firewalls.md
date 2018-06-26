@@ -15,4 +15,4 @@ lastupdated: "2018-06-25"
 {:download: .download}
 
 # Firewalls
-CONTENT TO COME
+CONTENT TO COME (JUNIPER)
