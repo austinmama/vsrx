@@ -24,7 +24,7 @@ To get started with the IBM Cloud Juniper vSRX Standard, navigate to the order p
 5.	On the Order page select the **Juniper OS** tab.
 6.	In the Configure your Network Gateway Appliance page, select the **High Availability Pair** option if desired, as well as the network uplink speeds.  
 
-	**NOTE:** HA is not supported for EAP
+	**NOTE:** HA is not supported for the Early Access Program.
 	
 7.	Review your selections then click **Add to Order**, and the order will be verified automatically.
 8.	On the Checkout page, if you already own VLANs in the selected data center, select the backend VLANs which need to be protected. Give a hostname and domain name for your server, and check all boxes for the IBM Cloud service terms. Then click **Submit Order**.
