@@ -15,7 +15,7 @@ lastupdated: "2018-06-25"
 {:download: .download}
 
 # Getting Started
-To get started with the IBM Cloud Juniper vSRX Standard, navigate to the order page in the Customer Portal:
+To get started with IBM Cloud Juniper vSRX Standard, navigate to the order page in the Customer Portal:
 
 1.	From your browser, open the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} and log into your account.
 2.	In the Customer Portal navigation, select **Network > Gateway Appliances**.

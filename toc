@@ -27,5 +27,6 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    vsrx-docs.md
     getting-help.md
     {: .navgroup-end}
