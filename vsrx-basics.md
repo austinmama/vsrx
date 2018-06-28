@@ -26,4 +26,4 @@ vSRX can be accessed via ssh via public/private IP
 
 	![Gateway Appliance Details](images/basics.png)
 
-* Run the command `ssh <IP>`. The username and password here will be the same as on the server.
+* Run the command `ssh customer-admin@<IP>`. The password will be the same as *root* password on the server.
