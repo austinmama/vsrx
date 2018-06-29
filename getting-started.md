@@ -21,17 +21,16 @@ To get started with IBM Cloud Juniper vSRX Gateway, navigate to the order page i
 2.	In the Customer Portal navigation, select **Network > Gateway Appliances**.
 3.	From the Gateway Appliances list page, click **Order Gateway**.
 4.	From the Order page, select your desired data center from dropdown menu, then choose the desired type of server hardware on which the Juniper vSRX will be provisioned.
-5.	On the Order page select the **Juniper** then **Juniper vSRX 15.x Standard** in **Operating System** tab.
-6.	In the Configure your Network Gateway Appliance page, select the **High Availability Pair** option if desired, as well as the network uplink speeds.  
+5.	On the Order page select **High Availability Pair** option if desired, select Memory size, **Juniper** tab then **Juniper vSRX 15.x Standard** in Operating System, and then select network uplink speed.
 
 	**NOTE:** HA is not supported for the Early Access Program.
 
 7.	Review your selections then click **Add to Order**, and the order will be verified automatically.
 8.	On the Checkout page, if you already own VLANs in the selected data center, select the backend VLANs which need to be protected. Give a hostname and domain name for your server, and check all boxes for the IBM Cloud service terms. Then click **Submit Order**.
 
-After your order is approved, the provisioning of your vSRX starts automatically. When the provisioning process is complete, the new vSRX displays in the Gateway Appliances list page in the Customer Portal.
+After your order is approved, the provisioning of your vSRX starts automatically. When the provisioning process is complete, the gateway will appear in the Gateway Appliances list page.
 
-Click the gateway name to open the Gateway Details page, then click on each gateway member to open the Device Details page. You will find the IP addresses, login username, and password for the device.
+Click the gateway name to open the Gateway Details page. You will find the IP addresses, login username, and password for the device.
 
 ## VLANs and the Gateway Appliance's role
 A VLAN (virtual LAN) is a mechanism that segregates a physical network into many virtual segments. For convenience, traffic from multiple selected VLANs can be delivered through a single network cable, a process commonly called "trunking."
