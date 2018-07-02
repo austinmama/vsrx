@@ -71,13 +71,17 @@ Perform the following procedure to disassociate a VLAN from a Gateway Appliance:
 After disassociating a VLAN from a Gateway Appliance, the VLAN may be associated to another Gateway. The VLAN may also be associated back to the Gateway Appliance at any time. After disassociating a VLAN from a Gateway Appliance, the VLAN's traffic cannot be routed through the Gateway. VLANs must be associated to a Gateway Appliance before they can be routed.
 
 ## Route Multiple VLANs Over Same Network Interface
-IBM Cloud Juniper vSRX Standard is able to route multiple VLANs over the same network interface (for example, `dp0bond0` or `dp0bond1`). This is accomplished by setting the switch port into trunk mode and configuring virtual interfaces (VIFs) on the device.
+The IBM Cloud Juniper vSRX Firewall can operate with multiple VLANs over the same network interface. It can also handle both untagged and tagged traffic at the same time. This is accomplished by setting the interface encapsulation to `flexible-vlan-tagging`. Unit 0 is the sub-interface that is untagged and other non-zero units are tagged. 
 
-For example: 
+Use the following set of commands to achieve this:
 
 ```
-set interfaces bonding dp0bond0 vif 1432 address 10.0.10.1/24
-set interfaces bonding dp0bond0 vif 1693 address 10.0.20.1/24
+set interfaces ge-0/0/0 flexible-vlan-tagging
+set interfaces ge-0/0/0 native-vlan-id 10
+set interfaces ge-0/0/0 unit 0 vlan-id 10
+set interfaces ge-0/0/0 unit 0 family inet address <IP/MASK> 
+set interfaces ge-0/0/0 unit 50 vlan-id 50
+set interfaces ge-0/0/0 unit 50 family inet address <IP/MASK>
 ```
 
-The commands above create two virtual interfaces on the `dp0bond0` interface. The interface `dp0bond0.1432` processes traffic for VLAN 1432 while the interface `dp0bond0.1693` processes traffic for VLAN 1693.
+**NOTE:** Even though the unit 0 is untagged, `JunOS` needs it to reference the VLAN ID that is configured as `native-vlan`. In the example, since `native-vlan-id` is `10`, the unit 0 should have a `vlan-id` of `10` as well. In this way, `JunOS` is informed that unit 0 should be untagged.

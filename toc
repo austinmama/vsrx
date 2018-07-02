@@ -11,6 +11,7 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    vsrx-release-notes.md
     access-gateway-appliances.md
     access-gateway-details.md
     vsrx-basics.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -14,5 +14,5 @@ lastupdated: "2018-06-25"
 {:tip: .tip}
 {:download: .download}
 
-# NAT
-CONTENT TO COME
+# Work with NAT
+To configure NAT for the IBM Cloud Juniper vSRX Firewall, please refer to this [configuration guide](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/security/security-nat.pdf) on the Juniper website.
