@@ -15,9 +15,8 @@ lastupdated: "2018-07-02"
 {:download: .download}
 
 # Early Access Program Limitations
-This topic provides information regarding limitations for the IBM Cloud Juniper vSRX Standard EAP.
 
-Current limitations for the EAP version of vSRX are:
+Current limitations for the IBM Cloud Juniper vSRX EAP version are:
 
 *	No support for High Availability configurations
-* No support for OS reload
+* No support of OS reload for HA configuration
