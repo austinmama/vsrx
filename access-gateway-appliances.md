@@ -22,3 +22,5 @@ Perform the following procedure to access the Gateway Appliances screen in the C
 
 1. Access the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} using your unique credentials.
 2. Select **Gateway Appliances** from the Network menu option.
+
+  ![Gateway Appliances List page](images/gateway-list.png)

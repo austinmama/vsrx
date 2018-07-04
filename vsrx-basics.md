@@ -15,27 +15,29 @@ lastupdated: "2018-07-02"
 {:download: .download}
 
 # vSRX Basics
-The IBM Cloud Juniper vSRX Firewall can be configured using a remote console session through SSH or by logging into the web GUI. By default, the web GUI is not available from the public internet. To enable the web GUI, log in through SSH first.
+The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into the web GUI. By default, the web GUI is not available from the public internet. To enable the web GUI, log in through SSH first.
 
 **NOTE:** Configuring the vSRX outside of its shell and interface may produce unexpected results and thus it is not recommended.
 
 ## Accessing the Device Using SSH
-You can access the vSRX using SSH through a public/private IP:
+
+You can access the vSRX using SSH through a public IP address, or through a private IP address if you're on SoftLayer VPN:
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
 	![Gateway Appliance Details](images/basics.png)
 
-2 Run the command `ssh customer-admin@<IP>`. The password will be the same as *root* password on the server.
+2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as *root* password on the server.
 
 To enable the web management GUI, you should run the following command from the CLI:
 
 ```
-set system services web-management http interface fxp0.0 
+set system services web-management http interface fxp0.0
 ```
 
 ##Creating system users
-By default, the IBM Cloud Juniper vSRX Firewall is configured for root SSH access. Additional users can be added with their own set of priorities. For example:
+
+By default, the IBM Cloud Juniper vSRX is configured with SSH access for username `customer-admin`. Additional users can be added with their own set of priorities. For example:
 
 ```
 set system login user ops class operator authentication encrypted-password <CYPHER>
@@ -45,14 +47,17 @@ Where `ops` is the username and `operator` is the class/permission level assigne
 
 Customized classes can be also defined as opposed to pre-defined ones.
 
+
 ##Defining the vSRX hostname
-To set or change the SRX hostname, you can use the following command:
+
+To set or change the vSRX hostname, you can use the following command:
 
 ```
 set system host-name <hostname>
 ```
 
 ##Configuring DNS and NTP
+
 To configure name server resolution and NTP, run the following commands:
 
 ```
@@ -61,6 +66,7 @@ set system ntp <NTP server>
 ```
 
 ##Changing the root password
+
 To change the root password, run the following command:
 
 ```
