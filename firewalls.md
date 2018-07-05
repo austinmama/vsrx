@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -27,7 +27,7 @@ In the IBM Cloud, a vSRX is designed to have four different security zones:
 
 To configure a stateful firewall, perform the following procedure:
 
-1. Create security zones and assigned respective interfaces:
+1. Create security zones and assign the respective interfaces:
 
 	```
 	set security zones security-zone CUSTOMER-PRIVATE interfaces ge-0/0/1.0

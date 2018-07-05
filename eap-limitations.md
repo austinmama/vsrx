@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -18,5 +18,5 @@ lastupdated: "2018-07-02"
 
 Current limitations for the IBM Cloud Juniper vSRX EAP version are:
 
-*	No support for High Availability configurations
+* No support for High Availability configurations
 * No support of OS reload for HA configuration

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-02"
 # vSRX Basics
 The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into the web GUI. By default, the web GUI is not available from the public internet. To enable the web GUI, log in through SSH first.
 
-**NOTE:** Configuring the vSRX outside of its shell and interface may produce unexpected results and thus it is not recommended.
+**NOTE:** Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
 
 ## Accessing the Device Using SSH
 
@@ -27,7 +27,7 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 	![Gateway Appliance Details](images/basics.png)
 
-2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as *root* password on the server.
+2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server.
 
 To enable the web management GUI, you should run the following command from the CLI:
 
@@ -46,7 +46,6 @@ set system login user ops class operator authentication encrypted-password <CYPH
 Where `ops` is the username and `operator` is the class/permission level assigned to the user.
 
 Customized classes can be also defined as opposed to pre-defined ones.
-
 
 ##Defining the vSRX hostname
 

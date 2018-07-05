@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -56,9 +56,9 @@ set protocols bgp group CUSTOMER neighbor 2.2.2.2
 
 In this example, BGP is configured for the following:
 
-* To use source IP address of 1.1.1.1 to establish the session
+* To use source IP address of `1.1.1.1` to establish the session
 * To negotiate both ipv4 and ipv6 unicast families
-* To peer with a neighbor that belongs to AS 65002
-* Peer neighbor IP = 2.2.2.2
+* To peer with a neighbor that belongs to `AS 65002`
+* Peer neighbor IP `2.2.2.2`
 
 Additional configurations can be found [here](https://www.juniper.net/documentation/en_US/junos11.4/information-products/topic-collections/config-guide-routing/config-guide-routing.pdf).

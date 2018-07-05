@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-06-25"
 
 # View all Gateway Appliances
 
-The Gateway Appliances screen in the Customer Portal is where you can display and access all Network Gateway Appliances which includes the IBM Cloud Juniper vSRX.  
+The Gateway Appliances screen in the Customer Portal is where you can display and access all Network Gateway Appliances, including the IBM Cloud Juniper vSRX.  
 
 Perform the following procedure to access the Gateway Appliances screen in the Customer Portal.
 

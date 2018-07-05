@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -84,4 +84,4 @@ set interfaces ge-0/0/0 unit 50 vlan-id 50
 set interfaces ge-0/0/0 unit 50 family inet address <IP/MASK>
 ```
 
-**NOTE:** Even though the unit 0 is untagged, `JunOS` needs it to reference the VLAN ID that is configured as `native-vlan`. In the example, since `native-vlan-id` is `10`, the unit 0 should have a `vlan-id` of `10` as well. In this way, `JunOS` is informed that unit 0 should be untagged.
+**NOTE:** Even though unit 0 is untagged, `JunOS` needs it to reference the VLAN ID that is configured as `native-vlan`. In the example, since `native-vlan-id` is `10`, unit 0 should have a `vlan-id` of `10` as well. In this way, `JunOS` is informed that unit 0 should be untagged.
