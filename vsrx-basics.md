@@ -27,7 +27,7 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 	![Gateway Appliance Details](images/basics.png)
 
-2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server.
+2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
 
 To enable the web management GUI, you should run the following command from the CLI:
 
