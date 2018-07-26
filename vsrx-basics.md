@@ -25,19 +25,19 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
-	![Gateway Appliance Details](images/basics.png)
+	![Gateway Appliance Details](images/gw-sa-details.png)
 
-2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
+2. Run the command `ssh admin@<vSRX IP>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
 
-To enable the web management GUI, you should run the following command from the CLI:
+	![Gateway HA Details](images/gw-ha-details.png)
 
-```
-set system services web-management http interface fxp0.0
-```
+vSRX web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at https://vSRX-IP:8443.
 
-##Creating system users
+![vSRX Web Management](images/vSRX-webui.png)
 
-By default, the IBM Cloud Juniper vSRX is configured with SSH access for username `customer-admin`. Additional users can be added with their own set of priorities. For example:
+## Creating system users
+
+By default, the IBM Cloud Juniper vSRX is configured with SSH access for username `admin`. Additional users can be added with their own set of priorities. For example:
 
 ```
 set system login user ops class operator authentication encrypted-password <CYPHER>
@@ -47,7 +47,7 @@ Where `ops` is the username and `operator` is the class/permission level assigne
 
 Customized classes can be also defined as opposed to pre-defined ones.
 
-##Defining the vSRX hostname
+## Defining the vSRX hostname
 
 To set or change the vSRX hostname, you can use the following command:
 
@@ -55,7 +55,7 @@ To set or change the vSRX hostname, you can use the following command:
 set system host-name <hostname>
 ```
 
-##Configuring DNS and NTP
+## Configuring DNS and NTP
 
 To configure name server resolution and NTP, run the following commands:
 
@@ -64,7 +64,7 @@ set system name-server <DNS server>
 set system ntp <NTP server>
 ```
 
-##Changing the root password
+## Changing the root password
 
 To change the root password, run the following command:
 
