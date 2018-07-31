@@ -7,7 +7,7 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    [Explore Firewalls](https://console.bluemix.net/docs/infrastructure/fortigate-10g/explore-firewalls.html#explore-firewalls)
+    [Explore Firewalls](../../infrastructure/fortigate-10g/explore-firewalls.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -24,7 +24,7 @@ IBM Cloud Juniper vSRX Standard
 
     {: .navgroup id="reference"}
     eap-limitations.md
-    [IBM Cloud IP Ranges](https://console.bluemix.net/docs/infrastructure/hardware-firewall-dedicated/ips.html#ibm-cloud-ip-ranges)
+    [IBM Cloud IP Ranges](../../infrastructure/hardware-firewall-dedicated/ips.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
