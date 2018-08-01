@@ -11,7 +11,6 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    vsrx-release-notes.md
     access-gateway-appliances.md
     access-gateway-details.md
     vsrx-basics.md
@@ -23,11 +22,13 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    vsrx-release-notes.md
     eap-limitations.md
     [IBM Cloud IP Ranges](../../infrastructure/hardware-firewall-dedicated/ips.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    eap-limitations.md
     vsrx-docs.md
     getting-help.md
     {: .navgroup-end}
