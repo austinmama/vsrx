@@ -27,7 +27,10 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 	![Gateway Appliance Details](images/basics.png)
 
-2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
+2. Run the command `ssh customer-admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
+
+
+## Accessing the Device via vSRX Web Management UI
 
 To enable the web management GUI, you should run the following commands from the CLI in `configuration` mode:
 
@@ -38,14 +41,24 @@ set system services web-management https port 8443
 set system services web-management https system-generated-certificate
 set system services web-management session session-limit 100
 
-set firewall filter PROTECT-IN term WEBSERVICE from destination-address <your-public-gateway-ip/32>
-set firewall filter PROTECT-IN term WEBSERVICE from destination-address <your-private-gateway-ip/32>
+set firewall filter PROTECT-IN term WEBSERVICE from destination-address <public-gateway-ip/32>
+set firewall filter PROTECT-IN term WEBSERVICE from destination-address <private-gateway-ip/32>
 set firewall filter PROTECT-IN term WEBSERVICE from protocol tcp
 set firewall filter PROTECT-IN term WEBSERVICE from destination-port 8443
 set firewall filter PROTECT-IN term WEBSERVICE then accept
 ```
 
-##Creating system users
+Now, you can access vSRX web management at https://gateway-ip:8443
+
+
+## Accessing the Device via virsh console
+
+You can also access the vSRX from gateway server Operating System (OS):
+1. Logging on your gateway server by running the command `ssh root@<server-ip>`
+2. Run command `virsh list` to find your vSRX VM name
+3. Run command `virsh console <your vSRXvM name>`
+
+## Creating system users
 
 By default, the IBM Cloud Juniper vSRX is configured with SSH access for username `customer-admin`. Additional users can be added with their own set of priorities. For example:
 
@@ -57,7 +70,7 @@ Where `ops` is the username and `operator` is the class/permission level assigne
 
 Customized classes can be also defined as opposed to pre-defined ones.
 
-##Defining the vSRX hostname
+## Defining the vSRX hostname
 
 To set or change the vSRX hostname, you can use the following command:
 
@@ -65,7 +78,7 @@ To set or change the vSRX hostname, you can use the following command:
 set system host-name <hostname>
 ```
 
-##Configuring DNS and NTP
+## Configuring DNS and NTP
 
 To configure name server resolution and NTP, run the following commands:
 
@@ -74,7 +87,7 @@ set system name-server <DNS server>
 set system ntp <NTP server>
 ```
 
-##Changing the root password
+## Changing the root password
 
 To change the root password, run the following command:
 
