@@ -29,10 +29,20 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 2. Run the command `ssh customer-admin@<IP>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
 
-To enable the web management GUI, you should run the following command from the CLI:
+To enable the web management GUI, you should run the following command from the CLI in `configuration` mode:
 
 ```
-set system services web-management http interface fxp0.0
+set system services web-management https interface fxp0.0
+set system services web-management https interface ge-0/0/1.0
+set system services web-management https port 8443
+set system services web-management https system-generated-certificate
+set system services web-management session session-limit 100
+
+set firewall filter PROTECT-IN term WEBSERVICE from destination-address <your-public-gateway-ip/32>
+set firewall filter PROTECT-IN term WEBSERVICE from destination-address <your-private-gateway-ip/32>
+set firewall filter PROTECT-IN term WEBSERVICE from protocol tcp
+set firewall filter PROTECT-IN term WEBSERVICE from destination-port 8443
+set firewall filter PROTECT-IN term WEBSERVICE then accept
 ```
 
 ##Creating system users
