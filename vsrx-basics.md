@@ -30,9 +30,9 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 2. Run the command `ssh customer-admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
 
 
-## Accessing the Device via vSRX Web Management UI
+## Accessing the Device using the vSRX Web Management UI
 
-To enable the web management GUI, you should run the following commands from the CLI in `configuration` mode:
+To enable the web management GUI, run the following commands from the CLI in `configuration` mode:
 
 ```
 set system services web-management https interface fxp0.0
@@ -48,31 +48,31 @@ set firewall filter PROTECT-IN term WEBSERVICE from destination-port 8443
 set firewall filter PROTECT-IN term WEBSERVICE then accept
 ```
 
-Now, you can access vSRX web management at https://gateway-ip:8443
+You can now access vSRX web management at `https://gateway-ip:8443`.
 
 
-## Accessing the Device via virsh console
+## Accessing the Device using the virsh console
 
-You can also access the vSRX from gateway server Operating System (OS):
-1. Logging on your gateway server by running the command `ssh root@<server-ip>`
-2. Run command `virsh list` to find your vSRX VM name
-3. Run command `virsh console <your vSRXvM name>`
+You can also access the vSRX from the gateway server Operating System (OS):
+1. Log on your gateway server by running the command `ssh root@<server-ip>`.
+2. Run thre command `virsh list` to find your vSRX VM name.
+3. Run the command `virsh console <your vSRXvM name>`.
 
 ## Creating system users
 
-By default, the IBM Cloud Juniper vSRX is configured with SSH access for username `customer-admin`. Additional users can be added with their own set of priorities. For example:
+By default, the IBM Cloud Juniper vSRX is configured with SSH access for the username `customer-admin`. Additional users can be added with their own set of priorities. For example:
 
 ```
 set system login user ops class operator authentication encrypted-password <CYPHER>
 ```
 
-Where `ops` is the username and `operator` is the class/permission level assigned to the user.
+In this example, `ops` is the username and `operator` is the class/permission level assigned to the user.
 
 Customized classes can be also defined as opposed to pre-defined ones.
 
 ## Defining the vSRX hostname
 
-To set or change the vSRX hostname, you can use the following command:
+You can set or change the vSRX hostname using the following command:
 
 ```
 set system host-name <hostname>
@@ -89,7 +89,7 @@ set system ntp <NTP server>
 
 ## Changing the root password
 
-To change the root password, run the following command:
+You can change the root password by running the following command:
 
 ```
 set system root-authentication plain-text-password
