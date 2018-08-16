@@ -25,9 +25,12 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
-	![Gateway Appliance Details](images/basics.png)
+	![Gateway Appliance SA Details](images/gw-sa-details.png)
 
-2. Run the command `ssh customer-admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
+2. Run the command `ssh admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
+
+	![Gateway Appliance HA Details](images/gw-ha-details.png)
+
 
 ## Accessing the Configuration Mode
 
@@ -43,23 +46,9 @@ To leave Configuration mode run the command `exit`.
 
 ## Accessing the Device using the vSRX Web Management UI
 
-To enable the web management GUI, run the following commands from the CLI in `configuration` mode:
+vSRX web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at `https://gateway-ip:8443`.
 
-```
-set system services web-management https interface fxp0.0
-set system services web-management https interface ge-0/0/1.0
-set system services web-management https port 8443
-set system services web-management https system-generated-certificate
-set system services web-management session session-limit 100
-
-set firewall filter PROTECT-IN term WEBSERVICE from destination-address <public-gateway-ip/32>
-set firewall filter PROTECT-IN term WEBSERVICE from destination-address <private-gateway-ip/32>
-set firewall filter PROTECT-IN term WEBSERVICE from protocol tcp
-set firewall filter PROTECT-IN term WEBSERVICE from destination-port 8443
-set firewall filter PROTECT-IN term WEBSERVICE then accept
-```
-
-You can now access vSRX web management at `https://gateway-ip:8443`.
+![Gateway Appliance HA Details](images/vSRX-webui.png)
 
 
 ## Accessing the Device using the virsh console
@@ -71,7 +60,7 @@ You can also access the vSRX from the gateway server Operating System (OS):
 
 ## Creating system users
 
-By default, the IBM Cloud Juniper vSRX is configured with SSH access for the username `customer-admin`. Additional users can be added with their own set of priorities. For example:
+By default, the IBM Cloud Juniper vSRX is configured with SSH access for the username `admin`. Additional users can be added with their own set of priorities. For example:
 
 ```
 set system login user ops class operator authentication encrypted-password <CYPHER>
