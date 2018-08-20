@@ -29,6 +29,10 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 2. Run the command `ssh customer-admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
 
+## Accessing the Configuration Mode
+
+Once a shell has been opened to the vSRX, you can enter the configuration mode by running `config`.  Configurations can be viewed in this mode using the `show` command.  Changes can be staged using the `set` command.  Staged changes can be viewed by running `show | compare`.  If you are happy with these changes, you will need to commit them to the active configuration by running `commit` and then `save`.  To leave Configuration mode run `exit`.
+
 
 ## Accessing the Device using the vSRX Web Management UI
 
