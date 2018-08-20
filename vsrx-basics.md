@@ -31,8 +31,15 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 ## Accessing the Configuration Mode
 
-Once a shell has been opened to the vSRX, you can enter the configuration mode by running `config`.  Configurations can be viewed in this mode using the `show` command.  Changes can be staged using the `set` command.  Staged changes can be viewed by running `show | compare`.  If you are happy with these changes, you will need to commit them to the active configuration by running `commit` and then `save`.  To leave Configuration mode run `exit`.
+You can enter the configuration mode, once a shell has been opened to the vSRX, by running the `config` command. You can several things in this mode using the following commands:
 
+* `show` - View configurations  
+* `show | compare` - View staged changes 
+* `set` - Stage changes 
+
+If you are happy with your changes, you can commit them to the active configuration by running the commands `commit` and then `save`.  
+
+To leave Configuration mode run the command `exit`.
 
 ## Accessing the Device using the vSRX Web Management UI
 
