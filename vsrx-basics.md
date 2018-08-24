@@ -15,7 +15,7 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # vSRX Basics
-The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into the web GUI. By default, the web GUI is not available from the public internet. To enable the web GUI, log in through SSH first.
+The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into Juniper web management GUI.
 
 **NOTE:** Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
 
@@ -34,19 +34,20 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 ## Accessing the Configuration Mode
 
-You can enter the configuration mode, once a shell has been opened to the vSRX, by running the `config` command. You can several things in this mode using the following commands:
+You can enter the configuration mode, once a shell has been opened to the vSRX, by running the `config` command. You can do several things in this mode using the following commands:
 
 * `show` - View configurations  
-* `show | compare` - View staged changes 
-* `set` - Stage changes 
+* `show | compare` - View staged changes
+* `set` - Stage changes
+* `commit check` - Verify the syntax of the configuration
 
 If you are happy with your changes, you can commit them to the active configuration by running the commands `commit` and then `save`.  
 
 To leave Configuration mode run the command `exit`.
 
-## Accessing the Device using the vSRX Web Management UI
+## Accessing the Device using the Juniper Web Management UI
 
-vSRX web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at `https://gateway-ip:8443`.
+Juniper web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at `https://gateway-ip:8443`.
 
 ![Gateway Appliance HA Details](images/vSRX-webui.png)
 
