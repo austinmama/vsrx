@@ -21,7 +21,7 @@ To get started with IBM Cloud Juniper vSRX Gateway, navigate to the order page i
 2.	In the Customer Portal navigation, select **Network > Gateway Appliances**.
 3.	From the Gateway Appliances list page, click **Order Gateway**.
 4.	From the Order page, select your desired data center from dropdown menu, then choose the desired type of server hardware on which the Juniper vSRX will be provisioned.
-5.	On the Order page, select the **High Availability Pair** option at top of page if desired, then select the Memory size. Next, click the **Juniper** tab, then **Juniper vSRX 15.x Standard** under **Operating System**. Finally, select the desired network uplink speed.
+5.	On the Order page, select the **High Availability Pair** option at top of page if desired, then select the Memory size. Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked single processor server, or select **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked dual processor server. Finally, select the desired network uplink speed.
 6.	Review your selections then click **Add to Order**, and the order will be verified automatically.
 7.	On the Checkout page, if you already own VLANs in the selected data center, select the backend VLANs which need to be protected. Give a hostname and domain name for your server, and check all boxes for the IBM Cloud service terms. Click **Submit Order**.
 
