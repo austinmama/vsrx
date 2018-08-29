@@ -15,7 +15,7 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # vSRX Basics
-The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into Juniper web management GUI.
+The IBM Cloud Juniper vSRX gateway can be configured using a remote console session through SSH or by logging into the Juniper web management GUI.
 
 **NOTE:** Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
 
@@ -47,7 +47,7 @@ To leave Configuration mode run the command `exit`.
 
 ## Accessing the Device using the Juniper Web Management UI
 
-Juniper web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at `https://gateway-ip:8443`.
+The Juniper web management GUI has been configured by default, with vSRX generated self-signed certificate. Only https is enabled on port 8443. You can access it at `https://gateway-ip:8443`.
 
 ![Gateway Appliance HA Details](images/vSRX-webui.png)
 
