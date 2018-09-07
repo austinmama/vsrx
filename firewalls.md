@@ -15,7 +15,7 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # Work with firewalls
-The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone". 
+The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone", to handle stateful firewalls.  Stateless firealls are controlled by firewall filters. 
 
 Policies are used to allow/block traffic between these defined zones, and the rules defined here are stateful.
 In the IBM Cloud, a vSRX is designed to have four different security zones:
@@ -25,6 +25,7 @@ In the IBM Cloud, a vSRX is designed to have four different security zones:
 * Customer-Private (tagged)
 * Customer-Public (tagged)
 
+## Zone Policies
 To configure a stateful firewall, perform the following procedure:
 
 1. Create security zones and assign the respective interfaces:
@@ -66,3 +67,19 @@ To allow protocols, such as OSPF or BGP, use the following command:
 ```
 set security zones security-zone trust interfaces ge-0/0/1.0 host-inbound-traffic protocols all
 ```
+
+## Firewall Filters
+By default the IBM Cloud Juniper vSRX allows ping, ssh, and https to itself and drops all other traffic by applying the PROTECT-IN filter to the lo interface.
+To configure a new stateless firewall, perform the following procedure:
+
+1. Create firewall filter and term (NB: the following filter will allow only ICMP and drop all other traffic)
+	```
+	set firewall filter ALLOW-PING term ICMP from protocol icmp
+	set firewall filter ALLOW-PING term ICMP then accept
+	```
+	
+2. Apply filter rule to interface (NB: the following will apply the filter to all private network traffic)
+	```
+	set interfaces ge-0/0/0 unit 0 family inet filter input ALLOW-PING
+	```
+	
