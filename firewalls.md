@@ -15,7 +15,7 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # Work with firewalls
-The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone", to handle stateful firewalls.  Stateless firealls are controlled by firewall filters. 
+The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone", to handle stateful firewalls.  Stateless firewalls are controlled by firewall filters. 
 
 Policies are used to allow/block traffic between these defined zones, and the rules defined here are stateful.
 In the IBM Cloud, a vSRX is designed to have four different security zones:
