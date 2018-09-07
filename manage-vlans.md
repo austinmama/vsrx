@@ -21,11 +21,12 @@ You can perform a variety of actions from the [Gateway Appliance Details screen]
 
 A VLAN needs to be associated to a Gateway Appliance before it can be routed. VLAN association is the linking of an eligible VLAN to a Network Gateway so that it may be routed to a Gateway Appliance in the future. The process of association does not automatically route a VLAN to a Gateway Appliance; the VLAN continues to use front-end and back-end customer routers until it is routed to the Gateway.
 
-VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway.
+VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway. If there are no available VLANs to associate, [order VLANs](../vlans/order-vlan.html)
 
-1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
-2. Select the desired VLAN from the **Associate a VLAN** dropdown list.
-3. Click the **Associate** button to associate the VLAN.
+1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.  
+2. Select the VLANs tab.  
+3. Click **Associate VLAN** and select a VLAN from the dropdown.  
+4. Click **Save** and confirm your selection. The VLAN association action does not route the VLAN through the firewall.
 
 After associating a VLAN to the Gateway Appliance, it appears in the Associated VLANs section of the Gateway Appliance Details screen. From this section, the VLAN may be routed to the Gateway or may be disassociated from the Gateway. Additional eligible VLANs may be associated to a Gateway Appliance at any time by repeating the steps above.
 
@@ -35,10 +36,10 @@ Associated VLANs are linked to a Gateway Appliance, but traffic in and out of th
 
 Perform the following procedure to route an associated VLAN:
 
-1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
-2. Locate the desired VLAN in the Associated VLANs section.
-3. Select **Route VLAN** from the Actions dropdown menu.
-4. Click **Yes** to route the VLAN.
+1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.  
+2. Select the VLANs tab.
+3. Select the desired VLAN(s) by toggling the checkbox.
+4. Click **Route Through** and confirm your selection.
 
 After routing a VLAN, all front-end and back-end traffic moves from the customer routers to the Network Gateway. Additional controls related to traffic and the Gateway Appliance itself may be taken by accessing the Gateway's management tool. Routing through the Network Gateway may be discontinued at any time by [bypassing the Gateway Appliance](#bypass-gateway-appliance-routing-for-a-vlan).
 
@@ -51,9 +52,9 @@ Bypassing a VLAN allows the VLAN to remain associated to the Network Gateway. If
 Perform the following procedure to bypass Gateway routing for a VLAN:
 
 1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
-2. Locate the desired VLAN in the Associated VLANs section.
-3. Select **Bypass VLAN** from the Actions dropdown menu.
-4. Click **Yes** to bypass the Gateway.
+2. Select the VLANs tab.
+3. Select the desired VLAN(s) by toggling the checkbox.
+4. Click **Route Around** and confirm your selection.
 
 After bypassing the Network Gateway, all front-end and back-end traffic routes through the FCR and BCR associated with the VLAN. The VLAN will remain associated with the Gateway Appliance and may be routed back to the Gateway Appliance at any time.
 
@@ -64,9 +65,9 @@ VLANs may be linked to one Gateway Appliance at a time through [association](#as
 Perform the following procedure to disassociate a VLAN from a Gateway Appliance:
 
 1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
-2. Locate the desired VLAN in the Associated VLANs section.
-3. Select **Disassociate** from the **Actions** dropdown menu.
-4. Click **Yes** to disassociate the VLAN.
+2. Select the VLANs tab.
+3. Select the desired VLAN(s) by toggling the checkbox.
+4. Click **Disassociate** and confirm your selection.
 
 After disassociating a VLAN from a Gateway Appliance, the VLAN may be associated to another Gateway. The VLAN may also be associated back to the Gateway Appliance at any time. After disassociating a VLAN from a Gateway Appliance, the VLAN's traffic cannot be routed through the Gateway. VLANs must be associated to a Gateway Appliance before they can be routed.
 
