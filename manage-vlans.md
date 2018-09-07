@@ -23,9 +23,9 @@ A VLAN needs to be associated to a Gateway Appliance before it can be routed. VL
 
 VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway. If there are no available VLANs to associate, [order VLANs](../vlans/order-vlan.html)
 
-1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.  
-2. Select the VLANs tab.  
-3. Click **Associate VLAN** and select a VLAN from the dropdown.  
+1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
+2. Select the VLANs tab.
+3. Click **Associate VLAN** and select a VLAN from the dropdown.
 4. Click **Save** and confirm your selection. The VLAN association action does not route the VLAN through the firewall.
 
 After associating a VLAN to the Gateway Appliance, it appears in the Associated VLANs section of the Gateway Appliance Details screen. From this section, the VLAN may be routed to the Gateway or may be disassociated from the Gateway. Additional eligible VLANs may be associated to a Gateway Appliance at any time by repeating the steps above.
@@ -36,7 +36,7 @@ Associated VLANs are linked to a Gateway Appliance, but traffic in and out of th
 
 Perform the following procedure to route an associated VLAN:
 
-1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.  
+1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
 2. Select the VLANs tab.
 3. Select the desired VLAN(s) by toggling the checkbox.
 4. Click **Route Through** and confirm your selection.
@@ -76,13 +76,16 @@ The IBM Cloud Juniper vSRX can operate with multiple VLANs over the same network
 
 Use the following set of commands to achieve this:
 
+Standalone Case:
 ```
-set interfaces ge-0/0/0 flexible-vlan-tagging
-set interfaces ge-0/0/0 native-vlan-id 10
-set interfaces ge-0/0/0 unit 0 vlan-id 10
-set interfaces ge-0/0/0 unit 0 family inet address <IP/MASK>
 set interfaces ge-0/0/0 unit 50 vlan-id 50
 set interfaces ge-0/0/0 unit 50 family inet address <IP/MASK>
+```
+
+HA Case:
+```
+set interfaces reth2 unit 50 vlan-id 50
+set interfaces reth2 unit 50 family inet address <IP/MASK>
 ```
 
 **NOTE:** Even though unit 0 is untagged, `JunOS` needs it to reference the VLAN ID that is configured as `native-vlan`. In the example, since `native-vlan-id` is `10`, unit 0 should have a `vlan-id` of `10` as well. In this way, `JunOS` is informed that unit 0 should be untagged.

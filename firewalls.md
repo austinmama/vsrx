@@ -15,26 +15,33 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # Work with firewalls
-The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone", to handle stateful firewalls.  Stateless firewalls are controlled by firewall filters. 
+The IBM Cloud Juniper vSRX uses the concept of security zones, where each vSRX interface is mapped to a "zone", to handle stateful firewalls.  Stateless firewalls are controlled by firewall filters.
 
 Policies are used to allow/block traffic between these defined zones, and the rules defined here are stateful.
 In the IBM Cloud, a vSRX is designed to have four different security zones:
 
-* SL-Private (untagged)
-* SL-Public (untagged)
-* Customer-Private (tagged)
-* Customer-Public (tagged)
+| Zone                     | Standalone Interface | HA Interface |
+| :---                     |        :----:        |         ---: |
+| SL-Private (untagged)    | ge-0/0/0.0           | reth0.0      |
+| SL-Public (untagged)     | ge-0/0/1.0           | reth1.0      |
+| Customer-Private (tagged)| ge-0/0/0.1           | reth2.1      |
+| Customer-Public (tagged) | ge-0/0/1.1           | reth3.1      |
 
 ## Zone Policies
 To configure a stateful firewall, perform the following procedure:
 
 1. Create security zones and assign the respective interfaces:
 
+	Standalone Case:
 	```
-	set security zones security-zone CUSTOMER-PRIVATE interfaces ge-0/0/1.0
-	set security zones security-zone CUSTOMER-PUBLIC interfaces ge-0/0/2.0
+	set security zones security-zone CUSTOMER-PRIVATE interfaces ge-0/0/0.1
+	set security zones security-zone CUSTOMER-PUBLIC interfaces ge-0/0/1.1
 	```
-
+	HA Case
+	```
+	set security zones security-zone CUSTOMER-PRIVATE interfaces reth2.1
+	set security zones security-zone CUSTOMER-PUBLIC interfaces reth2.1
+	```
 2. Define the policy and rules between two different zones.
 
 	The following example illustrates pinging traffic from the zone `Customer-Private` to `Customer-Public`:
@@ -56,16 +63,24 @@ Since this is a stateful operation, there is no need to allow return packets (in
 
 In order to allow traffic that is directed to the vSRX itself, use the following command:
 
+Standalone Case:
 ```
-set security zones security-zone CUSTOMER-PRIVATE interfaces ge-0/0/1.0 host-inbound-traffic system-services all
+set security zones security-zone CUSTOMER-PRIVATE interfaces ge-0/0/0.0 host-inbound-traffic system-services all
 ```
-
-In this case, you are allowing system services traffic (for example, SSH) destined for the IP address configured under the interface `ge-0/0/1.0`.
+HA Case:
+```
+set security zones security-zone CUSTOMER-PRIVATE interfaces reth2.0 host-inbound-traffic system-services all
+```
 
 To allow protocols, such as OSPF or BGP, use the following command:
 
+Standalone Case:
 ```
-set security zones security-zone trust interfaces ge-0/0/1.0 host-inbound-traffic protocols all
+set security zones security-zone trust interfaces ge-0/0/0.0 host-inbound-traffic protocols all
+```
+HA Case:
+```
+set security zones security-zone trust interfaces reth2.0 host-inbound-traffic protocols all
 ```
 
 ## Firewall Filters
@@ -77,9 +92,8 @@ To configure a new stateless firewall, perform the following procedure:
 	set firewall filter ALLOW-PING term ICMP from protocol icmp
 	set firewall filter ALLOW-PING term ICMP then accept
 	```
-	
+
 2. Apply filter rule to interface (NB: the following will apply the filter to all private network traffic)
 	```
 	set interfaces ge-0/0/0 unit 0 family inet filter input ALLOW-PING
 	```
-	
