@@ -23,7 +23,6 @@ IBM Cloud Juniper vSRX Standard
 
     {: .navgroup id="reference"}
     vsrx-release-notes.md
-    eap-limitations.md
     [IBM Cloud IP Ranges](../../infrastructure/hardware-firewall-dedicated/ips.html)
     {: .navgroup-end}
 
