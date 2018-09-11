@@ -19,6 +19,7 @@ IBM Cloud Juniper vSRX Standard
     nat.md
     routing.md
     vpn.md
+    os-reload.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
