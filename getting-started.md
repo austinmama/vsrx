@@ -44,7 +44,7 @@ If your account is unlinked, perform the following procedure:
 5.	On the Order page, select the **High Availability Pair** option if desired, then select the Memory size.
 6. Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server. Finally, select the desired network uplink speed.
 7.	Review your selections, then click **Add to Order**. Your order will be verified automatically.
-7.	On the Checkout page, if you already own VLANs in the selected data center, select the backend VLANs you want to protect. Give a hostname and domain name for your server, select a SSH key for access authentication if desired, and check all boxes for the IBM Cloud service terms and 3rd Party Software Terms. Click **Submit Order**.
+7.	On the Checkout page, if you already own VLANs in the selected data center, select the back-end VLANs you want to protect. Give a hostname and domain name for your server, select an SSH key for access authentication if desired, and check all boxes for the IBM Cloud service terms and Third Party Software Terms. Click **Submit Order**.
 
 ## After ordering
 After your order is approved, the provisioning of your vSRX starts automatically. When the provisioning process is complete, the gateway will appear in the Gateway Appliances list page.
