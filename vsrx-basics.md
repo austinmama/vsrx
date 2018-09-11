@@ -27,9 +27,7 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 	![Gateway Appliance SA Details](images/gw-sa-details.png)
 
-2. Run the command `ssh admin@<gateway-ip>`. The initial password will be the same as the *root* password on the server. In HA configuration, the initial password will be the same as the *root* password on the first server listed in details page.
-
-	![Gateway Appliance HA Details](images/gw-ha-details.png)
+2. Run the command `ssh admin@<gateway-ip>`. Enter password of `admin` when it's prompted.
 
 
 ## Accessing the Configuration Mode
