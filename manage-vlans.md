@@ -91,3 +91,68 @@ set interfaces reth2 unit 50 family inet address <IP/MASK>
 ```
 
 **NOTE:** Even though unit 0 is untagged, `JunOS` needs it to reference the VLAN ID that is configured as `native-vlan`. In the example, since `native-vlan-id` is `10`, unit 0 should have a `vlan-id` of `10` as well. This way, `JunOS` is informed that unit 0 should be untagged.
+
+## Sample VLAN Configuration for vSRX
+
+Below is a sample configuration for vSRX which defines two private interfaces and one customer zone.
+With this sample configuration Private VLAN1 and Private VLAN2 can communicate with each other. Stand alone vSRX interfaces are defined as ge-0/0/0 (private) and ge-0/0/1 (public), and for High Availability instance, they are defined as reth2 (HA private) and reth3 (HA public).
+
+![VLAN configuration](images/Sample-Topology-VLAN-to-VLAN.png)
+
+```
+# show interfaces
+
+ge-0/0/0 {
+   description PRIVATE_VLANs;
+   flexible-vlan-tagging;
+   native-vlan-id 1121;
+   unit 0 {
+       vlan-id 1121;
+       family inet {
+           address 10.184.108.158/26;
+       }
+   }
+   unit 10 {
+       vlan-id 1811;
+       family inet {
+           address 10.184.237.201/29;
+       }
+   }
+   unit 20 {
+       vlan-id 1812;
+       family inet {
+           address 10.185.48.9/29;
+       }
+   }
+}
+
+
+# show security zones security-zone CUSTOMER-PRIVATE
+interfaces {
+   ge-0/0/0.10 {
+       host-inbound-traffic {
+           system-services {
+               all;
+           }
+       }
+   }
+   ge-0/0/0.20 {
+       host-inbound-traffic {
+           system-services {
+               all;
+           }
+       }
+   }
+}
+# show security policies from-zone CUSTOMER-PRIVATE to-zone CUSTOMER-PRIVATE
+policy Allow_C_C {
+   match {
+       source-address any;
+       destination-address any;
+       application any;
+   }
+   then {
+       permit;
+   }
+}
+```
