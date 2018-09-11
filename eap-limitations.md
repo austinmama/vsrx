@@ -17,6 +17,5 @@ lastupdated: "2018-07-05"
 # Early Access Program Limitations
 
 Current limitations for the IBM Cloud Juniper vSRX EAP version are:
-* OS Reload only works for standalone Gateway servers. There is no support for OS Reload on HA gateway servers during EAP.
 * No upgrade support from standalone to HA.
 * No SRIOV support. Linux bridge is used in the network configuration for vSRX.
