@@ -97,7 +97,7 @@ set interfaces reth2 unit 50 family inet address <IP/MASK>
 Below is a sample configuration for vSRX which defines two private interfaces and one customer zone.
 With this sample configuration Private VLAN1 and Private VLAN2 can communicate with each other. Stand alone vSRX interfaces are defined as ge-0/0/0 (private) and ge-0/0/1 (public), and for High Availability instance, they are defined as reth2 (HA private) and reth3 (HA public).
 
-![VLAN configuration](images/Sample-Topology-VLAN-to-VLAN.png)
+<img src="images/Sample-Topology-VLAN-to-VLAN.png" alt="drawing" style="width: 500px;"/>
 
 ```
 # show interfaces
