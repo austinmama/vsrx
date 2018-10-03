@@ -24,3 +24,8 @@ Perform the following procedure to access the Gateway Appliances screen in the C
 2. Select **Gateway Appliances** from the Network menu option.
 
   ![Gateway Appliances List page](images/gateway-list.png)
+  
+  
+The Gateway Appliances List page has additional features including sorting by Name, Vendor, or Location. Clicking the header for these columns will alphabetically sort your gateways for more convenient viewing. If you'd prefer more gateways appear on the page, click the dropdown in the bottom left corner and expand the grid to your liking. Furthermore, the bottom right corner allows you to switch pages to view the rest of your gateways.  
+
+You also have the ability to rename your gateway. In the right most part of the grid, clicking the overflow menu will allow you to do so.
