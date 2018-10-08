@@ -603,3 +603,13 @@ The following table illustrates the network interface definitions for the previo
 | fab0 / fab1   |   Chassis cluster fabric link |
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
+
+
+In addition, two redundancy groups are configured. The following table illustrates these redundancy groups:
+
+| Redundancy Group   |  Redundancy Group  Function      |
+| :---          |    :---         |
+| redundancy-group 0   |  Redundancy group for control plane |
+| redundancy-group 1   |  Redundancy group for data plane |
+
+Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
