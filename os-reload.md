@@ -22,7 +22,7 @@ The OS Reload process is used to rebuild a gateway server. The process performs 
 * Create a vSRX VM in the KVM
 * Reconfigure the vSRX with the default configuration for IBM Cloud
 
-The process usually requires 30 minutes to complete. Standalone Gateways will be out of service during this period. For High Availability (HA) Gateways, when you reload the OS on one of your servers, the vSRX will failover to another server in the cluster, and continue to process data traffic. Once the reload is complete, the server will rejoin the cluster.
+The process usually requires 1 hour 40 minutes to complete. Standalone Gateways will be out of service during this period. For High Availability (HA) Gateways, when you reload the OS on one of your servers, the vSRX will failover to another server in the cluster, and continue to process data traffic. Once the reload is complete, the server will rejoin the cluster.
 
 **CAUTION:** Do not perform an OS reload on both servers of an HA Gateway at the same time. Doing so will destroy the vSRX cluster and cause the Gateway to be out of service. If the vSRX cluster is destroyed, you must use the `Rebuild Cluster` command to re-provision vSRX and recreate the HA cluster.
 
@@ -52,5 +52,5 @@ To rebuild one of your HA vSRX clusters, perform the following procedure:
 2. Click **Rebuild Cluster** in the vSRX Panel.
 ![Rebuild Cluster](images/rebuild_cluster.png)
 
-3. Carefully read the warning message. The operation to rebuild a cluster is destructive. If you wish to proceed, save your vSRX configuration before clicking `Rebuild` to start the process. 
+3. Carefully read the warning message. The operation to rebuild a cluster is destructive. If you wish to proceed, save your vSRX configuration before clicking `Rebuild` to start the process.
 ![Confirm Rebuild Cluster](images/rebuild_cluster_confirm.png)
