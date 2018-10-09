@@ -25,7 +25,7 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
-	![Gateway Appliance SA Details](images/gw-sa-details.png)
+<img src="images/basics.png" alt="drawing" style="width: 700px;"/>
 
 2. Run the command `ssh admin@<gateway-ip>`. Enter password of `admin` when it's prompted.
 

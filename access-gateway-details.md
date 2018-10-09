@@ -23,4 +23,6 @@ Perform the following procedure to access the Gateway Details screen.
 1. [Access the Gateway Appliances screen](access-gateway-appliances.html) in the Customer Portal.
 2. Click the Gateway Appliance Name for the desired Network Gateway to access the Gateway Appliance Details screen.
 
+<img src="images/gw-sa-details.png" alt="drawing" style="width: 700px;"/>
+
 Interactions may be taken on multiple VLANs at any given time using the Bulk Actions feature.
