@@ -18,6 +18,7 @@ IBM Cloud Juniper vSRX Standard
     manage-vlans.md
     firewalls.md
     nat.md
+    failover.md
     routing.md
     vpn.md
     os-reload.md
