@@ -28,9 +28,18 @@ If your account is linked, perform the following procedure:
 2.	In the left side navigation, select **Infrastructure > Network > Gateway Appliances**.
 3.	From the Gateway Appliances list page, click **Create a Gateway**.
 4.	From the Order page, choose a **Hostname** and **Domain** and then select the **High Availability Pair** option if desired.
+
+	<img src="images/linked_order.png" alt="drawing" style="width: 600px;"/>
+
 5. Next, select your **Location** of choice along with the associated **Pod** and then choose your **Server** and the desired amount of **RAM**.
-6. Select a SSH Key if you want use it to authenticate the access to your new Gateway.
+
+	<img src="images/linked_order.png" alt="drawing" style="width: 500px;"/>
+
+6. Select a SSH Key if you want to use it to authenticate the access to your new Gateway.
 7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server.
+
+	<img src="images/linked_image.png" alt="drawing" style="width: 600px;"/>
+
 8. Finish choosing any of the optional add-ons, add additional **Storage Disks**, and choose your **Uplink Port Speed**.
 8. Review your selections in the **Order Summary**, read and agree to the 3rd Party Software Terms.
 9. Finally, click **Provision**.
@@ -41,6 +50,9 @@ If your account is unlinked, perform the following procedure:
 2.	In the Customer Portal navigation, select **Network > Gateway Appliances**.
 3.	From the Gateway Appliances list page, click **Order Gateway**.
 4.	From the Order page, select your desired data center from the dropdown menu, then choose the desired type of server hardware on which the Juniper vSRX will be provisioned.
+
+	<img src="images/unlinked.png" alt="drawing" style="width: 300px;"/>
+
 5.	On the Order page, select the **High Availability Pair** option if desired, then select the Memory size.
 6. Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server. Finally, select the desired network uplink speed.
 7.	Review your selections, then click **Add to Order**. Your order will be verified automatically.
@@ -50,6 +62,8 @@ If your account is unlinked, perform the following procedure:
 After your order is approved, the provisioning of your vSRX starts automatically. When the provisioning process is complete, the gateway will appear in the Gateway Appliances list page.
 
 Click the gateway name to open the Gateway Details page. You will find the IP addresses, login username, and passwords for the device.
+
+<img src="images/after_order.png" alt="drawing" style="width: 600px;"/>
 
 ## VLANs and the Gateway Appliance's role
 A VLAN (virtual LAN) is a mechanism that segregates a physical network into many virtual segments. For convenience, traffic from multiple selected VLANs can be delivered through a single network cable, a process commonly called "trunking."
