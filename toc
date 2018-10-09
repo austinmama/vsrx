@@ -24,12 +24,12 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    known-limitations.md
     vsrx-release-notes.md
     [IBM Cloud IP Ranges](../../infrastructure/hardware-firewall-dedicated/ips.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    eap-limitations.md
     vsrx-docs.md
     getting-help.md
     {: .navgroup-end}
