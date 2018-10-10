@@ -36,7 +36,7 @@ If your account is linked, perform the following procedure:
 
 5. Next, select your **Location** of choice along with the associated **Pod** and then choose your **Server** and the desired amount of **RAM**.
 
-	<img src="images/linked_order.png" alt="drawing" style="width: 500px;"/>
+	<img src="images/linked_server.png" alt="drawing" style="width: 500px;"/>
 
 6. Select a SSH Key if you want to use it to authenticate the access to your new Gateway.
 7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server.
@@ -45,7 +45,8 @@ If your account is linked, perform the following procedure:
 
 8. Finish choosing any of the optional add-ons, add additional **Storage Disks**, and choose your **Uplink Port Speed**.
 8. Review your selections in the **Order Summary**, read and agree to the 3rd Party Software Terms.
-9. Finally, click **Provision**.
+9. Finally, click **Provision**.
+
 ## Ordering with an unlinked account
 If your account is unlinked, perform the following procedure:
 
