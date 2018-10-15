@@ -40,9 +40,6 @@ If your account is linked, perform the following procedure:
 
 6. Select a SSH Key if you want to use it to authenticate the access to your new Gateway.
 7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server.
-
-	<img src="images/linked_image.png" alt="drawing" style="width: 600px;"/>
-
 8. Finish choosing any of the optional add-ons, add additional **Storage Disks**, and choose your **Uplink Port Speed**.
 8. Review your selections in the **Order Summary**, read and agree to the 3rd Party Software Terms.
 9. Finally, click **Provision**.
