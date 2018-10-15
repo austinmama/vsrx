@@ -14,11 +14,8 @@ lastupdated: "2018-10-09"
 {:tip: .tip}
 {:download: .download}
 
-# Use Case Example
-The following is a sample use case with configuration commands.
-
-## Allowing SSH and Ping to a Public Subnet
-In the following use case, it is assumed that this is a high-availability deployment of the Juniper vSRX, with a single Public vlan and subnet.  This guide will show how to configure the vSRX with a new interface, zone, and address-book.  As the default action for all traffic is to drop, this guide will show how to set up traffic flows that allow all traffic within the new zone, all traffic from the new zone to the internet, and allow only ssh and ping from the internet to one subnet on the new vlan.
+# Step by Step: Allowing SSH and Pinging to a Public Subnet
+This guide will show how to configure the vSRX with a new interface, zone, and address-book.  As the default action for all traffic is to drop, this guide will show how to set up traffic flows that allow all traffic within the new zone, all traffic from the new zone to the internet, and allow only ssh and ping from the internet to one subnet on the new vlan.
 
 In this example, the following values are used.
 ```
@@ -133,5 +130,4 @@ This is the expected output:
 
 After checking the configuration is correct, run `commit` to push the changes to the active configurations
 
-### Route VLAN to finish and begin use
-The vSRX is now configured to route and filter traffic to the new vlan and subnet, allowing only ssh and ping inbound.  Now route the vlan as shown in [Manage VLANs](manage-vlans.html) and begin use.
+### 
