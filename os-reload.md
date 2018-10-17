@@ -24,7 +24,8 @@ The OS Reload process is used to rebuild a gateway server. The process performs 
 
 The process usually requires 1 hour 40 minutes to complete. Standalone Gateways will be out of service during this period. For Juniper High Availability (HA) Gateways, when you reload the OS on one of your servers, the vSRX will failover to another server in the cluster, and continue to process data traffic. Once the reload is complete, the server will rejoin the cluster.
 
-**CAUTION:** If you're already running a Juniper vSRX HA cluster, do not perform an OS reload on both servers of the HA Gateway at the same time. Doing so will destroy the vSRX cluster and cause the Gateway to be out of service. If the vSRX cluster is destroyed, you must use the [Rebuild Cluster](os-reload.html#rebuilding-an-ha-vsrx-cluster) command to re-provision vSRX and recreate the HA cluster.
+**CAUTION:** If you're already running a Juniper vSRX HA cluster, do not perform an OS reload on both servers of the HA Gateway at the same time. Doing so will destroy the vSRX cluster and cause the Gateway to be out of service. If the vSRX cluster is destroyed, you must use the 
+[Rebuild Cluster](os-reload.html#rebuilding-an-ha-vsrx-cluster) command to re-provision vSRX and recreate the HA cluster.
 
 ## Performing an OS reload
 To reload the OS for a gateway server, perform the following procedure:
