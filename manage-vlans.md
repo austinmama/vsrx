@@ -21,7 +21,7 @@ You can perform a variety of actions from the [Gateway Appliance Details screen]
 
 A VLAN needs to be associated to a Gateway Appliance before it can be routed. VLAN association is the linking of an eligible VLAN to a Network Gateway so that it can be routed to a Gateway Appliance. This association does not automatically route the VLAN to a Gateway Appliance; the VLAN continues to use front-end and back-end customer routers until it is routed.
 
-VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway. 
+VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway.
 
 **NOTE:** If there are no available VLANs to associate, then you will need [order them](../vlans/order-vlan.html).
 
@@ -74,9 +74,9 @@ Perform the following procedure to disassociate a VLAN from a Gateway Appliance:
 After disassociating a VLAN from a Gateway Appliance, the VLAN may be associated to another Gateway. The VLAN may also be associated back to the Gateway Appliance at any time. After disassociating a VLAN from a Gateway Appliance, the VLAN's traffic cannot be routed through the Gateway. VLANs must be associated to a Gateway Appliance before they can be routed.
 
 ## Route Multiple VLANs over the same network interface
-The IBM Cloud Juniper vSRX can operate with multiple VLANs over the same network interface. It can also handle both untagged and tagged traffic at the same time. This is accomplished by setting the interface encapsulation to `flexible-vlan-tagging`. Unit 0 is the sub-interface that is untagged; other, non-zero units are tagged.
+The IBM Cloud Juniper vSRX can operate with multiple VLANs over the same network interface. It can also handle both untagged and tagged traffic at the same time. This is accomplished on the standalone device by setting the interface encapsulation to `flexible-vlan-tagging`, or on the High-Availability devices by using reth2 and reth3 as tagged interfaces. This is done as part of the default configuration and does not need to be modified.  On the standalone devices, Unit 0 is the sub-interface that is untagged; other, non-zero units are tagged.
 
-Use the following set of commands to achieve this:
+Use the following set of commands to configure additional tagged interfaces:
 
 Standalone Case:
 ```
