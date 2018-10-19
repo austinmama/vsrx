@@ -13,8 +13,9 @@ lastupdated: "2018-10-15"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Creating your new traffic flows
-Create the necesary new traffic flows by running the following commands:
+# Creating your new traffic flows 
+Create the necesary new traffic flows by running the following commands.  
+Scroll to the right to view the entire command!  
 
 ```
 set security policies from-zone CUSTOMER-PUBLIC to-zone CUSTOMER-PUBLIC policy ALLOW_INTERNAL description "Allow all traffic within CUSTOMER_PUBLIC zone"
