@@ -30,7 +30,7 @@ To do so, perform the following procedure:
 2. On the primary vSRX gateway device, run the command:
 
 	```
-	show chasis cluster status 
+	show chassis cluster status 
 	```
 	The output should be similar to the following:
 
@@ -62,7 +62,7 @@ To do so, perform the following procedure:
 3. Initiate failover by running the following command in the console prompt:
 
 	```
-	request chasis cluster failover redundancy-group 	<redundancy group number> node <node number>
+	request chassis cluster failover redundancy-group <redundancy group number> node <node number>
 	```
 
 	Select the appropriate redundancy group number and node number from the output of the command in step two. To failover both redundancy groups, execute the previous command twice, one for each group.
@@ -71,4 +71,4 @@ To do so, perform the following procedure:
 
 5. Login to the other vSRX gateway of your pair. Enter into CLI mode by again executing the command `cli` and then verify that the console output shows as `primary`.
 
-**NOTE:** When you enter CLI mode in your Juniper vSRX gateway device, the output will show as `primary` from the control plane perspective. Always check the `show chasis cluster status` output to determine which gateway device is primary from data plane perspective. Refer to [vSRX Default Configuration](vsrx-default-config.html) to learn more about redundancy groups, as well as the control and data planes.
+**NOTE:** When you enter CLI mode in your Juniper vSRX gateway device, the output will show as `primary` from the control plane perspective. Always check the `show chassis cluster status` output to determine which gateway device is primary from data plane perspective. Refer to [vSRX Default Configuration](vsrx-default-config.html) to learn more about redundancy groups, as well as the control and data planes.
