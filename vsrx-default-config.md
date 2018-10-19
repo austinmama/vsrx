@@ -26,6 +26,7 @@ Juniper vSRX gateway devices in IBM Cloud come with following default configurat
 
 ## Default configuration of a sample standalone vSRX gateway
 
+```
 system {
     host-name cicd-gw2-vSRX;
     root-authentication {
