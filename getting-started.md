@@ -39,7 +39,7 @@ If your account is linked, perform the following procedure:
 	<img src="images/linked_server.png" alt="drawing" style="width: 500px;"/>
 
 6. Select a SSH Key if you want to use it to authenticate the access to your new Gateway.
-7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server.
+7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** for a single processor server.
 8. Finish choosing any of the optional add-ons, add additional **Storage Disks**, and choose your **Uplink Port Speed**.
 8. Review your selections in the **Order Summary**, read and agree to the 3rd Party Software Terms.
 9. Finally, click **Provision**.
@@ -52,7 +52,7 @@ If your account is unlinked, perform the following procedure:
 3.	From the Gateway Appliances list page, click **Order Gateway**.
 4.	From the Order page, select your desired data center from the dropdown menu, then choose the desired type of server hardware on which the Juniper vSRX will be provisioned.
 5.	On the Order page, select the **High Availability Pair** option if desired, then select the Memory size.
-6. Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** if you picked a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** if you picked a dual processor server. Finally, select the desired network uplink speed.
+6. Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** for a single processor server. Finally, select the desired network uplink speed.
 7.	Review your selections, then click **Add to Order**. Your order will be verified automatically.
 7.	On the Checkout page, if you already own VLANs in the selected data center, select the back-end VLANs you want to protect. Give a hostname and domain name for your server, select an SSH key for access authentication if desired, and check all boxes for the IBM Cloud service terms and Third Party Software Terms. Click **Submit Order**.
 
