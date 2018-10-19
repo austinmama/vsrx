@@ -22,7 +22,6 @@ IBM Cloud Juniper vSRX Standard
         ssh-create-interface.md
         ssh-create-flows.md
         ssh-check-output.md
-        ssh-route-vlan.md
 
     manage-vlans.md
     firewalls.md
