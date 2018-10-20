@@ -13,8 +13,8 @@ lastupdated: "2018-10-15"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Create the New Interface, Zone, and Address-Book Subnet
-First you will need to create an interface unit for the vlan and add the subnet's gateway address.  You will then be able to create a security zone associated with the new unit and an address-book entry for the subnet.  
+# Create the New Interface, Zone, and Address Book Subnet
+First, you'll need to create an interface unit for the VLAN and add the subnet's gateway address. You'll then be able to create a security zone associated with the new unit and an `address-book` entry for the subnet.  
 
 ```
 set interfaces reth3 unit 1523 vlan-id 1523

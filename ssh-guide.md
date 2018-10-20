@@ -30,6 +30,6 @@ In this Step-by-Step guide you will learn how to configure the service:
 
 Task  | Description
 ------------- | -------------
-[Create a new interface, zone, and address-book subnet](ssh-create-interface.html) | Create the tagged interface unit and security zone for the new vlan.
-[Creating your new traffic flows](ssh-create-flows.html) | Create the new traffic flows to allow inbound ping and ssh.
+[Create a new interface, zone, and address-book subnet](ssh-create-interface.html) | Create the tagged interface unit and security zone for the new VLAN.
+[Creating your new traffic flows](ssh-create-flows.html) | Create the new traffic flows to allow inbound pinging and SSH.
 [Confirm the output and commit the changes](ssh-check-output.html) | Check the output to confirm what will be committed to the active configuration.
