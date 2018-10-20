@@ -14,7 +14,7 @@ lastupdated: "2018-07-05"
 {:tip: .tip}
 {:download: .download}
 
-# Manage VLANs
+# Managing VLANs
 You can perform a variety of actions from the [Gateway Appliance Details screen](access-gateway-details.html).
 
 ## Associate a VLAN to a Gateway Appliance

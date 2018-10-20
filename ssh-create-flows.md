@@ -13,7 +13,7 @@ lastupdated: "2018-10-15"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Creating your new traffic flows
+# Create Your New Traffic Flows
 Now that you have created the new zone (CUSTOMER-PUBLIC), you will need to configure policies to control the network traffic flow.  The first one configured below allows all traffic within the CUSTOMER-PUBLIC zone.  The second one allows all traffic from CUSTOMER-PUBLIC out to the public internet.  The third flow allows only SSH and PING traffic from the public internet to the CUSTOMER-PUBLIC zone, and drops the rest as the default action is drop.
 Scroll to the right to view the entire command!  
 

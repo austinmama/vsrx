@@ -13,7 +13,7 @@ lastupdated: "2018-10-15"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Confirm the output and commit the changes
+# Confirm the Output and Commit the Changes
 After the changes and additions you've made have been staged, run the following command to confirm what will be committed to the active configuration:
 
 ```
