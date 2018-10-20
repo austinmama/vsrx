@@ -16,7 +16,7 @@ lastupdated: "2018-07-05"
 
 # Getting Started
 
-To get started with IBM Cloud Juniper vSRX Gateway, you should first determine if your account is linked to IBM Bluemix. If so, this will slightly alter the ordering process.
+To get started with IBM Cloud Juniper vSRX Gateway, you should first determine if your account is linked to IBM Cloud. If so, this will slightly alter the ordering process.
 
 To find out if you have a linked account, navigate to the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} in your browser and log in. If your account is unlinked, you will see a **Learn more about Bluemix!** button at the top right.
 
@@ -27,7 +27,7 @@ You can now order your Gateway Appliance, using the appropriate method that foll
 ## Ordering with a linked account
 If your account is linked, perform the following procedure:
 
-1.	Open [Bluemix ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/){: new_window} and log into your account.
+1.	Open [IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/){: new_window} and log into your account.
 2.	In the left side navigation, select **Infrastructure > Network > Gateway Appliances**.
 3.	From the Gateway Appliances list page, click **Create a Gateway**.
 4.	From the Order page, choose a **Hostname** and **Domain** and then select the **High Availability Pair** option if desired.
