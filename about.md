@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-07-05"
+  years: 2018
+lastupdated: "2018-10-22"
 
 ---
 
@@ -15,9 +15,11 @@ lastupdated: "2018-07-05"
 {:download: .download}
 
 # About
-The IBM Cloud Juniper vSRX allows you to selectively route private and public network traffic through a full-featured enterprise level firewall that is powered by JunOS software supporting features, such as full routing stacks, QoS and traffic sharing, policy-based routing, and VPN among others. The vSRX provides performance, ease of configuration and maintenance advantages with simplicity of running on a bare metal server. The hardware is sized to handle the routing/security load for multiple VLANs and can be ordered with redundant network links and redundant RAID arrays. All vSRX features are customer-managed.
+IBM Cloud Juniper vSRX allows you to selectively route private and public network traffic through a full-featured enterprise level firewall that is powered by JunOS software supporting features, such as full routing stacks, QoS and traffic sharing, policy-based routing, and VPN among others. The vSRX provides performance, ease of configuration and maintenance advantages with simplicity of running on a bare metal server. The hardware is sized to handle the routing/security load for multiple VLANs and can be ordered with redundant network links and redundant RAID arrays. All vSRX features are customer-managed.
 
 The IBM Cloud vSRX is offered in two different modes: standalone or High Availability (HA) cluster.
+
+**NOTE:** Additional documentation for IBM Cloud Juniper vSRX can be found in the [Supplemental Documentation](vsrx-docs.html) topic.
 
 ##Firewall
 The vSRX deploys to protect your environment from external and internal threats. It can filter both private and public facing traffic. Customers can manage the vSRX themselves by defining policies and rules to allow or deny (among other actions) inbound or outbound network traffic, protecting their applications from internal and external users. Both IPv4 and IPv6 stacks are supported in a stateful manner. 

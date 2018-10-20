@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-07-05"
+  years: 2018
+lastupdated: "2018-10-22"
 
 ---
 
@@ -23,8 +23,7 @@ Perform the following procedure to access the Gateway Appliances screen in the C
 1. Access the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} using your unique credentials.
 2. Select **Gateway Appliances** from the Network menu option.
 
-  ![Gateway Appliances List page](images/gateway-list.png)
-  
+<img src="images/gateway-apps.png" alt="drawing" style="width: 600px;"/>
   
 The Gateway Appliances List page has additional features including sorting by Name, Vendor, or Location. Clicking the header for these columns will alphabetically sort your gateways for more convenient viewing. If you'd prefer more gateways appear on the page, click the dropdown in the bottom left corner and expand the grid to your liking. Furthermore, the bottom right corner allows you to switch pages to view the rest of your gateways.  
 
