@@ -23,7 +23,7 @@ A VLAN needs to be associated to a Gateway Appliance before it can be routed. VL
 
 VLANs may be associated to only one Gateway at a time and must not have a firewall. Perform the following procedure to associate a VLAN to a Network Gateway.
 
-**NOTE:** If there are no available VLANs to associate, then you will need [order them](../vlans/order-vlan.html).
+**NOTE:** If there are no available VLANs to associate, then you will need to [order them](../vlans/order-vlan.html).
 
 1. [Access the Gateway Appliance Details screen](access-gateway-details.html) in the Customer Portal.
 2. Select the VLANs tab.
