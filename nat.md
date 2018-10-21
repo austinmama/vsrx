@@ -17,7 +17,7 @@ lastupdated: "2018-10-22"
 # Working with NAT
 This topic provides a sample configuration for sNAT on a vSRX appliance. With this configuration, a private node routed behind the Gateway can communicate with the outside world.
 
-![sNAT Diagram](images/Sample-Topology-SNAT.png)
+<img src="images/Sample-Topology-SNAT.png" alt="drawing" style="width: 500px;"/>
 
 ```
 from-zone CUSTOMER-PRIVATE to-zone SL-PUBLIC {
