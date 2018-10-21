@@ -293,7 +293,7 @@ firewall {
 }
 ```
 
-THe following table illustrates network interface definitions for the previous configuration:
+The following table illustrates network interface definitions for the previous configuration:
 
 | Interface Name    |  Interface Function      |
 | :---          |   :---         |
