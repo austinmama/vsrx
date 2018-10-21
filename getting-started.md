@@ -32,11 +32,11 @@ If your account is linked, perform the following procedure:
 3.	From the Gateway Appliances list page, click **Create a Gateway**.
 4.	From the Order page, choose a **Hostname** and **Domain** and then select the **High Availability Pair** option if desired.
 
-	<img src="images/linked_order.png" alt="drawing" style="width: 600px;"/>
+	<img src="images/linked_order.png" alt="drawing" style="width: 700px;"/>
 
 5. Next, select your **Location** of choice along with the associated **Pod** and then choose your **Server** and the desired amount of **RAM**.
 
-	<img src="images/linked_server.png" alt="drawing" style="width: 500px;"/>
+	<img src="images/linked_server.png" alt="drawing" style="width: 600px;"/>
 
 6. Select a SSH Key if you want to use it to authenticate the access to your new Gateway.
 7. Under **Image**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** for a single processor server.
@@ -61,7 +61,7 @@ After your order is approved, the provisioning of your vSRX starts automatically
 
 Click the gateway name to open the Gateway Details page. You will find the IP addresses, login username, and passwords for the device.
 
-<img src="images/after_order.png" alt="drawing" style="width: 600px;"/>
+<img src="images/after_order.png" alt="drawing" style="width: 700px;"/>
 
 ## VLANs and the Gateway Appliance's role
 A VLAN (virtual LAN) is a mechanism that segregates a physical network into many virtual segments. For convenience, traffic from multiple selected VLANs can be delivered through a single network cable, a process commonly called "trunking."
