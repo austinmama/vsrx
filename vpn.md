@@ -17,7 +17,7 @@ lastupdated: "2018-10-22"
 # Working with VPN
 This topic details a sample configuration for a Route based VPN between two sites. In this sample configuration Server 1 (Site A) can communicate with Server 2 (Site B), and each site utilizes two phase IPSEC authentication.
 
-<img src="images/site-to-site-vpn.png" alt="drawing" style="width: 500px;"/>
+<img src="images/site-to-site-vpn.png" alt="drawing" style="width: 600px;"/>
 
 ## Sample configuration for Site A (Dallas):
 
