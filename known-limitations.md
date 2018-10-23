@@ -16,9 +16,9 @@ lastupdated: "2018-10-22"
 
 # Known Limitations
 
-Current limitations for {{site.data.keyword.cloud}} Juniper vSRX:
+Current limitations for {{site.data.keyword.cloud}} IBM® Cloud Juniper vSRX:
 
-* IBM Cloud Juniper vSRX Gateway is deployed with networking virtualization using Linux Bridge. Linux Bridge based networking virtualization can only achieve limited throughput and never line-rate throughput.
+* Juniper vSRX Gateway is deployed with networking virtualization using Linux Bridge. Linux Bridge based networking virtualization can only achieve limited throughput and never line-rate throughput.
 
 * Only 1Gbps license and interfaces are supported on Juniper vSRX. 10Gbps support is coming soon.
 
