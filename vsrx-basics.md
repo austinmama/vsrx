@@ -52,13 +52,13 @@ The Juniper web management GUI has been configured by default, with vSRX generat
 
 ![Gateway Appliance HA Details](images/vSRX-webui.png)
 
+## Accessing the Device using the VIRSH Console
 
-## Accessing the Device using the virsh console
+You can also access the vSRX from the gateway server Operating System:
 
-You can also access the vSRX from the gateway server Operating System (OS):
-1. Log on your gateway server by running the command `ssh root@<server-ip>`.
-2. Run thre command `virsh list` to find your vSRX VM name.
-3. Run the command `virsh console <your vSRXvM name>`.
+1. Log onto your gateway server by running the command `ssh root@<server-ip>`.
+2. Run the command `virsh list` to find your vSRX VM name.
+3. Run the command `virsh console <your vSRX VM name>`.
 
 ## Creating system users
 
