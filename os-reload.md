@@ -48,7 +48,7 @@ If you are reloading a standalone Vyatta Server, a standalone Juniper vSRX will 
 
 If you are reloading High Availability Vyatta Servers, you must run the command `OS Reload` on both hardware servers. This installs Ubuntu 16.04. Then use the **Rebuild Cluster** option (detailed in the following section) to provision the vSRX and create the the HA cluster. The same gateway IP addresses will be used, and the password for the root user on the host server (as well as the password for the admin and root users in the vSRX) will be reset.
 
-**CAUTION:** Do not perform an OS reload on only one server of the Vyatta HA cluster. Two different Operating Systems in single Gateway HA cluster is not supported.
+**CAUTION:** Do not perform an OS reload on only one server of the Vyatta HA cluster. Having two different Operating Systems on a single Gateway HA cluster is not supported.
 
 ## Rebuilding an HA vSRX Cluster
 To rebuild one of your HA vSRX clusters, perform the following procedure:
