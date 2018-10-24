@@ -27,8 +27,11 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 <img src="images/basics.png" alt="drawing" style="width: 700px;"/>
 
-2. Run the command `ssh admin@<gateway-ip>`. Enter password of `admin` when it's prompted.
+2. Click the "eye" icon to reveal the admin user's password. 
 
+3. Run the command `ssh admin@<gateway-ip>`, then enter the admin user's password.
+
+**NOTE:** If you do not see the "eye" icon, you may not have permission to view the password. Please check your access permissions with the account owner.
 
 ## Accessing the Configuration Mode
 
