@@ -46,7 +46,7 @@ To reload the OS for a gateway server, perform the following procedure:
 ## Using OS Reload to migrate from Vyatta/VRA Server to Juniper vSRX
 If you are reloading a standalone Vyatta Server, a standalone Juniper vSRX will be provisioned once the OS reload completes. The same gateway IP addresses will be used, and the password for the root user on the host server, and the admin and root users in the vSRX will be reset.
 
-If you are reloading High Availability Vyatta Servers, you must run the command `OS Reload` on both hardware servers. This installs Ubuntu 16.04. Then use the **Rebuild Cluster** option (detailed in the following section) to provision the vSRX and create the the HA cluster. The same gateway IP addresses will be used, and the password for the root user on the host server (as well as the password for the admin and root users in the vSRX) will be reset.
+If you are reloading High Availability Vyatta Servers, you must run the command `OS Reload` on both hardware servers. This installs Ubuntu 16.04. Then use the **Rebuild Cluster** option (detailed in the following section) to provision the vSRX and create the HA cluster. The same gateway IP addresses will be used, and the password for the root user on the host server (as well as the password for the admin and root users in the vSRX) will be reset.
 
 **CAUTION:** Do not perform an OS reload on only one server of the Vyatta HA cluster. Two different Operating Systems in single Gateway HA cluster is not supported.
 

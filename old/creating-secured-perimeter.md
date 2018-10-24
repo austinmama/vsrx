@@ -21,7 +21,8 @@ A secured perimeter uses a Secure Perimeter Segment (SPS) to segregate networks 
 
 ## Setting up the secured perimeter
 
-Following are the steps for setting up a secured perimeter.  For a detailed description of these steps see [Set up a Secure Perimeter in the IBM Cloud] (https://developer.ibm.com/dwblog/2018/ibm-cloud-vyatta-set-up-secure-perimeter)
+The foll steps for setting up a secured perimeter. For a detailed description of these steps see [Set up a Secure Perimeter in the IBM Cloud] (https://developer.ibm.com/dwblog/2018/ibm-cloud-vyatta-set-up-secure-perimeter)
+
 1) Configure permissions in the IBM Cloud and infrastructure required to access the cloud services and infrastructure components involved in the secure perimeter.
 1) Create an outer boundary in the public internet trough a public VLAN and a firewall. This outer boundary will be used to isolate the SPS.
 2) Place the SPS inside that boundary
