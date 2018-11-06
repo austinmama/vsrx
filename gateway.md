@@ -18,10 +18,13 @@ lastupdated: "2018-11-06"
 
 Perform the following procedure to reclaim your Gateway.
 
-1. [Access the Gateway Appliances screen](access-gateway-appliances.html) in the Customer Portal, and navigate to the Gateway details page by selecting desired Gateway name.2. Click the server name in the Hardware Panel.
+1. [Access the Gateway Appliances screen](access-gateway-appliances.html) in the Customer Portal, and navigate to the Gateway details page by selecting desired Gateway name.
+2. Click the server name in the Hardware Panel.
 ![Hardware Server](images/os_hardware.png)
 
-3. On the device's page, click **Cancel Device** in the Action drop down menu to access the Server Configuration page.
+Before reclaiming a gateway, make sure all protected VLANs have been [disassociated](manage-vlans.html) from this gateway.  
+
+3. On the device's page, click **Cancel Device** in the Action drop down menu to access the Server Configuration page.  
 4. On the Cancel Device confirmation screen, begin the reclaim process by clicking **Continue**. If you do not want to proceed with the reclaim, click **Close**.
 
 For HA pairs, these actions will need to be performed on both devices.
