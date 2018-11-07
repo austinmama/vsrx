@@ -15,7 +15,6 @@ IBM Cloud Juniper vSRX Standard
     access-gateway-details.md
     vsrx-basics.md
     vsrx-default-config.md
-    gateway.md
 
     {: .topicgroup}
     Step-by-step: How to Allow SSH and Pinging to a Public Subnet
@@ -31,6 +30,7 @@ IBM Cloud Juniper vSRX Standard
     routing.md
     vpn.md
     os-reload.md
+    reclaim-gateway.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
