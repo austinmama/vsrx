@@ -16,7 +16,7 @@ lastupdated: "2018-11-07"
 {:important: .important}
 {:note: .note}
 
-# Getting Started
+# Getting Started With IBM Cloud Juniper vSRX Gateway
 
 To get started with the IBM® Cloud Juniper vSRX Gateway, first determine whether your account is linked to IBM Cloud.
 
