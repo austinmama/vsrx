@@ -14,7 +14,7 @@ lastupdated: "2018-10-22"
 {:tip: .tip}
 {:download: .download}
 
-# Supplemental vSRX documentation
+# Supplemental IBM Cloud Juniper vSRX documentation
 The following table provides links to supplemental documentation for IBM® Cloud Juniper vSRX Standard.
 
 vSRX Documentation  | Description
