@@ -28,8 +28,8 @@ To find out whether you have a linked account, navigate to the [Customer Portal 
 
 You can order your Gateway Appliance, using one of these methods:
 
-For a list of Known Limitations with IBM Cloud Juniper vSRX Gateway, refer to [the Known Limitations topic](known-limitations.html).
-{:note:}
+For a list of Known Limitations with IBM Cloud Juniper vSRX Gateway, refer to the [Known Limitations topic](/docs/infrastructure/vsrx?topic=vsrx-known-limitations-for-ibm-cloud-juniper-vsrx).
+{:note}
 
 ### Ordering with a linked account
 If your account is linked, follow this procedure:
@@ -62,7 +62,7 @@ If your account is unlinked, follow this procedure:
 3.	From the **Gateway Appliances** list, click **Order Gateway**.
 4.	From the **Order** page, select your desired data center from the dropdown menu, then choose the desired type of server hardware on which the Juniper vSRX will be provisioned. 
 
-	If you plan to use a Dual Processor Multi-Core Server, you must select **Intel Xeon 5120** as the server type. {:note:}
+	If you plan to use a Dual Processor Multi-Core Server, you must select **Intel Xeon 5120** as the server type. {:note}
 	
 5.	On the **Order** page, select the **High Availability Pair** option if desired, then select the **Memory** size.
 6. 	Next, click the **Juniper** tab under **Operating System**, select **Juniper vSRX 15.x (up to 1 Gbps) Standard** for a single processor server, or **Juniper vSRX 15.x (up to 10 Gbps) Standard** for a dual processor server.
