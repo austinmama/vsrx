@@ -7,7 +7,7 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    [Explore Firewalls](/docs/infrastructure/fortigate-10g/explore-firewalls.html)
+    [Explore Firewalls1](/fortigate-10g/fortigate-10g-exploring-firewalls)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
