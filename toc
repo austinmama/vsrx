@@ -7,7 +7,7 @@ IBM Cloud Juniper vSRX Standard
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    [Explore Firewalls](/fortigate-10g/fortigate-10g-exploring-firewalls)
+    /fortigate-10g/fortigate-10g-exploring-firewalls
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -35,7 +35,7 @@ IBM Cloud Juniper vSRX Standard
 
     {: .navgroup id="reference"}
     vsrx-release-notes.md
-    [IBM Cloud IP Ranges](/hardware-firewall-dedicated/hardware-firewall-dedicated-ibm-cloud-ip-ranges)
+    /hardware-firewall-dedicated/hardware-firewall-dedicated-ibm-cloud-ip-ranges
     {: .navgroup-end}
 
     {: .navgroup id="help"}
