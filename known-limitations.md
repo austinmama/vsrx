@@ -29,4 +29,6 @@ Current limitations for {{site.data.keyword.cloud}} IBM® Cloud Juniper vSRX:
 
 * There is no support to upgrade from Standalone to High-availability mode.
 
-* IBM Cloud Juniper vSRX Gateway is deployed with Junos OS version `15.1X49-D123`. Currently, there is no support for upgrading to a different version.
+* IBM Cloud Juniper vSRX Gateway is deployed with the options of Junos OS version `15.1` or `18.4`. Currently, there is no support for upgrading/downgrading to a different version.
+
+* Remove the 60-day eval license as it may cause the kernel to generate ERROR messages even when there is another (valid) license on the system.
