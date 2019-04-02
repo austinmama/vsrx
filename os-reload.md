@@ -23,7 +23,7 @@ subcollection: vsrx
 # Reloading and Migrating the OS
 {: #reloading-an-migrating-the-os}
 
-The OS Reload process is used to rebuild a gateway server. The process performs the following actions:
+The OS reload process is used to rebuild a gateway server. The process performs the following actions:
 
 * Reload the server host's operating system
 * Install KVM in the operating system
@@ -32,12 +32,13 @@ The OS Reload process is used to rebuild a gateway server. The process performs 
 
 The process usually requires 1 hour 40 minutes to complete. Standalone Gateways will be out of service during this period. For Juniper High Availability (HA) Gateways, when you reload the OS on one of your servers, the vSRX will failover to another server in the cluster, and continue to process data traffic. Once the reload is complete, the server will rejoin the cluster.
 
-There are two requirements in order for an OS-Reload to succeed on an HA vSRX device:
+There are two requirements in order for an OS reload to succeed on an HA vSRX device:
 
-* Make sure that you are able to use the **vSRX root credentials** to [access the device using SSH through a private IP address](docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#performing-ibm-cloud-juniper-vsrx-basics).
-* **Do NOT** perform an OS-Reload on both servers of the HA gateway at the same time.
+* Make sure that you are able to use the **vSRX root credentials** to [access the device using SSH through a private IP address](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#performing-ibm-cloud-juniper-vsrx-basics).
 
-Performing an OS-Reload on both servers of the HA gateway at the same time will destroy the vSRX cluster and cause the gateway to be out of service. If the vSRX cluster is destroyed, you must use the **Rebuild Cluster** option (detailed below) to re-provision vSRX and recreate the HA cluster.
+* **Do NOT** perform an OS reload on both servers of the Highly Available gateway at the same time.
+
+Performing an OS reload on both servers of the HA gateway at the same time will destroy the vSRX cluster and cause the gateway to be out of service. If the vSRX cluster is destroyed, you must use the **Rebuild Cluster** option (detailed below) to re-provision vSRX and recreate the HA cluster.
 {: important}
 
 ## Performing an OS reload
