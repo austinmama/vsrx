@@ -32,19 +32,11 @@ Juniper vSRX gateway devices in IBM Cloud come with following default configurat
 * Access from the zone `SL-PRIVATE` to all services is provided by SoftLayer and address-set `SERVICE` is permitted
 * All other network accesses are denied
 
-## Default configuration of a sample standalone vSRX gateway
+## Default configuration of a sample standalone of latest SR-IOV vSRX gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
 ```
 system {
-    host-name cicd-gw2-vSRX;
-    root-authentication {
-        encrypted-password "xxxxxxxxxxxxxxxxxxxxxxzx"; ## SECRET-DATA
-    }
-    name-server {
-        10.0.80.11;
-        10.0.80.12;
-    }
     login {
         class security {
             permissions [ security-control view-configuration ];
@@ -53,27 +45,40 @@ system {
             uid 2000;
             class super-user;
             authentication {
-                encrypted-password "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; ## SECRET-DATA
+                encrypted-password "xxxxxxxxxxxxxxxxxxxxxxzx"; ## SECRET-DATA
             }
         }
     }
+    root-authentication {
+        encrypted-password "xxxxxxxxxxxxxxxxxxxxxxzx"; ## SECRET-DATA
+    }
     services {
-        ssh;
+        ssh {
+            root-login allow;
+        }
         netconf {
             ssh {
                 port 830;
             }
         }
         web-management {
+            http {
+                interface fxp0.0;
+            }
             https {
                 port 8443;
                 system-generated-certificate;
-                interface [ fxp0.0 ge-0/0/0.0 ge-0/0/1.0 ];
+                interface [ fxp0.0 ae0.0 ae1.0 ge-0/0/0.0 ge-0/0/1.0 ];
             }
             session {
                 session-limit 100;
             }
         }
+    }
+    host-name cicd-gw1-vSRX;
+    name-server {
+        10.0.80.11;
+        10.0.80.12;
     }
     syslog {
         user * {
@@ -87,8 +92,20 @@ system {
             interactive-commands any;
         }
     }
+    license {
+        autoupdate {
+            url https://ae1.juniper.net/junos/key_retrieval;
+        }
+    }
     ntp {
         server 10.0.77.54;
+    }
+}
+chassis {
+    aggregated-devices {
+        ethernet {
+            device-count 10;
+        }
     }
 }
 security {
@@ -118,8 +135,8 @@ security {
             address SL13 10.2.160.0/20;
             address SL10 10.2.32.0/20;
             address SL11 10.2.64.0/20;
-            address SL_PRIV_MGMT 10.188.111.89/32;
-            address SL_PUB_MGMT 169.60.86.234/32;
+            address SL_PRIV_MGMT 10.184.108.150/32;
+            address SL_PUB_MGMT 169.48.2.5/32;
             address-set SERVICE {
                 address SL8;
                 address SL9;
@@ -167,6 +184,30 @@ security {
         }
     }
     policies {
+        from-zone trust to-zone trust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+        from-zone trust to-zone untrust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
         from-zone SL-PRIVATE to-zone SL-PRIVATE {
             policy Allow_Management {
                 match {
@@ -193,9 +234,15 @@ security {
         }
     }
     zones {
+        security-zone trust {
+            tcp-rst;
+        }
+        security-zone untrust {
+            screen untrust-screen;
+        }
         security-zone SL-PRIVATE {
             interfaces {
-                ge-0/0/0.0 {
+                ae0.0 {
                     host-inbound-traffic {
                         system-services {
                             all;
@@ -206,7 +253,7 @@ security {
         }
         security-zone SL-PUBLIC {
             interfaces {
-                ge-0/0/1.0 {
+                ae1.0 {
                     host-inbound-traffic {
                         system-services {
                             all;
@@ -219,32 +266,56 @@ security {
 }
 interfaces {
     ge-0/0/0 {
-        description PRIVATE_VLANs;
-        flexible-vlan-tagging;
-        native-vlan-id 925;
-        unit 0 {
-            vlan-id 925;
-            family inet {
-                address 10.188.111.89/26;
-            }
+        ether-options {
+            802.3ad ae0;
         }
     }
     ge-0/0/1 {
+        ether-options {
+            802.3ad ae1;
+        }
+    }
+    ge-0/0/2 {
+        ether-options {
+            802.3ad ae0;
+        }
+    }
+    ge-0/0/3 {
+        ether-options {
+            802.3ad ae1;
+        }
+    }
+    ae0 {
+        description PRIVATE_VLANs;
+        flexible-vlan-tagging;
+        native-vlan-id 1121;
+        unit 0 {
+            vlan-id 1121;
+            family inet {
+                address 10.184.108.150/26;
+            }
+        }
+    }
+    ae1 {
         description PUBLIC_VLAN;
         flexible-vlan-tagging;
-        native-vlan-id 985;
+        native-vlan-id 1294;
         unit 0 {
-            vlan-id 985;
+            vlan-id 1294;
             family inet {
-                address 169.60.86.234/29;
+                address 169.48.2.5/27;
             }
             family inet6 {
-                address 2607:f0d0:3901:0063:0000:0000:0000:0005/64;
+                address 2607:f0d0:1f01:d7::c/64;
             }
         }
     }
     fxp0 {
-        unit 0;
+        unit 0 {
+            family inet {
+                address 192.168.68.150/24;
+            }
+        }
     }
     lo0 {
         unit 0 {
@@ -257,20 +328,14 @@ interfaces {
         }
     }
 }
-routing-options {
-    static {
-        route 0.0.0.0/0 next-hop 169.60.86.233;
-        route 161.26.0.0/16 next-hop 10.188.111.65;
-        route 10.0.0.0/8 next-hop 10.188.111.65;
-    }
-}
 firewall {
     filter PROTECT-IN {
         term PING {
             from {
                 destination-address {
-                    169.60.86.234/32;
-                    10.188.111.89/32;
+                    169.48.2.5/32;
+                    10.184.108.150/32;
+                    192.168.68.0/24;
                 }
                 protocol icmp;
             }
@@ -279,25 +344,41 @@ firewall {
         term SSH {
             from {
                 destination-address {
-                    169.60.86.234/32;
-                    10.188.111.89/32;
+                    169.48.2.5/32;
+                    10.184.108.150/32;
+                    192.168.68.0/24;
                 }
                 protocol tcp;
-                destination-port ssh;
+                destination-port [ ssh 830 ];
             }
             then accept;
         }
         term WEB {
             from {
                 destination-address {
-                    169.60.86.234/32;
-                    10.188.111.89/32;
+                    169.48.2.5/32;
+                    10.184.108.150/32;
                 }
                 protocol tcp;
                 port 8443;
             }
             then accept;
         }
+        term DNS {
+            from {
+                protocol udp;
+                source-port 53;
+            }
+            then accept;
+        }
+    }
+}
+routing-options {
+    static {
+        route 166.9.0.0/16 next-hop 10.184.108.129;
+        route 0.0.0.0/0 next-hop 169.48.2.97;
+        route 161.26.0.0/16 next-hop 10.184.108.129;
+        route 10.0.0.0/8 next-hop 10.184.108.129;
     }
 }
 ```
@@ -308,6 +389,8 @@ The following table illustrates network interface definitions for the previous c
 | :---          |   :---         |
 | ge-0/0/0      |   Gigabit ethernet interface for SL-PRIVATE transit VLAN |
 | ge-0/0/1      |   Gigabit ethernet interface for SL-PUBLIC transit VLAN  |
+| ae0.0         |   Aggregated Ethernet interface |
+| ae1.0         |   Aggregated Ethernet interface |
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
@@ -319,24 +402,35 @@ The following table illustrates network interface definitions for the previous c
 groups {
     node0 {
         system {
-            host-name cicd-gw1-vSRX-Node0;
+            host-name cicd-gw2-vSRX-Node0;
+        }
+        interfaces {
+            fxp0 {
+                unit 0 {
+                    family inet {
+                        address 192.168.59.150/24;
+                    }
+                }
+            }
         }
     }
     node1 {
         system {
-            host-name cicd-gw1-vSRX-Node1;
+            host-name cicd-gw2-vSRX-Node1;
+        }
+        interfaces {
+            fxp0 {
+                unit 0 {
+                    family inet {
+                        address 192.168.59.151/24;
+                    }
+                }
+            }
         }
     }
 }
 apply-groups "${node}";
 system {
-    root-authentication {
-        encrypted-password "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; ## SECRET-DATA
-    }
-    name-server {
-        10.0.80.11;
-        10.0.80.12;
-    }
     login {
         class security {
             permissions [ security-control view-configuration ];
@@ -345,18 +439,26 @@ system {
             uid 2000;
             class super-user;
             authentication {
-                encrypted-password "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; ## SECRET-DATA
+                encrypted-password "xxxxxxxxxxxxxxxxxxxxxxzx"; ## SECRET-DATA
             }
         }
     }
+    root-authentication {
+        encrypted-password "xxxxxxxxxxxxxxxxxxxxxxzx"; ## SECRET-DATA
+    }
     services {
-        ssh;
+        ssh {
+            root-login allow;
+        }
         netconf {
             ssh {
                 port 830;
             }
         }
         web-management {
+            http {
+                interface fxp0.0;
+            }
             https {
                 port 8443;
                 system-generated-certificate;
@@ -366,6 +468,10 @@ system {
                 session-limit 100;
             }
         }
+    }
+    name-server {
+        10.0.80.11;
+        10.0.80.12;
     }
     syslog {
         user * {
@@ -379,12 +485,18 @@ system {
             interactive-commands any;
         }
     }
+    license {
+        autoupdate {
+            url https://ae1.juniper.net/junos/key_retrieval;
+        }
+    }
     ntp {
         server 10.0.77.54;
     }
 }
 chassis {
     cluster {
+        control-link-recovery;
         reth-count 4;
         redundancy-group 0 {
             node 0 priority 100;
@@ -394,6 +506,12 @@ chassis {
             node 0 priority 100;
             node 1 priority 1;
             preempt;
+            interface-monitor {
+                ge-0/0/3 weight 130;
+                ge-0/0/4 weight 130;
+                ge-7/0/3 weight 130;
+                ge-7/0/4 weight 130;
+            }
         }
     }
 }
@@ -424,8 +542,8 @@ security {
             address SL13 10.2.160.0/20;
             address SL10 10.2.32.0/20;
             address SL11 10.2.64.0/20;
-            address SL_PRIV_MGMT 10.137.165.55/32;
-            address SL_PUB_MGMT 159.8.201.115/32;
+            address SL_PRIV_MGMT 10.127.152.144/32;
+            address SL_PUB_MGMT 159.8.12.5/32;
             address-set SERVICE {
                 address SL8;
                 address SL9;
@@ -473,6 +591,30 @@ security {
         }
     }
     policies {
+        from-zone trust to-zone trust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+        from-zone trust to-zone untrust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
         from-zone SL-PRIVATE to-zone SL-PRIVATE {
             policy Allow_Management {
                 match {
@@ -499,6 +641,12 @@ security {
         }
     }
     zones {
+        security-zone trust {
+            tcp-rst;
+        }
+        security-zone untrust {
+            screen untrust-screen;
+        }
         security-zone SL-PRIVATE {
             interfaces {
                 reth0.0 {
@@ -531,7 +679,7 @@ interfaces {
     }
     ge-0/0/2 {
         gigether-options {
-            redundant-parent reth2;
+            redundant-parent reth0;
         }
     }
     ge-0/0/3 {
@@ -540,6 +688,26 @@ interfaces {
         }
     }
     ge-0/0/4 {
+        gigether-options {
+            redundant-parent reth1;
+        }
+    }
+    ge-0/0/5 {
+        gigether-options {
+            redundant-parent reth2;
+        }
+    }
+    ge-0/0/6 {
+        gigether-options {
+            redundant-parent reth2;
+        }
+    }
+    ge-0/0/7 {
+        gigether-options {
+            redundant-parent reth3;
+        }
+    }
+    ge-0/0/8 {
         gigether-options {
             redundant-parent reth3;
         }
@@ -551,7 +719,7 @@ interfaces {
     }
     ge-7/0/2 {
         gigether-options {
-            redundant-parent reth2;
+            redundant-parent reth0;
         }
     }
     ge-7/0/3 {
@@ -560,6 +728,26 @@ interfaces {
         }
     }
     ge-7/0/4 {
+        gigether-options {
+            redundant-parent reth1;
+        }
+    }
+    ge-7/0/5 {
+        gigether-options {
+            redundant-parent reth2;
+        }
+    }
+    ge-7/0/6 {
+        gigether-options {
+            redundant-parent reth2;
+        }
+    }
+    ge-7/0/7 {
+        gigether-options {
+            redundant-parent reth3;
+        }
+    }
+    ge-7/0/8 {
         gigether-options {
             redundant-parent reth3;
         }
@@ -578,9 +766,6 @@ interfaces {
             }
         }
     }
-    fxp0 {
-        unit 0;
-    }
     lo0 {
         unit 0 {
             family inet {
@@ -598,7 +783,7 @@ interfaces {
         unit 0 {
             description "SL PRIVATE VLAN INTERFACE";
             family inet {
-                address 10.137.165.55/26;
+                address 10.127.152.144/26;
             }
         }
     }
@@ -609,10 +794,10 @@ interfaces {
         unit 0 {
             description "SL PUBLIC VLAN INTERFACE";
             family inet {
-                address 159.8.201.115/28;
+                address 159.8.12.5/29;
             }
             family inet6 {
-                address 2a03:8180:1401:72::6/64;
+                address 2a03:8180:1301:101::4/64;
             }
         }
     }
@@ -629,20 +814,14 @@ interfaces {
         }
     }
 }
-routing-options {
-    static {
-        route 0.0.0.0/0 next-hop 159.8.201.113;
-        route 161.26.0.0/16 next-hop 10.137.165.1;
-        route 10.0.0.0/8 next-hop 10.137.165.1;
-    }
-}
 firewall {
     filter PROTECT-IN {
         term PING {
             from {
                 destination-address {
-                    159.8.201.115/32;
-                    10.137.165.55/32;
+                    159.8.12.5/32;
+                    10.127.152.144/32;
+                    192.168.59.0/24;
                 }
                 protocol icmp;
             }
@@ -651,28 +830,43 @@ firewall {
         term SSH {
             from {
                 destination-address {
-                    159.8.201.115/32;
-                    10.137.165.55/32;
+                    159.8.12.5/32;
+                    10.127.152.144/32;
+                    192.168.59.0/24;
                 }
                 protocol tcp;
-                destination-port ssh;
+                destination-port [ ssh 830 ];
             }
             then accept;
         }
         term WEB {
             from {
                 destination-address {
-                    159.8.201.115/32;
-                    10.137.165.55/32;
+                    159.8.12.5/32;
+                    10.127.152.144/32;
                 }
                 protocol tcp;
                 port 8443;
             }
             then accept;
         }
+        term DNS {
+            from {
+                protocol udp;
+                source-port 53;
+            }
+            then accept;
+        }
     }
 }
-
+routing-options {
+    static {
+        route 166.9.0.0/16 next-hop 10.127.152.129;
+        route 0.0.0.0/0 next-hop 159.8.12.73;
+        route 161.26.0.0/16 next-hop 10.127.152.129;
+        route 10.0.0.0/8 next-hop 10.127.152.129;
+    }
+}
 ```
 
 The following table illustrates the network interface definitions for the previous configuration:
