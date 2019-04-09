@@ -35,7 +35,12 @@ Juniper vSRX gateway devices in IBM Cloud come with following default configurat
 ## Default configuration of a sample standalone of latest SR-IOV vSRX gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
+The following code samples are examples from the latest code release.
+{: note}
+
 ```
+## Last changed: 2019-04-04 19:29:45 UTC
+version 18.4R1-S1.3;
 system {
     login {
         class security {
@@ -394,11 +399,12 @@ The following table illustrates network interface definitions for the previous c
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
-
 ## Default configuration of a sample Highly Available (HA) vSRX gateway
 {: #default-configuration-of-a-sample-highly-available-ha-vsrx-gateway}
 
 ```
+## Last changed: 2019-04-04 20:03:36 UTC
+version 18.4R1-S1.3;
 groups {
     node0 {
         system {
