@@ -34,7 +34,9 @@ The process usually requires 1 hour 40 minutes to complete. Standalone Gateways 
 
 There are two requirements in order for an OS reload to succeed on an HA vSRX device:
 
-* Make sure that you are able to use the **vSRX root credentials** to [access the device using SSH through a private IP address](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#performing-ibm-cloud-juniper-vsrx-basics).
+* vSRX Gateway password must match password on file(IMS Database). Customer must match password shown in portal for vSRX.
+
+  <img src="images/gw-vsrx-password.png" alt="drawing" style="width: 700px;"/>
 
 * **Do NOT** perform an OS reload on both servers of the Highly Available gateway at the same time.
 
