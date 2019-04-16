@@ -34,7 +34,7 @@ The process usually requires 1 hour 40 minutes to complete. Standalone Gateways 
 
 For successful reload or rebuild cluster on an HA vSRX:
 
-* The root password for the provisioned vSRX Gateway must match the root password defined on the vSRX portal. The password defined in the portal was defined when the Gateway was first provisioned and may not match the current Gateway password. If the password was changed after the initial provisioning then SSH to the vSRX Gateway and change the root password to match, then attempt the OS Reload or Rebuild Cluster operation.
+* The root password for the provisioned vSRX Gateway must match the root password defined in the vSRX portal. The password in the portal was defined when the Gateway was first provisioned, and may not match the current Gateway password. If the password was changed after the initial provisioning, then use SSH to connect to the vSRX Gateway and change the root password to match. Once the passwords, you can proceed with the OS Reload or Rebuild Cluster operation.
 
   <img src="images/gw-vsrx-password.png" alt="drawing" style="width: 700px;"/>
 
