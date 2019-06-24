@@ -23,18 +23,18 @@ subcollection: vsrx
 # Importing/Exporting vSRX Configuration
 {: #importing-exporting-vsrx-configuration}
 
-The vSRX upgrade process preserves the configuration, and if the reloads afterwards are done one at a time, then the configuration is still preserved throughout the process. Only change is the interface remapping at the end to optimize for SR-IOV. However, it is still strongly recommended to export and backup your vSRX configuration settings before starting the upgrade.
+The vSRX upgrade process preserves the configuration, and if the reloads afterwards are done one at a time, then the configuration is still preserved throughout the process. However, it is still strongly recommended to export and backup your vSRX configuration settings before starting the upgrade.
 
-After the upgrade process, for SA, you can import the original configuration you have saved if you want to restore it. For HA, restore configuration manually from your exported file only if for some reason the upgrade fails.
+After the upgrade process, for Stand Alone, you should import the original configuration you have saved if you want to restore it. For High Availability, restore configuration manually from your exported file only if for some reason the upgrade fails.
 
 ## Considerations
 {: #considerations}
 
 * The upgrade process for Standalone and High Availability(HA) are different. Details can be found [here](docs/infrastructure/vsrx?topic=vsrx-upgrading-the-vsrx).
 * J-web interface allows you to display, edit, and upload the current configuration quickly and easily without using the Junos OS CLI. Reference [Juniper J-Web User Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/topics/concept/J-web-overview.html){:new_window} for more details.
-* The OS reload and redeployment of vSRX will put the correct SR-IOV optimized interface mapping in the vSRX configuration. So when importing original vSRX settings, make sure that the new “interfaces” section is not modified. There are two ways of doing it. You could either import sub-sections other that the “interfaces” section, or you could import the whole config and then manually restore 18.x SR-IOV interfaces.
+* <a id="InterfaceMapping"></a>An upgrade from the vSRX 15.x 10G offering to vSRX 18.x 10G overring results in changes to the vSRX interface mappings in the configuration file. So when importing original vSRX settings, make sure that the new “interfaces” section is not modified. There are two ways of doing it. You could either import sub-sections other that the “interfaces” section, or you could import the whole config and then manually restore 18.x SR-IOV interfaces.
 
-The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`.
+The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`. Reference [vsrx default configuration](docs/infrastructure/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) for more details on SR-IOV mappings.
 {: important}
 
 If you prefer using the Junos OS CLI, the following contents provide different methods to export/import your configuration settings, depending on whether you want to export/import the entire configuration or just part of it. To manage the configuration settings, entering CLI mode first, and then run the command `configure` to enter configuration mode. To commit your changes, run the command `commit` under configuration mode.
@@ -72,7 +72,7 @@ set interfaces ge-0/0/0 mtu 9000
 ## Import the Whole vSRX Configuration
 {: #import-the-whole-vsrx-configuration}
 
-The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`.
+[Ensure default interface mappings are preserved](#InterfaceMapping) after import.
 {: important}
 
 * After upgrading the vSRX, copy the config file you have saved back to the `/var/tmp` folder.
@@ -81,7 +81,7 @@ The new vSRX default interface configuration for both Linux Bridge and SR-IOV ne
 ## Import Part of the vSRX Configuration
 {: #import-part-of-the-vsrx-configuration}
 
-The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`.
+[Ensure default interface mappings are preserved](#InterfaceMapping) after import.
 {: important}
 
 * Under configuration mode, run `edit <section>` to go to the configuration tree level that you want.
