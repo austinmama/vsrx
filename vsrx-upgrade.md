@@ -58,7 +58,7 @@ For available Juniper vSRX versions and version specific upgrade considerations,
 ## Performing a vSRX Upgrade (Standalone)
 {: #performing-a-vsrx-upgrade-sa}
 
-To do a vSRX upgrade, reference [this page](docs/infrastructure/vsrx?topic=vsrx-reloading-the-os) to reload the OS. Since the default OS is the same OS, make sure to **change the default OS** and select the newer one.
+To do a vSRX upgrade, reference [this page](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os) to reload the OS. Since the default OS is the same OS, make sure to **change the default OS** and select the newer one.
 
 For Standalone, the previous configuration is not restored, so an export/import is strongly recommended!
 {: important}

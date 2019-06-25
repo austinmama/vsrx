@@ -30,11 +30,11 @@ After the upgrade process, for Stand Alone, you should import the original confi
 ## Considerations
 {: #considerations}
 
-* The upgrade process for Standalone and High Availability(HA) are different. Details can be found [here](docs/infrastructure/vsrx?topic=vsrx-upgrading-the-vsrx).
+* The upgrade process for Standalone and High Availability(HA) are different. Details can be found [here](/docs/infrastructure/vsrx?topic=vsrx-upgrading-the-vsrx).
 * J-web interface allows you to display, edit, and upload the current configuration quickly and easily without using the Junos OS CLI. Reference [Juniper J-Web User Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/topics/concept/J-web-overview.html){:new_window} for more details.
 * <a id="InterfaceMapping"></a>An upgrade from the vSRX 15.x 10G offering to vSRX 18.x 10G overring results in changes to the vSRX interface mappings in the configuration file. So when importing original vSRX settings, make sure that the new “interfaces” section is not modified. There are two ways of doing it. You could either import sub-sections other that the “interfaces” section, or you could import the whole config and then manually restore 18.x SR-IOV interfaces.
 
-The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`. Reference [vsrx default configuration](docs/infrastructure/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) for more details on SR-IOV mappings.
+The new vSRX default interface configuration for both Linux Bridge and SR-IOV needs to be preserved after the import of their configuration's. For example, for SR-IOV the ge interfaces have specific mappings to the host that must be preserved to enable SR-IOV. These interfaces are found in the cli via `show configuration interfaces`. Reference [vsrx default configuration](/docs/infrastructure/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) for more details on SR-IOV mappings.
 {: important}
 
 If you prefer using the Junos OS CLI, the following contents provide different methods to export/import your configuration settings, depending on whether you want to export/import the entire configuration or just part of it. To manage the configuration settings, entering CLI mode first, and then run the command `configure` to enter configuration mode. To commit your changes, run the command `commit` under configuration mode.
