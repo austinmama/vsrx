@@ -80,7 +80,7 @@ To do a vSRX upgrade, perform the following procedure:
 
   ![Upgrading](images/vsrx_upgrading.png)
 
-4. If the upgrade is successful the Gateway will move to "Upgrade Active". It is recommended you validate the vSRX configuration. The **Rollback** Action is available in the drop down menu. Rollback will revert the vSRX to the previous version and preserve any configuration's.
+4. If the upgrade is successful the Gateway will move to "Upgrade Active". It is recommended you validate the vSRX configuration. The **Rollback Version** Action is available in the drop down menu. Rollback will revert the vSRX to the previous version and preserve any configuration's.
 
 Once OS Reload is started in step 5 the Rollback Action will no longer be available.
 {: important}
