@@ -76,13 +76,19 @@ To do a vSRX upgrade, perform the following procedure:
 
   ![Hardware Server](images/os_hardware.png)
   
-3. On the device’s page, click **Upgrade** in the Action drop down menu to access the Server Configuration page.
+3. On the device’s page, click **Upgrade Version** in the Action drop down menu to access the Upgrade Version page.
 
-4. On the Server Configuration page, you can configure and start the vSRX Upgrade.
+  ![Upgrade Version Button](images/upgrade_version_button.png)
 
-5. If the upgrade is successful the Gateway will move to "Upgraded and Active". It is recommended you validate the vSRX configuration. The **Rollback** Action is available in the drop down menu. Rollback will revert the vSRX to the previous version and preserve any configuration's.
+4. On the Upgrade Version page, you can select the newer version and start the vSRX Upgrade.
+
+  ![Upgrade Version Page](images/upgrade_version_page.png)
+
+5. If the upgrade is successful the Gateway will move to "Upgrade Active". It is recommended you validate the vSRX configuration. The **Rollback** Action is available in the drop down menu. Rollback will revert the vSRX to the previous version and preserve any configuration's.
 
 Once OS Reload is started in step 6 the Rollback Action will no longer be available.
 {: important}
+
+  ![Rollback Version Button](images/rollback_version_button.png)
 
 6. OS Reload one node at a time to update the Host OS. OS Reload Steps can be found [here](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os). Since the default OS is the same OS, make sure to **change the default OS** and select the newer one.
