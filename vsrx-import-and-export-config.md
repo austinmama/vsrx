@@ -102,6 +102,7 @@ To import only part of the vSRX configuration:
 3. Paste the content, hit Enter to go to a new line, then type Control + D to end the input. 
 
   The output should be similar to the following:
+  
   ```
   # load merge terminal relative
   [Type ^D at a new line to end input]
@@ -115,7 +116,7 @@ To import only part of the vSRX configuration:
   
   [edit interfaces lo0 unit 0]
   ```
-  
+
 Alternatively, you can also:
 
 * Replace the configuration instead of merging it, by deleting the configuration first with the command `delete` under this configuration tree level and then performing a `load merge terminal relative` to copy and paste your previous configuration. 
