@@ -81,18 +81,14 @@ To do a vSRX upgrade, perform the following procedure:
 
   ![Upgrade Version Page](images/upgrade_version_page.png)
   
-3. During the upgrade process, the vSRX status is "Upgrading".
+3. During the upgrade process, the vSRX status shows as "Upgrading".
 
-  ![Upgrading](images/vsrx_upgrading.png)
-
-4. If the upgrade is successful, the Gateway status changes to "Upgrade Active". It is recommended you validate the vSRX configuration. 
+4. If the upgrade is successful, the Gateway status changes to "Upgrade Active". It is recommended that you now validate the vSRX configuration. 
 
   The **Rollback Version** Action is available in the drop down menu, and can revert the vSRX to the previous version and configuration.
   {: note}
 
   Once the OS reload process begins in step 5, the Rollback Action will no longer be available.
   {: important}
-  
-  ![Rollback Version Button](images/rollback_version_button.png)
   
 5. Perform an OS reload on one node at a time to update the Host OS. The procedure can be found [here](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os). Ensure that you **change the default OS** and select the newest one.
