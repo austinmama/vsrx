@@ -30,7 +30,7 @@ The upgrade process migrates the Junos OS for vSRX software to the latest releas
 
 * The Standalone upgrade requires only an OS reload.
 
-For a Standalone environment, the previous configuration is not restored, so you should export and import your configurstion. Refer to  [Importing and exporting the vSRX configuration](docs/infrastructure/vsrx?topic=vsrx-importing-and-exporting-the-vsrx-configuration) for more information.
+For a Standalone environment, the previous configuration is not restored, so you should export and import your configurstion. Refer to  [Importing and exporting the vSRX configuration](docs/infrastructure/vsrx?topic=vsrx-importing-exporting-vsrx-configuration) for more information.
 {: important}
 
 * The HA upgrade requires two steps: a vSRX ppgrade and then the OS reload. It is strongly recommended you confirm that the vSRX configuration is correct at each step.
@@ -90,9 +90,9 @@ To do a vSRX upgrade, perform the following procedure:
   The **Rollback Version** Action is available in the drop down menu, and can revert the vSRX to the previous version and configuration.
   {: note}
 
-Once the OS reload process begins in step 5, the Rollback Action will no longer be available.
-{: important}
-
+  Once the OS reload process begins in step 5, the Rollback Action will no longer be available.
+  {: important}
+  
   ![Rollback Version Button](images/rollback_version_button.png)
-
+  
 5. Perform an OS reload on one node at a time to update the Host OS. The procedure can be found [here](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os). Ensure that you **change the default OS** and select the newest one.
