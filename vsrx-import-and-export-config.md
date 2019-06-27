@@ -113,7 +113,6 @@ To import only part of the vSRX configuration:
           }
   load complete
   
-  
   [edit interfaces lo0 unit 0]
   ```
 
