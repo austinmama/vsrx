@@ -30,10 +30,10 @@ The upgrade process migrates the Junos OS for vSRX software to the latest releas
 
 * The Standalone upgrade requires only an OS reload.
 
-For a Standalone environment, the previous configuration is not restored, so you should export and import your configurstion. Refer to  [Importing and exporting the vSRX configuration](docs/infrastructure/vsrx?topic=vsrx-importing-exporting-vsrx-configuration) for more information.
+For a Standalone environment, the previous configuration is not restored, so you should export and import your configuration. Refer to [Importing and exporting the vSRX configuration](/docs/infrastructure/vsrx?topic=vsrx-importing-exporting-vsrx-configuration) for more information.
 {: important}
 
-* The HA upgrade requires two steps: a vSRX ppgrade and then the OS reload. It is strongly recommended you confirm that the vSRX configuration is correct at each step.
+* The HA upgrade requires two steps: a vSRX upgrade and then the OS reload. It is strongly recommended you confirm that the vSRX configuration is correct at each step.
 * When requesting OS reload, make sure to change the default OS and select the newest version.
 
 ![Change Default OS](images/change_default_os.png)
@@ -48,7 +48,7 @@ Performing an OS reload on both servers of the High Availability gateway at the 
 
 * Before performing an upgrade, run the command `show chassis cluster status` to ensure that a single node is configured as primary (with higher priority) for both redundancy groups, and that that node at run time is serving as the primary for both RGs. If the RGs primary is not on the same node, run `request chassis cluster failover redundancy-group <RG number> node <node number>` and then `request chassis cluster failover reset redundancy-group <RG number>` to manually make RGs fall on the same node.
 
-It is good practice to backup (export) your vSRX configuration settings before starting an upgrade. Details can be found [here](/docs/infrastructure/vsrx?topic=vsrx-importing-and-exporting-the-vsrx-configuration).
+It is good practice to backup (export) your vSRX configuration settings before starting an upgrade. Details can be found [here](/docs/infrastructure/vsrx?topic=vsrx-importing-exporting-vsrx-configuration).
 {: tip}
 
 The upgrade process varies depending upon the vSRX Gateway Appliance configuration. Reference the vSRX appliance configurations to determine which upgrade steps are needed for you vSRX:
@@ -85,7 +85,7 @@ To do a vSRX upgrade, perform the following procedure:
 
   If the upgrade is successful, the Gateway status changes to "Upgrade Active". It is recommended that you now validate the vSRX configuration. 
 
-  The **Rollback Version** action is available in the drop down menu, and can revert the vSRX to the previous version and configuration. Once the OS reload process begins in step 5, the Rollback Version action will no longer be available.
+  The **Rollback Version** action is available in the drop down menu, and can revert the vSRX to the previous version and configuration. Once the OS reload process begins in step 4, the Rollback Version action will no longer be available.
   {: important}
   
 5. Perform an OS reload on one node at a time to update the Host OS. The procedure can be found [here](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os). Ensure that you **change the default OS** and select the newest one.
