@@ -1,2 +1,2 @@
-#IBM Cloud Juniper vSRX
-IBM Cloud Juniper vSRX Gateway
+#{{site.data.keyword.vsrx_full}}
+{{site.data.keyword.vsrx_full}} Gateway
