@@ -20,7 +20,7 @@ subcollection: vsrx
 {:note: .note}
 {:important: .important}
 
-# Performing {{site.data.keyword.vsrx_full}} Basics
+# Performing vSRX Basics
 {: #performing-ibm-cloud-juniper-vsrx-basics}
 
 The {{site.data.keyword.vsrx_full}} gateway can be configured using a remote console session through SSH or by logging into the Juniper web management GUI.

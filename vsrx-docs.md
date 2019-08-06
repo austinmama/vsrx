@@ -20,7 +20,7 @@ subcollection: vsrx
 {:note: .note}
 {:important: .important}
 
-# Supplemental {{site.data.keyword.vsrx_full}} documentation
+# Supplemental vSRX documentation
 {: #supplemental-ibm-cloud-juniper-vsrx-documentation}
 
 The following table provides links to supplemental documentation for {{site.data.keyword.vsrx_full}} Standard.
