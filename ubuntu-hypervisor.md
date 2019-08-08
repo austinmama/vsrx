@@ -36,10 +36,9 @@ By default, the Ubuntu Firewall (UFW) is not enabled. If you do enable the UFW, 
   show chassis cluster status
   ```
 
-  If the output shows the node status as lost, then it is possible the firewall is blocking GRE and cluster heartbeat traffic.
-  
+ If the output shows the node status as lost, then it is possible the firewall is blocking GRE and cluster heartbeat traffic.
+    
   ```
-  
   root@asloma-vsrx-18-10g-dual-wdc07-ha0-vSRX-Node0> show chassis cluster status    
   
   Monitor Failure codes:
@@ -75,12 +74,13 @@ By default, the Ubuntu Firewall (UFW) is not enabled. If you do enable the UFW, 
 
     node0  100      primary              yes     no       None           
 
-    node1  0        lost                 n/a     n/a      n/a       
-    ```
+    node1  0        lost                 n/a     n/a      n/a  
+
+  ```
 
 You can allow GRE traffic through the firewall by performing the following procedure:
 
-1. Modify the ``/etc/ufw/before.rules` to accept Protocol 47 traffic. To do so, add the following to the top of the `before.rules` file:
+1. Modify the `/etc/ufw/before.rules` to accept Protocol 47 traffic. To do so, add the following to the top of the `before.rules` file:
 
   ```
   -A ufw-before-input -p 47 -j ACCEPT
