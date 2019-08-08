@@ -32,6 +32,7 @@ IBM Cloud Juniper vSRX
     vpn.md
     os-reload.md
     vsrx-upgrade.md
+    ubuntu-hypervisor.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
