@@ -39,6 +39,7 @@ By default, the Ubuntu Firewall (UFW) is not enabled. If you do enable the UFW, 
   If the output shows the node status as lost, then it is possible the firewall is blocking GRE and cluster heartbeat traffic.
   
   ```
+  
   root@asloma-vsrx-18-10g-dual-wdc07-ha0-vSRX-Node0> show chassis cluster status    
   
   Monitor Failure codes:
