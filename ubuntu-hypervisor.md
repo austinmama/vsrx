@@ -39,41 +39,30 @@ By default, the Ubuntu Firewall (UFW) is not enabled. If you do enable the UFW, 
  If the output shows the node status as lost, then it is possible the firewall is blocking GRE and cluster heartbeat traffic.
     
   ```
-  root@asloma-vsrx-18-10g-dual-wdc07-ha0-vSRX-Node0> show chassis cluster status    
-  
+  root@asloma-vsrx-18-10g-dual-wdc07-ha0-vSRX-Node0> show chassis cluster status1
+    
   Monitor Failure codes:
   
     CS  Cold Sync monitoring        FL  Fabric Connection monitoring
-  
     GR  GRES monitoring             HW  Hardware monitoring
-  
     IF  Interface monitoring        IP  IP monitoring
-  
     LB  Loopback monitoring         MB  Mbuf monitoring
-  
     NH  Nexthop monitoring          NP  NPC monitoring              
-  
     SP  SPU monitoring              SM  Schedule monitoring
-  
     CF  Config Sync monitoring      RE  Relinquish monitoring
   
-
     Cluster ID: 7
 
     Node   Priority Status               Preempt Manual   Monitor-failures
 
-
     Redundancy group: 0 , Failover count: 1
-
+  
     node0  100      primary              no      no       None           
-
     node1  0        lost                 n/a     n/a      n/a            
-
 
     Redundancy group: 1 , Failover count: 3
 
     node0  100      primary              yes     no       None           
-
     node1  0        lost                 n/a     n/a      n/a  
 
   ```
