@@ -23,9 +23,10 @@ subcollection: vsrx
 # Upgrading the vSRX
 {: #upgrading-the-vsrx}
 
-For High Availability (HA) vSRX configurations an upgrade require two steps.
-1) Running the `Upgrade Version` action one time against the vSRX Gateway. This upgrades Junos OS on the vSRX.
-2) Running the `OS Reload` action against each bare-metal host, one at a time. This upgrades Ubuntu OS.
+The process to upgrade High Availability (HA) vSRX configurations require two steps:
+
+1. Running the `Upgrade Version` action against the vSRX Gateway, which upgrades the Junos OS on the vSRX.
+2. Running the `OS Reload` action against each bare-metal host, one at a time, which upgrades the Ubuntu OS.
 
 The upgrade process usually requires several hours to complete, depending on whether it's a Standalone or High Availability gateway appliance. For Standalone Gateways, the vSRX will be out of service during the upgrade process. For HA Gateways, when doing the upgrade, the vSRX will failover to another server in the cluster, and continue to process data traffic. Once the upgrade is complete, the server will rejoin the cluster.  
 
