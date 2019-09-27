@@ -20,7 +20,7 @@ subcollection: vsrx
 {:important: .important}
 {:download: .download}
 
-# Getting Started With IBM Cloud Juniper vSRX
+# Getting Started with IBM Cloud Juniper vSRX
 {: #getting-started}
 
 To get started with the {{site.data.keyword.vsrx_full}} Gateway, you'll first need to determine whether your account is linked to IBM Cloud.
