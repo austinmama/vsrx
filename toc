@@ -18,8 +18,7 @@ IBM Cloud Juniper vSRX
 
     {: .topicgroup}
     Work with VLANs
-        gateway-appliance/gateway-appliance-managing-vlans-and-gateway-appliances
-        /gateway-appliance/gateway-appliance-routing-vlans
+        /gateway-appliance/gateway-appliance-managing-vlans-and-gateway-appliances
 
     vsrx-default-config.md
     vsrx-import-and-export-config.md
