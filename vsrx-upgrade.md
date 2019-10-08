@@ -114,7 +114,7 @@ To do a vSRX upgrade, perform the following procedure:
 
 4. Perform an OS reload on one node at a time to update the Host OS. The procedure can be found [here](/docs/infrastructure/vsrx?topic=vsrx-reloading-the-os). Ensure that you **change the default OS** and select the newest one. Note, the host OS password will change after the OS reload completes.
 
-  For 10G (SR-IOV) upgrade only, after the first OS reload completes that node will become the primary node. High Availability will not be enabled until the second node is OS reloaded to enable SR-IOV. Therefore, it is strongly recommended that the OS Reload of the second node is executed in a timely manner.
+  For 10G (SR-IOV) upgrades only: When the first OS reload completes, that node becomes the primary node. High Availability will not be enabled until the second node is OS reloaded to enable SR-IOV. Therefore, it is strongly recommended that you execute the OS reload of the second node quickly.
   {: important}
 
 ## Post-Upgrade considerations
