@@ -124,11 +124,11 @@ The vSRX license can either be specified when the Gateway is first ordered or it
 To view your current license, perform the following procedure:
 
 1. From your browser, open [https://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){:new_window} and log into your account.
-2. Select the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) from the top left, then click **Classic Infrastructure**.
+2. Select the Menu icon  ![Menu icon](../../icons/icon_hamburger.svg)  from the top left, then click **Classic Infrastructure**.
 3. Choose **Network > Gateway Appliances**.
 4. Click the Gateway Appliance Name for the desired Network Gateway to access the Gateway Appliance Details screen.
 
 To change your current license, perform the steps above, then:
 
-1. Click the Pencil icon ![Pencil icon](../../icons/edit-tagging.svg) next to your current license to edit it.
+1. Click the Pencil icon  ![Pencil icon](../../icons/edit-tagging.svg)  next to your current license to edit it.
 2. Select the desired license and click **Update**.
