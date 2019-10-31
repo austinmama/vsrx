@@ -36,6 +36,7 @@ IBM Cloud Juniper vSRX
     routing.md
     vpn.md
     os-reload.md
+    rebuild-cluster.md
     vsrx-upgrade.md
     {: .navgroup-end}
 
