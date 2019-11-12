@@ -11,7 +11,7 @@ subcollection: vsrx
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank_"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -35,7 +35,7 @@ You can access the vSRX using SSH through a public IP address, or through a priv
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
-  <img src="images/gw-sa-details.png" alt="drawing" style="width: 700px;"/>
+  ![Gateway details](images/gw-sa-details.png "Gateway details")
 
 2. Click the "eye" icon to reveal the admin user's password.
 

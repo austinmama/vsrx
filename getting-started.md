@@ -11,7 +11,7 @@ subcollection: vsrx
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank_"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -49,14 +49,14 @@ Alternatively, from the [IBM Cloud Catalog ![External link icon](../../icons/lau
 
 3. From the **Gateway appliance** section, enter your **Hostname** and **Domain** name information. These fields will already be populated with default information, so ensure the values are correct.
 
-	<img src="images/linked_order.png" alt="drawing" style="width: 700px;"/>
+	![Linked order](images/linked_order.png "Linked order")
 
 4. Check the **High Availability** option if desired, then select your desired data center **Location**, and the specific **Pod** you want from the dropdown menu.
 
   Only pods that already have an associated VLAN will display here. If you wish to provision your Gateway Appliance in a pod you don't see listed, first create a VLAN there.
   {: note}
 
-	<img src="images/linked_server.png" alt="drawing" style="width: 600px;"/>
+	![Linked server](images/linked_server.png "Linked server")
 
 5. From the **Configuration** section, choose your processor's RAM. You can also define an SSH key, if you want to use it to authenticate access to your new Gateway.
 
@@ -115,4 +115,4 @@ After your order is approved, the provisioning of your vSRX starts automatically
 
 Click the gateway name to open the **Gateway Details** page. You'll find the IP addresses, login username, and passwords for the device.
 
-<img src="images/after_order.png" alt="drawing" style="width: 700px;"/>
+![After ordering](images/after_order.png "After ordering")
