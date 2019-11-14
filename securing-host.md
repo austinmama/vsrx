@@ -34,7 +34,7 @@ Implementing an Ubuntu firewall (UFW, Iptables, and so on) without required rule
 
 The following rules are used to allow cluster communication for UFW:
 
-- To allow protocol 47 (used for heartbeat communication) in /etc/ufw/before.rules:
+- To allow protocol 47 (used for heartbeat communication) in `/etc/ufw/before.rules`:
 
   ```
   -A ufw-before-input -p 47 -j ACCEPT
