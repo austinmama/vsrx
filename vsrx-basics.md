@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-31"
+lastupdated: "2019-11-14"
 
 keywords: basics, performing, accessing, ssh, device, gateway, configuration, mode, juniper, ui, dns, htp, password
 
@@ -23,7 +23,8 @@ subcollection: vsrx
 # Performing vSRX Basics
 {: #performing-ibm-cloud-juniper-vsrx-basics}
 
-The {{site.data.keyword.vsrx_full}} gateway can be configured using a remote console session through SSH or by logging into the Juniper web management GUI.
+You can configure and maintain your {{site.data.keyword.vsrx_full}} in a variety of ways, either through a remote console session through SSH or by logging into the Juniper web management GUI.
+{: shortdesc}
 
 Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
 {: note}

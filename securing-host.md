@@ -4,7 +4,7 @@ copyright:
   years: 2018
 lastupdated: "2019-11-14"
 
-keywords: about, vsrx, overview, details, firewall, vpn, nat, routing, vlan
+keywords: secure, securing, host, os, ubuntu, ufw, iptables, firewal, vsrx, juniper
 
 subcollection: vsrx
 
