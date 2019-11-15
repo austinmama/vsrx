@@ -32,7 +32,7 @@ If a public IP is assigned to the host, you can remove it and use the private IP
 Implementing an Ubuntu firewall (UFW, Iptables, and so on) without required rules can cause the {{site.data.keyword.vsrx}} HA cluster to be disabled. The vSRX solution depends on heartbeat communication between the primary and secondary nodes. If the firewall rules do not allow communication between the nodes, then cluster communication will be lost.
 {: important}
 
-For {{site.data.keyword.vsrx}} version 18.4 and later the following rules are used to allow cluster communication for UFW:
+For {{site.data.keyword.vsrx}} version 18.4 and later, the following rules are used to allow cluster communication for UFW:
 
 - To allow protocol 47 (used for heartbeat communication) in `/etc/ufw/before.rules`:
 
@@ -52,9 +52,9 @@ For {{site.data.keyword.vsrx}} version 18.4 and later the following rules are us
   ufw enable
   ```
 
-For {{site.data.keyword.vsrx}} version's prior to 18.4 the rules must also allow for multicast communication.
+For {{site.data.keyword.vsrx}} versions prior to 18.4, the rules must also allow for multicast communication.
 
-In some cases, troubleshooting operations may require disabling of the firewall for access to public repositories. Work with IBM Support to understand how to proceed in these cases.
+In some cases, troubleshooting operations may require disabling the firewall for access to public repositories. In these cases, you should work with IBM Support to understand how to proceed.
 {: note}
 
 Most Gateway actions require SSH access to the host OS and the {{site.data.keyword.vsrx}} to execute. Blocking this access with a firewall can cause the following actions to fail:
