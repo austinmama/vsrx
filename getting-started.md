@@ -39,9 +39,9 @@ Each license includes a different set of features and options, and the following
 
 | License Type  | Features |
 | ------------- | ------------- |
-| Standard | <ul><li>Core security: firewall, ALG, screens, user firewall</li><li>IPsec VPN (site-to-site VPN)</li><li>NAT</li><li>CoS</li><li>Routing services: BGP, OSPF, DHCP, J-Flow, IPv4</li><li>Foundation: Static routing, management (J-Web, CLI, and NETCONF), on-box logging, diagnostics</li></ul>
+| **Standard** | <ul><li>Core security: firewall, ALG, screens, user firewall</li><li>IPsec VPN (site-to-site VPN)</li><li>NAT</li><li>CoS</li><li>Routing services: BGP, OSPF, DHCP, J-Flow, IPv4</li><li>Foundation: Static routing, management (J-Web, CLI, and NETCONF), on-box logging, diagnostics</li></ul>
  |
-| Content Security Bundle (CSB) <br>Includes all Standard features, along with the additional features in the next column.</br> | <ul><li>AppSecure<ul><li>Application Tracking (AppTrack)</li><li>Application Firewall (AppFW)</li><li>Application Quality of Service (AppQoS)</li><li>Advanced policy-based routing (APBR)</li><li>Application Quality of Experience (AppQoE)</li></ul></li></ul> |
+| **Content Security Bundle (CSB)** <br></br><br>Includes all Standard features, along with the additional features listed in the next column.</br> | <ul><li>AppSecure<ul><li>Application Tracking (AppTrack)</li><li>Application Firewall (AppFW)</li><li>Application Quality of Service (AppQoS)</li><li>Advanced policy-based routing (APBR)</li><li>Application Quality of Experience (AppQoE)</li></ul></li></ul><ul><li>•	User Firewall<li>IPS</li><li>UTM</li><ul><li>o	Anti Virus</li><li>o	Anti Spam</li><li>o	Web Filtering</li><li>o	Content Filtering</li></ul><li>SSL Proxy</li><ul><li>o	SSL Forward Proxy</li><li>o	SSL Reverse Proxy</li><li>o	SSL Decrypting Mirror</li></ul></li></ul> |
 
 ### Ordering a vSRX
 {: #ordering-with-a-linked-account}
