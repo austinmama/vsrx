@@ -43,6 +43,9 @@ Each license includes a different set of features and options, and the following
  |
 | **Content Security Bundle (CSB)** <br></br><br>Includes all Standard features, along with the additional features listed in the next column.</br> | <ul><li>AppSecure<ul><li>Application Tracking (AppTrack)</li><li>Application Firewall (AppFW)</li><li>Application Quality of Service (AppQoS)</li><li>Advanced policy-based routing (APBR)</li><li>Application Quality of Experience (AppQoE)</li></ul></li></ul><ul><li>•	User Firewall<li>IPS</li><li>UTM</li><ul><li>o	Anti Virus</li><li>o	Anti Spam</li><li>o	Web Filtering</li><li>o	Content Filtering</li></ul><li>SSL Proxy</li><ul><li>o	SSL Forward Proxy</li><li>o	SSL Reverse Proxy</li><li>o	SSL Decrypting Mirror</li></ul></li></ul> |
 
+You can specify your license type when ordering your vSRX, as well as change the license using the [Gateway Appliance Details](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#vsrx-licenses) page.
+{: note}
+
 ### Ordering a vSRX
 {: #ordering-with-a-linked-account}
 
@@ -50,10 +53,13 @@ You can order your {{site.data.keyword.vsrx_full}} by performing the following p
 
 1. From your browser, open the Gateway Appliances page in the [Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: new_window} and log into your account.
 
-  You can also get to this page by logging into the [IBM Cloud UI Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com) and selecting **Classic Infrastructure > Network > Gateway appliance**.
-Alternatively, from the [IBM Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog), select the **Network** category then choose the **Gateway Appliance** tile.
+  You can also get to this page by logging into the [IBM Cloud UI Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com) and selecting **Classic Infrastructure > Network > Gateway appliance**. Alternatively, from the [IBM Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog), select the **Network** category then choose the **Gateway Appliance** tile.
 
 2. Choose **Juniper vSRX (up to 1 Gbps)** or **Juniper vSRX (up to 10 Gbps)** under **Gateway Vendor**.
+
+3. Choose your license type from **License add-ons**, either Standard or CSB.
+  Refer to the previous section for information on the features offered with each license.
+  {: tip}
 
 3. From the **Gateway appliance** section, enter your **Hostname** and **Domain** name information. These fields will already be populated with default information, so ensure the values are correct.
 

@@ -132,4 +132,7 @@ To view your current license, perform the following procedure:
 To change your current license, perform the steps above, then:
 
 1. Click the Pencil icon  ![Pencil icon](../../icons/edit-tagging.svg)  next to your current license to edit it.
-2. Select the desired license and click **Update**.
+
+  ![Changing your license](images/license-edit.png "Changing your license")
+
+2. Select your new license type and click **Save**.
