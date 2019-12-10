@@ -32,7 +32,7 @@ For a list of Known Limitations with {{site.data.keyword.vsrx_full}} Gateway, re
 ## Choosing a vSRX License
 {: #choosing-license}
 
-Currently, only {{site.data.keyword.vsrx_full}} 10G Standalone configurations can choose between the following license options. Full support for among all the various vSRX configurations, including 1G and High Availability, will be introduced soon.
+Currently, only {{site.data.keyword.vsrx_full}} 10G Standalone configurations can choose between the following license options. Full support for the various vSRX configurations, including 1G and High Availability, will be introduced soon.
 {: important}
 
 There are two license types available for your {{site.data.keyword.vsrx_full}}:
