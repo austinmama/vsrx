@@ -114,13 +114,10 @@ This prompts you to input a new password, which is encrypted and stored in the c
 
 The vSRX has two available licenses:
 
-* The Standard license
-* The Content Security Bundle license.
+* Standard
+* Content Security Bundle (CSB)
 
-Detailed information on these licenses can be found in the Juniper documentation topic <JUNIPER TOPIC NAME>.
-{: note}
-
-The vSRX license can either be specified when the Gateway is first ordered or it can be changed after it is provisioned.
+For information on the features offered with these licenses, refer to [Choosing a vSRX License](/docs/infrastructure/vsrx?topic=vsrx-getting-started#choosing-license.
 
 To view your current license, perform the following procedure:
 
@@ -129,10 +126,11 @@ To view your current license, perform the following procedure:
 3. Choose **Network > Gateway Appliances**.
 4. Click the Gateway Appliance Name for the desired Network Gateway to access the Gateway Appliance Details screen.
 
+
 To change your current license, perform the steps above, then:
 
 1. Click the Pencil icon  ![Pencil icon](../../icons/edit-tagging.svg)  next to your current license to edit it.
 
   ![Changing your license](images/license-edit.png "Changing your license")
 
-2. Select your new license type and click **Save**.
+2. Select your new license type, then click **Save**.
