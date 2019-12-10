@@ -30,6 +30,7 @@ For a list of Known Limitations with {{site.data.keyword.vsrx_full}} Gateway, re
 {: note}
 
 ## Choosing a vSRX License
+{: #choosing-license}
 There are two license types available for your {{site.data.keyword.vsrx_full}}:
 
 * Standard
