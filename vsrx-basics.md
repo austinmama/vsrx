@@ -112,6 +112,9 @@ This prompts you to input a new password, which is encrypted and stored in the c
 ## Viewing and changing vSRX licenses
 {: #vsrx-licenses}
 
+Currently, only {{site.data.keyword.vsrx_full}} 10G Standalone configurations can choose between the following license options. Full support for among all the various vSRX configurations, including 1G and High Availability, will be introduced soon.
+{: important}
+
 The vSRX has two available licenses:
 
 * Standard
