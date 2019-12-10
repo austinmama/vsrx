@@ -29,6 +29,20 @@ subcollection: vsrx
 For a list of Known Limitations with {{site.data.keyword.vsrx_full}} Gateway, refer to the [Known Limitations topic](/docs/infrastructure/vsrx?topic=vsrx-known-limitations-for-ibm-cloud-juniper-vsrx).
 {: note}
 
+## Choosing a vSRX License
+There are two license types available for your {{site.data.keyword.vsrx_full}}:
+
+* Standard
+* Content Security Bundle (CSB)
+
+Each license includes a different set of features and options, and the following table outlines the differences.
+
+| License Type  | Features |
+| ------------- | ------------- |
+| Standard | <ul><li>Core security: firewall, ALG, screens, user firewall</li><li>IPsec VPN (site-to-site VPN)</li><li>NAT</li><li>CoS</li><li>Routing services: BGP, OSPF, DHCP, J-Flow, IPv4</li><li>Foundation: Static routing, management (J-Web, CLI, and NETCONF), on-box logging, diagnostics</li></ul>
+ |
+| Content Security Bundle (CSB) <br>Includes all Standard features, along with the additional features in the next column.</br> | <ul><li>AppSecure<ul><li>Application Tracking (AppTrack)</li><li>Application Firewall (AppFW)</li><li>Application Quality of Service (AppQoS)</li><li>Advanced policy-based routing (APBR)</li><li>Application Quality of Experience (AppQoE)</li></ul></li></ul> |
+
 ### Ordering a vSRX
 {: #ordering-with-a-linked-account}
 
