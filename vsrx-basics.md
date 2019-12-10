@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2019-11-14"
+lastupdated: "2019-12-10"
 
 keywords: basics, performing, accessing, ssh, device, gateway, configuration, mode, juniper, ui, dns, htp, password
 
@@ -131,6 +131,8 @@ To change your current license, perform the steps above, then:
 
 1. Click the Pencil icon  ![Pencil icon](../../icons/edit-tagging.svg)  next to your current license to edit it.
 
-  ![Changing your license](images/license-edit.png "Changing your license")
+  ![Editing your license](images/license-edit.png "Editing your license")
 
 2. Select your new license type, then click **Save**.
+
+  ![Changing your license](images/license-edit-choice.png "Changing your license")
