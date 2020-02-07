@@ -30,8 +30,34 @@ subcollection: vsrx
 The {{site.data.keyword.vsrx_full}} runs as a Virtual Machine on a bare-metal server installed with Ubuntu and KVM. To secure the host OS, you should ensure that no other critical services are hosted on the same OS.
 {: shortdesc}
 
-If a public IP is assigned to the host, you can remove it and use the private IP instead.
+## SSH Access
+{: #securing-host-ssh}
+
+The {{site.data.keyword.vsrx_full}} can be deployed with public and private network access or private network access only. By default, ssh access to the bare-metal host's will be disabled on new provisions. To manually disable ssh access to the public IP of the OS follow these steps:
+
+1. Modify /etc/ssh/sshd_config
+
+```
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+Match Address 10.0.0.0/8 
+    Password Authentication yes
+```
+
+2. Restart the ssh service. 
+``` /usr/sbin/service ssh restart```
+
+Ensure addresses in the private infrastructure network subnet are allowed ssh access. See the rules above. This is needed for actions such as:
+
+- OS Reload
+- Rebuild Cluster
+- Upgrade Version
+
 {: note}
+
+
+## Firewalls
+{: #securing-host-firewall}
 
 Implementing an Ubuntu firewall (UFW, Iptables, and so on) without required rules can cause the {{site.data.keyword.vsrx}} HA cluster to be disabled. The vSRX solution depends on heartbeat communication between the primary and secondary nodes. If the firewall rules do not allow communication between the nodes, then cluster communication will be lost.
 {: important}
