@@ -33,13 +33,22 @@ The {{site.data.keyword.vsrx_full}} runs as a Virtual Machine on a bare-metal se
 ## SSH Access
 {: #securing-host-ssh}
 
-The {{site.data.keyword.vsrx_full}} can be deployed with public and private network access or private network access only. By default, ssh access to the bare-metal host's will be disabled on new provisions. To manually disable ssh access to the public IP of the OS follow these steps:
+The {{site.data.keyword.vsrx_full}} can be deployed with public and private network access or private network access only. By default, ssh access to the host OS will be disabled on new provisions. Access to the host can be achieved through the private IP address. Alternatively, key based authentication can be used to access the public IP. When placing a new Gateway order specify the public SSH key. 
 
-1. Modify /etc/ssh/sshd_config
+To manually disable ssh access to the public IP of the OS follow these steps:
+
+1. Modify /etc/ssh/sshd_config 
+
+a. Ensure the following values are set. 
 
 ```
 ChallengeResponseAuthentication no
 PasswordAuthentication no
+```
+
+b. Add the following filter rules to the end of the file.
+
+```
 Match Address 10.0.0.0/8 
     Password Authentication yes
 ```
@@ -47,7 +56,7 @@ Match Address 10.0.0.0/8
 2. Restart the ssh service. 
 ``` /usr/sbin/service ssh restart```
 
-Ensure addresses in the private infrastructure network subnet are allowed ssh access. See the rules above. This is needed for actions such as:
+The rules above ensure addresses in the private infrastructure network 10.0.0.0/8 subnet are allowed ssh access. This is needed for actions such as:
 
 - OS Reload
 - Rebuild Cluster
@@ -87,10 +96,10 @@ For {{site.data.keyword.vsrx}} versions prior to 18.4, the rules must also allow
 In some cases, troubleshooting operations may require disabling the firewall for access to public repositories. In these cases, you should work with IBM Support to understand how to proceed.
 {: note}
 
-Most Gateway actions require SSH access to the host OS and the {{site.data.keyword.vsrx}} to execute. Blocking this access with a firewall can cause the following actions to fail:
+Most Gateway actions require SSH access to the private 10.0.0.0/8 subnet for the host OS and the {{site.data.keyword.vsrx}} to execute. Blocking this access with a firewall can cause the following actions to fail:
 
 - OS Reload
 - Rebuild Cluster
 - Upgrade Version
 
-As a result, if SSH access is disabled, you must re-enable it prior to executing any of these actions.
+As a result, if SSH access is disabled for the 10.0.0.0/8 subnet, you must re-enable it prior to executing any of these actions.
