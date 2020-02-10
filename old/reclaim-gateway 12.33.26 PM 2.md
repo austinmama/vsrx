@@ -25,7 +25,7 @@ subcollection: vsrx
 
 Perform the following procedure to reclaim your gateway:
 
-1. [Access the Gateway Appliances screen](/docs/infrastructure/vsrx?topic=vsrx-viewing-all-your-gateway-appliances) in the Customer Portal, and navigate to the Gateway Details page by selecting the desired gateway name.
+1. [Access the Gateway Appliances screen](/docs/vsrx?topic=vsrx-viewing-all-your-gateway-appliances) in the Customer Portal, and navigate to the Gateway Details page by selecting the desired gateway name.
 
   <img src="images/gw-sa-details.png" alt="drawing" style="width: 700px;"/>
 
@@ -33,7 +33,7 @@ Perform the following procedure to reclaim your gateway:
 
 	![Hardware Server](images/os_hardware.png)
 
-	Before reclaiming a gateway, make sure all protected VLANs have been [disassociated](/docs/infrastructure/vsrx?topic=vsrx-managing-ibm-vlans) from it.
+	Before reclaiming a gateway, make sure all protected VLANs have been [disassociated](/docs/vsrx?topic=vsrx-managing-ibm-vlans) from it.
 
 3. On the device's page, click **Cancel Device** in the Action drop down menu to access the Server Configuration page.  
 
