@@ -57,8 +57,9 @@ To manually disable SSH access to the public IP of the OS follow these steps:
 
 The procedure above ensures addresses in the private infrastructure network `10.0.0.0/8` subnet are allowed SSH access. This is needed for actions such as:
 
-  * OS reloads and upgrades
+  * OS reloads
   * Cluster rebuilding
+  * Version upgrades
   {: note}
 
 ## Firewalls
@@ -92,10 +93,10 @@ For {{site.data.keyword.vsrx}} versions prior to 18.4, the rules must also allow
 In some cases, troubleshooting operations may require disabling the firewall for access to public repositories. In these cases, you should work with IBM Support to understand how to proceed.
 {: note}
 
-Most Gateway actions require SSH access to the private 10.0.0.0/8 subnet for the host OS and the {{site.data.keyword.vsrx}} to execute. Blocking this access with a firewall can cause the following actions to fail:
+Most Gateway actions require SSH access to the private `10.0.0.0/8` subnet for the host OS and the {{site.data.keyword.vsrx}}. Blocking this access with a firewall can cause the following actions to fail:
 
-- OS Reload
-- Rebuild Cluster
-- Upgrade Version
+- OS reloads
+- Cluster rebuilding
+- Version upgrades
 
-As a result, if SSH access is disabled for the 10.0.0.0/8 subnet, you must re-enable it prior to executing any of these actions.
+As a result, if SSH access is disabled for the `10.0.0.0/8` subnet, you must re-enable it prior to executing any of these actions.
