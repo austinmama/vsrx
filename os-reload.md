@@ -77,6 +77,7 @@ To reload your OS, perform the following procedure:
 ## vSRX version mismatches
 {: #vsrx-version-mismatches}
 
-A {{site.data.keyword.vsrx_full}} cluster must have the same vSRX version on each node in order to fully support the High Availability feature. If a cluster has mismatched vSRX versions then OS reload the node with the older vSRX version to bring the cluster nodes to the same version level. A version mismatch applies to both minor release mismatches and major release mismatches. 
+A {{site.data.keyword.vsrx_full}} cluster must have the same vSRX version on each node in order to fully support the High Availability feature. If a cluster has mismatched vSRX versions, then you must reload the OS of the node with the older version (using the procedure in this topic) so that both nodes are at the same version level. 
 
-Follow these steps to OS Reload the node. [Performing an OS reload](https://cloud.ibm.com/docs/infrastructure/vsrx?topic=vsrx-performing-an-os-reload#performing-an-os-reload)
+A version mismatch applies to both minor release mismatches and major release mismatches. 
+{: note}
