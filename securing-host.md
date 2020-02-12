@@ -33,37 +33,33 @@ The {{site.data.keyword.vsrx_full}} runs as a Virtual Machine on a bare-metal se
 ## SSH Access
 {: #securing-host-ssh}
 
-The {{site.data.keyword.vsrx_full}} can be deployed with public and private network access or private network access only. By default, ssh access to the host OS will be disabled on new provisions. Access to the host can be achieved through the private IP address. Alternatively, key based authentication can be used to access the public IP. When placing a new Gateway order specify the public SSH key. 
+The {{site.data.keyword.vsrx_full}} can be deployed with public and private network access or private network access only. By default, SSH access to the host OS will be disabled on new provisions. Access to the host can be achieved through the private IP address. Alternatively, key based authentication can be used to access the public IP. To do so, specify the public SSH key when placing a new Gateway order . 
 
-To manually disable ssh access to the public IP of the OS follow these steps:
+To manually disable SSH access to the public IP of the OS follow these steps:
 
 1. Modify /etc/ssh/sshd_config 
 
-a. Ensure the following values are set. 
+  * Ensure the following values are set. 
+  
+  ```
+  ChallengeResponseAuthentication no
+  PasswordAuthentication no
+  ```
+  
+  * Add the following filter rules to the end of the file.
+  
+  ```
+  Match Address 10.0.0.0/8 
+      Password Authentication yes
+  ```
+  
+2. Restart the SSH service using the command `/usr/sbin/service ssh restart`. 
 
-```
-ChallengeResponseAuthentication no
-PasswordAuthentication no
-```
+The procedure above ensures addresses in the private infrastructure network `10.0.0.0/8` subnet are allowed SSH access. This is needed for actions such as:
 
-b. Add the following filter rules to the end of the file.
-
-```
-Match Address 10.0.0.0/8 
-    Password Authentication yes
-```
-
-2. Restart the ssh service. 
-``` /usr/sbin/service ssh restart```
-
-The rules above ensure addresses in the private infrastructure network 10.0.0.0/8 subnet are allowed ssh access. This is needed for actions such as:
-
-- OS Reload
-- Rebuild Cluster
-- Upgrade Version
-
-{: note}
-
+  * OS reloads and upgrades
+  * Cluster rebuilding
+  {: note}
 
 ## Firewalls
 {: #securing-host-firewall}
