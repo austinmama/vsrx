@@ -77,6 +77,10 @@ To export only part of the vSRX configuration:
 
   [edit]
   ```
+
+  Set mode displays the configuration as a series of configuration mode commands required to re-create the configuration. This is useful if you are not familiar with how to use configuration mode commands or if you want to cut, paste, and edit the displayed configuration.
+  {: tip}
+
 3. Copy and save the output into your local workspace for later use.
 
 ## Importing the entire vSRX configuration
