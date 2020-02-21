@@ -53,6 +53,9 @@ You can specify your license type when ordering your vSRX, as well as change the
 ### Ordering a vSRX
 {: #ordering-with-a-linked-account}
 
+IBM Cloud has temporarily suspended new sales of 1G Highly Available (HA) Juniper installations. This restriction is due to a pending design change that is required to improve HA stability. The offering is projected to become available in again in Q2 2020.
+{: important}
+
 You can order your {{site.data.keyword.vsrx_full}} by performing the following procedure:
 
 1. From your browser, open the Gateway Appliances page in the [Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: new_window} and log into your account.
