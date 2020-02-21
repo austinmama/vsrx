@@ -15,6 +15,7 @@ subcollection: vsrx
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:preview: .preview}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
