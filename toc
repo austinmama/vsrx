@@ -22,6 +22,7 @@ IBM Cloud Juniper vSRX
         readiness.md
         readiness_running.md
         readiness_errors.md
+        readiness_correcting_errors.md
 
     {: .topicgroup}
     Work with VLANs
