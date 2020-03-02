@@ -23,7 +23,7 @@ subcollection: vsrx
 {:support: data-reuse='support'}
 
 # Understanding readiness errors
-{: #readiness-running}
+{: #readiness-errors}
 
 INFO TO COME
 
