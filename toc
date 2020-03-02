@@ -18,6 +18,12 @@ IBM Cloud Juniper vSRX
     vsrx-basics.md
 
     {: .topicgroup}
+    Checking vSRX readiness
+       readiness.md
+       readiness_running.md
+       readiness_errors.md
+
+    {: .topicgroup}
     Work with VLANs
         /gateway-appliance/gateway-appliance-managing-vlans-and-gateway-appliances
 

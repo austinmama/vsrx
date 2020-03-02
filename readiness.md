@@ -1,0 +1,28 @@
+---
+
+copyright:
+  years: 2018
+lastupdated: "2020-02-02"
+
+keywords: checking, readiness
+
+subcollection: vsrx
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank_"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
+
+# Checking vSRX readiness
+{: #vsrx-readiness}
+
+INFO TO COME
