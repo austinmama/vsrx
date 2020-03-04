@@ -21,7 +21,7 @@ subcollection: vsrx
 {:important: .important}
 {:download: .download}
 
-# Getting Started with IBM Cloud Juniper vSRX
+# Getting started with IBM Cloud Juniper vSRX
 {: #getting-started}
 
 {{site.data.keyword.vsrx_full}} allows you to route private and public network traffic selectively, through a full-featured, enterprise-level firewall that is powered by JunOS software features, such as full routing stacks, QoS and traffic sharing, policy-based routing, and VPN.
@@ -30,7 +30,7 @@ subcollection: vsrx
 For a list of Known Limitations with {{site.data.keyword.vsrx_full}} Gateway, refer to the [Known Limitations topic](/docs/vsrx?topic=vsrx-known-limitations-for-ibm-cloud-juniper-vsrx).
 {: note}
 
-## Choosing a vSRX License
+## Choosing a vSRX license
 {: #choosing-license}
 
 Currently, only {{site.data.keyword.vsrx_full}} 10G Standalone configurations can choose between the following license options. Full support for the various vSRX configurations, including 1G and High Availability, will be introduced soon.
