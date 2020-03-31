@@ -76,9 +76,9 @@ The Gateway ssh console connection failed.
 {: #error-1013}
 The root user for the Gateway is not found.
 
-### Error 1016
-{: #error-1000}
-The Gateway ssh console connection could not be closed.
+### Error 1014
+{: #error-1014}
+The Gateway precheck has timed out.
 
 ### Error 1017
 {: #error-1017}
