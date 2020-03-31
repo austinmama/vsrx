@@ -80,14 +80,14 @@ The readiness check is currently running on your vSRX, and has not currently enc
 ### Incomplete
 {: #status-incomplete}
 
-INFO TO COME
+**NEEDED: Description of this status**
 
 ### Unsupported
 {: #status-unsupported}
 
-INFO TO COME
+**NEEDED: Description of this status**
 
 ### Current
 {: #status-current}
 
-The aspect you are 
+**NEEDED: Description of this status**
