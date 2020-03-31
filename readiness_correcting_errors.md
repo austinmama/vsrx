@@ -45,7 +45,7 @@ To validate connectivity, open an SSH session to the Ubuntu host's private IP us
 
 **NEEDED: Do they need more information on how to ensure the SSH session can be established?**
 
-  ![SSH credentials](images/readiness_module.png "SSH credentials")
+  ![SSH credentials](images/readiness_correcting.png "SSH credentials")
 
 If the session cannot be established, check the potential following issues:
 
@@ -60,7 +60,7 @@ If the session cannot be established, check the potential following issues:
 
 As with the Ubuntu SSH connectivity errors, many of the gateway actions performed on the vSRX require root SSH access to the private IP address as well. If the precheck readiness SSH connectivity check fails then the action can not proceed. To validate connectivity open an SSH session to the vSRX private IP using the root credentials listed on the Gateway Details page. Ensure the SSH session can be established.
 
-  ![SSH credentials](images/readiness_module.png "SSH credentials")
+  ![SSH credentials](images/readiness_correcting.png "SSH credentials")
 
 If the session cannot be established, check the potential following issues:
 
