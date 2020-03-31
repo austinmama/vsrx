@@ -25,35 +25,49 @@ subcollection: vsrx
 # Correcting readiness errors
 {: #correcting-readiness-errors}
 
-## Host (Ubuntu) SSH Connectivity Errors
+There are two categories of errors you may encounter when performing readiness checks:
+
+  * Host (Ubuntu) SSH connectivity errors
+  * Gateway (vSRX) SSH connectivity errors
+  
+If you encounter readiness check errors, refer to the following sections for tips on how to correct them.
+
+## Host (Ubuntu) SSH connectivity errors
 {: #correct-host_ssh_connectivity}
 
-Many of the Gateway Actions require root SSH access to the private IP address for each host Ubuntu OS. If the precheck readiness SSH connectivity check fails then the action can not proceed. To validate connectivity open an SSH session to the Ubuntu host's private IP using the root credentials listed on the Gateway Details page in the Hardware section. Ensure the SSH session can be established.
+Many of the Gateway Actions require root SSH access to the private IP address for each host Ubuntu OS. 
 
-<TODO: INSERT SCREENSHOT WITH GW DETAILS PAGE with PRIVATE IP and ROOT passwords highlighted>
-  
+**NEEDED: What is meant by "Gateway Actions"? Why is it capitalized? Should it really be gateway appliance actions?** 
 
-If the session can not be established ensure:
+If a precheck readiness SSH connectivity check fails then the action can not proceed. 
 
-- A firewall is not blocking SSH access to the private IP.
-- The root password listed on the Gateway details page above is the correct password for the root user. If not, then click the device link under the Hardware section and navigate to "Passwords". Use the Actions > Edit credentials action to change the password to match the actual root password on the Ubuntu host.
-- The root login may be disabled for the SSH server, or the SSH server may be disabled or stopped.
-- The root user account may be disabled on the Ubuntu host.
+**QUESTION: We now seem to be saying "precheck" instead of readiness check. Which is correct?**
 
-## Gateway (vSRX) SSH Connectivity Errors
+To validate connectivity, open an SSH session to the Ubuntu host's private IP using the root credentials listed in the **Hardware** section of the [Gateway Details](/docs/infrastructure/vsrx?topic=gateway-appliance-viewing-gateway-appliance-details) page. Ensure the SSH session can be established.
+
+**NEEDED: Do they need more information on how to ensure the SSH session can be established?**
+
+**JACK TODO: INSERT SCREENSHOT WITH GW DETAILS PAGE with PRIVATE IP and ROOT passwords highlighted**
+
+If the session cannot be established, check the potential following issues:
+
+  * Is a firewall blocking SSH access to the private IP?
+  * Is the root password listed on the Gateway Details page the correct password for the root user? 
+  If not, click the device link under the **Hardware** section and navigate to **Passwords**. Select **Actions > Edit credentials** and change the password to match the actual root password on the Ubuntu host.
+- Is the root login disabled for the SSH server? Is the SSH server disabled or stopped?
+- Is the root user account disabled on the Ubuntu host?
+
+## Gateway (vSRX) SSH connectivity errors
 {: #correct-gateway_ssh_connectivity}
 
 Many of the Gateway Actions require root SSH access to the private IP address for the Gateway. If the precheck readiness SSH connectivity check fails then the action can not proceed. To validate connectivity open an SSH session to the vSRX private IP using the root credentials listed on the Gateway Details page. Ensure the SSH session can be established.
 
-<TODO: INSERT SCREENSHOT WITH GW DETAILS PAGE with PRIVATE IP and ROOT passwords highlighted>
+**JACK TODO: INSERT SCREENSHOT WITH GW DETAILS PAGE with PRIVATE IP and ROOT passwords highlighted**
   
+If the session cannot be established, check the potential following issues:
 
-If the session can not be established ensure:
-
-- The vSRX firewall is not blocking SSH access to the private IP.
-- The root password listed on the Gateway details page above is the correct password for the root user. If not, then click the Edit icon the root password and change the password to match the actual root password for the vSRX.
-- The root user account may be disabled on the Ubuntu host.
-
-
-
-
+  * Is The vSRX firewall blocking SSH access to the private IP?
+  * Is the root password listed on the Gateway details page above is the correct password for the root user? 
+  If not, click the **Edit** icon the root password and change the password to match the actual root password for the vSRX.
+  **JACK TODO: This sentence seems to be missing some words. Is the Edit icon NEXT TO the root password? If not, what is meant here? Also, is the Edit icon the pencil icon?**
+  * Is the root user account disabled on the Ubuntu host?
