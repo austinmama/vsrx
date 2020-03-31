@@ -37,8 +37,6 @@ If you encounter readiness check errors, refer to the following sections for tip
 
 Many of the Gateway Actions require root SSH access to the private IP address for each host Ubuntu OS. 
 
-**NEEDED: What is meant by "Gateway Actions"? Why is it capitalized? Should it really be gateway appliance actions?** 
-
 If a precheck readiness SSH connectivity check fails then the action can not proceed. 
 
 **QUESTION: We now seem to be saying "precheck" instead of readiness check. Which is correct?**
