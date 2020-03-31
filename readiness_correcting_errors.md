@@ -52,8 +52,8 @@ If the session cannot be established, check the potential following issues:
   * Is a firewall blocking SSH access to the private IP?
   * Is the root password listed on the Gateway Details page the correct password for the root user?
   If not, click the device link under the **Hardware** section and navigate to **Passwords**. Select **Actions > Edit credentials** and change the password to match the actual root password on the Ubuntu host.
-- Is the root login disabled for the SSH server? Is the SSH server disabled or stopped?
-- Is the root user account disabled on the Ubuntu host?
+  * Is the root login disabled for the SSH server? Is the SSH server disabled or stopped?
+  * Is the root user account disabled on the Ubuntu host?
 
 ## Gateway (vSRX) SSH connectivity errors
 {: #correct-gateway_ssh_connectivity}
@@ -65,7 +65,7 @@ As with the Ubuntu SSH connectivity errors, many of the gateway actions performe
 If the session cannot be established, check the potential following issues:
 
   * Is The vSRX firewall blocking SSH access to the private IP?
-  * Is the root password listed on the Gateway details page above is the correct password for the root user?
+  * Is the root password listed on the Gateway details page the correct password for the root user?
   If not, click the **Edit** icon the root password and change the password to match the actual root password for the vSRX.
   **JACK TODO: This sentence seems to be missing some words. Is the Edit icon NEXT TO the root password? If not, what is meant here? Also, is the Edit icon the pencil icon?**
   * Is the root user account disabled on the Ubuntu host?
