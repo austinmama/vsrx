@@ -105,14 +105,6 @@ You may encounter the following errors when running version upgrade readiness ch
 {: #error-2001}
 The host has a precheck setup failure, please rerun or contact support.
 
-### Error 2005
-{: #error-2005}
-The host has a precheck setup failure and can not ping the Gateway.
-
-### Error 2006
-{: #error-2006}
-The host has a precheck setup failure and can not ping the private ip for the other node's host {insert_other_nodes_hostname}.
-
 ### Error 2007
 {: #error-2007}
 The host has a precheck setup failure and can not ssh to the Gateway.
