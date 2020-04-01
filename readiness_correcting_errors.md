@@ -36,7 +36,7 @@ Many of these errors result from the fact that the gateway actions being checked
 
 To validate connectivity, open an SSH session to either the Ubuntu host's or vSRX's private IP using the root credentials listed in the **Hardware** section of the [Gateway Details](/docs/infrastructure/vsrx?topic=gateway-appliance-viewing-gateway-appliance-details) page. Ensure that the SSH session can be established.
 
-**NEEDED: Do they need more information on how to ensure the SSH session can be established?**
+**NEEDED: Do they need more information on how to ensure the SSH session can be established? [This topic](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#accessing-the-device-using-ssh) seems to be the instructions for vSRX. Do we have instructions for Ubuntu anywhere? If not, do we need it?**
 
   ![SSH credentials](images/readiness_correcting.png "SSH credentials")
 
