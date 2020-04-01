@@ -32,7 +32,7 @@ There are two categories of errors you may encounter when performing readiness c
 
 Many of these errors result from the fact that the gateway actions being checked require root SSH access to the private IP address for either the Ubuntu (Host) OS or the vSRX (Gateway). If a precheck readiness SSH connectivity check fails, then the action can not proceed.
 
-**QUESTION: We now seem to be saying "precheck" instead of readiness check. Which is correct?**
+**QUESTION: In email ands slack, I've been seeing "precheck" used instead of readiness check. We also have precheck here. Which is correct? I assume Readiness check because it's in the UI, just making sure there isn't a term shift coming.**
 
 To validate connectivity, open an SSH session to either the Ubuntu host's or vSRX's private IP using the root credentials listed in the **Hardware** section of the [Gateway Details](/docs/infrastructure/vsrx?topic=gateway-appliance-viewing-gateway-appliance-details) page. Ensure that the SSH session can be established.
 
