@@ -32,7 +32,7 @@ Configuring the vSRX outside of its shell and interface may produce unexpected r
 ## Accessing the device using SSH
 {: #accessing-the-device-using-ssh}
 
-You can access the vSRX using SSH through a public IP address, or through a private IP address if you're on IBM Cloud VPN:
+You can access the vSRX or the host (Ubuntu) using SSH through a public IP address, or through a private IP address if you're on IBM Cloud VPN:
 
 1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 

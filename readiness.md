@@ -62,6 +62,11 @@ There are seven unique status conditions for the readiness check that you may en
 
 A readiness check has not yet been run for this action.
 
+### Expired
+{: #status-expired}
+
+The readiness check has not run recently enough to reflect accurate results. Run a new check to see the current status.
+
 ### Ready
 {: #status-ready}
 
