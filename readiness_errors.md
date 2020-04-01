@@ -25,7 +25,7 @@ subcollection: vsrx
 # Understanding readiness errors
 {: #readiness-errors}
 
-INFO TO COME
+Readiness check errors you may encounter can either be common errors or version upgrade errors. The below lists provide additional information on their error codes.
 
 ## Common readiness errors
 {: #common-errors}
