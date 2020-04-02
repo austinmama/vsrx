@@ -25,7 +25,7 @@ subcollection: vsrx
 # Checking vSRX readiness
 {: #vsrx-readiness}
 
-A readiness check verifies your vSRX's ability to perform certain gateway actions. They include:
+A readiness check verifies the ability of your {{site.data.keyword.vsrx_full}} to perform certain gateway actions. They include:
 
 * OS reloads
 * License upgrades
@@ -47,8 +47,8 @@ To run a readiness check, perform the following procedure:
 7. Select one of the three actions you would like to check for readiness, then select **Run check**.
 8. The details page for your vSRX displays again, as do the test results in the readiness check module.
 
-Ensure the status for any action you wish to perform is Ready before beginning that action.
-{: important}
+ Ensure the status for any action you wish to perform is Ready before beginning that action.
+ {: important}
 
 The following section provides details on the various readiness status conditions your check may return.
 
