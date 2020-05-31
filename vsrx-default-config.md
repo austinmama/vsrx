@@ -33,7 +33,7 @@ subcollection: vsrx
   * Access from the zone `SL-PRIVATE` to all services is provided by IBM and address-set `SERVICE` is permitted
   * All other network accesses are denied
 
-## Default configuration of a sample standalone of latest SR-IOV vSRX gateway
+## Default Configuration of a sample 1G Standalone SR-IOV Public and Private vSRX Gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
 The following code samples are examples from the latest code release.
@@ -467,12 +467,14 @@ The following table illustrates network interface definitions for the previous c
 | :---          |   :---         |
 | ge-0/0/0      |   Gigabit ethernet interface for SL-PRIVATE transit VLAN |
 | ge-0/0/1      |   Gigabit ethernet interface for SL-PUBLIC transit VLAN  |
+| ge-0/0/2      |   Gigabit ethernet interface for SL-PRIVATE transit VLAN |
+| ge-0/0/3      |   Gigabit ethernet interface for SL-PUBLIC transit VLAN |
 | ae0.0         |   Aggregated Ethernet interface |
 | ae1.0         |   Aggregated Ethernet interface |
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
-## Default configuration of a sample Highly Available (HA) vSRX gateway
+## Default Configuration of a sample 10G HA SR-IOV vSRX Gateway
 {: #default-configuration-of-a-sample-highly-available-ha-vsrx-gateway}
 
 ```
@@ -788,8 +790,7 @@ routing-options {
 }
 ```
 
-The following table illustrates the network interface definitions for the previous configuration:
-the following configuration represents the config above.
+The information in the following table represents the configuration above:
 
 | Interface Name   |  Interface  Function      |
 | :---          |    :---         |
@@ -813,3 +814,39 @@ In addition, two redundancy groups are configured. The following table illustrat
 | redundancy-group 1   |  Redundancy group for data plane |
 
 Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
+
+## vSRX HA Interfaces (With Flapping Fix and 4210 1G Server)
+
+### Use No-GRE, SR-IOV for both 10G and 1G
+
+|**Interface**|**10G Pub+Priv <br>(Flap Fix SR-IOV) <br>(Entry 1)**|**10G Priv Only <br>(Flap Fix SR-IOV) <br>(Entry 2)**|**1G Pub+Priv <br>(SR-IOV) <br>(Entry 1)**|**1G Priv Only <br>(SR-IOV) <br>(Entry 2)**|
+|-------------|----------------|-----------------|-----------------|----------------|
+|ge-0/0/0|fab0|fab0|fab0|fab0|
+|ge-0/0/1|reth0|reth0|reth0|reth0|
+|ge-0/0/2|reth0|reth0|reth0|reth0|
+|ge-0/0/3|reth1|reth2|reth1|reth2|
+|ge-0/0/4|reth1|reth2|reth1|reth2|
+|ge-0/0/5|reth2|fab0|reth2|fab0|
+|ge-0/0/6|reth2|Does Not Exist|reth2|Does Not Exist|
+|ge-0/0/7|reth3|Does Not Exist|reth3|Does Not Exist|
+|ge-0/0/8|reth3|Does Not Exist|reth3|Does Not Exist|
+|ge-0/0/9|fab0|Does Not Exist|fab0|Does Not Exist|
+|ge-7/0/0|fab1|fab1|fab1|fab1|
+|ge-7/0/1|reth0|reth0|reth0|reth0|
+|ge-7/0/2|reth0|reth0|reth0|reth0|
+|ge-7/0/3|reth1|reth2|reth1|reth2|
+|ge-7/0/4|reth1|reth2|reth1|reth2|
+|ge-7/0/5|reth2|fab1|reth2|fab1|
+|ge-7/0/6|reth2|Does Not Exist|reth2|Does Not Exist|
+|ge-7/0/7|reth3|Does Not Exist|reth3|Does Not Exist|
+|ge-7/0/8|reth3|Does Not Exist|reth3|Does Not Exist|
+|ge-7/0/9|fab1|Does Not Exist|fab1|Does Not Exist|
+
+### SR-IOV for both 10G and 1G
+
+|**Interface**|**10G Pub+Priv <br>(Flap Fix SR-IOV) <br>(Entry 3)**|**10G Priv Only <br>(Flap Fix SR-IOV) <br>(Entry 4)**|**1G Pub+Priv <br>(SR-IOV) <br>(Entry 3)**|**1G Priv Only <br>(SR-IOV) <br>(Entry 4)**|
+|-------------|----------------|-----------------|-----------------|----------------|
+|ge-0/0/0|ae0|ae0|ae0|ae0|
+|ge-0/0/1|ae1|ae0|ae1|ae0|
+|ge-0/0/2|ae0|Does Not Exist|ae0|Does Not Exist|
+|ge-0/0/3|ae1|Does Not Exist|ae1|Does Not Exist|
