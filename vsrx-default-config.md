@@ -361,7 +361,7 @@ The following table illustrates network interface definitions for the previous c
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
-## Default Configuration of a sample 10G HA SR-IOV vSRX Gateway
+## Default Configuration of a sample 10G HA SR-IOV Public and Private vSRX Gateway
 {: #default-configuration-of-a-sample-highly-available-ha-vsrx-gateway}
 
 ```
