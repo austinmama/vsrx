@@ -33,6 +33,15 @@ subcollection: vsrx
   * Access from the zone `SL-PRIVATE` to all services is provided by IBM and address-set `SERVICE` is permitted
   * All other network accesses are denied
 
+Two redundancy groups are configured. The following table illustrates these redundancy groups:
+
+| Redundancy group   |  Redundancy group function      |
+| :---          |    :---         |
+| redundancy-group 0   |  Redundancy group for control plane |
+| redundancy-group 1   |  Redundancy group for data plane |
+
+Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
+
 ## Default Configuration of a sample 1G Standalone SR-IOV Public and Private vSRX Gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
@@ -350,7 +359,7 @@ routing-options {
 
 The following table illustrates network interface definitions for the previous configuration:
 
-| Interface Name    |  Interface Function      |
+| Interface name    |  Interface function      |
 | :---          |   :---         |
 | ge-0/0/0      |   Gigabit ethernet interface for SL-PRIVATE transit VLAN |
 | ge-0/0/1      |   Gigabit ethernet interface for SL-PUBLIC transit VLAN  |
@@ -788,34 +797,27 @@ routing-options {
 
 The information in the following table represents the configuration above:
 
-| Interface Name   |  Interface  Function      |
-| :---          |    :---         |
-| ge-0/0/1 / ge-0/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 0 – reth0 |
-| ge-0/0/3 / ge-0/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 0 – reth1 |
-| ge-0/0/5 / ge-0/0/6 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 0 – reth2 |
-| ge-0/0/7 / ge-0/0/8 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 0 – reth3 |
-| ge-7/0/1 / ge-7/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 – reth0 |
-| ge-7/0/3 / ge-7/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 – reth1 |
-| ge-7/0/5 / ge-7/0/6 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 – reth2 |
-| ge-7/0/7 / ge-7/0/8 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 – reth3 |
-| fab0 / fab1   |   Chassis cluster fabric link |
-| fxp0          |   Management interface        |
-| lo0           |   loopback interface          |
+| Interface name   | Interface  function   | Redundant interface |
+| :---       |    :---     |    :---     |
+| ge-0/0/1 / ge-0/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 0 | reth0 |
+| ge-0/0/3 / ge-0/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 0 | reth1 |
+| ge-0/0/5 / ge-0/0/6 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 0 | reth2 |
+| ge-0/0/7 / ge-0/0/8 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 0 | reth3 |
+| ge-7/0/1 / ge-7/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 | reth0 |
+| ge-7/0/3 / ge-7/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 | reth1 |
+| ge-7/0/5 / ge-7/0/6 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 | reth2 |
+| ge-7/0/7 / ge-7/0/8 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 | reth3 |
+| fab0 / fab1   |   Chassis cluster fabric link | |
+| fxp0          |   Management interface        | |
+| lo0           |   loopback interface          | |
 
-In addition, two redundancy groups are configured. The following table illustrates these redundancy groups:
+## Interface configurations
+The legacy architecture for these configurations leveraged Linux bridging. IBM has since transitioned to a new architecture for its gateways that leverages SR-IOV. Both the legacy and current architecture is detailed in the following sections. 
 
-| Redundancy Group   |  Redundancy Group  Function      |
-| :---          |    :---         |
-| redundancy-group 0   |  Redundancy group for control plane |
-| redundancy-group 1   |  Redundancy group for data plane |
+### vSRX High Availability interfaces (current architecture)
+#### Use No-GRE, SR-IOV for both 10G and 1G
 
-Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
-
-## vSRX HA Interfaces (With Flapping Fix and 4210 1G Server)
-
-### Use No-GRE, SR-IOV for both 10G and 1G
-
-|**Interface**|**10G Pub+Priv <br>(Flap Fix SR-IOV) <br>(Entry 1)**|**10G Priv Only <br>(Flap Fix SR-IOV) <br>(Entry 2)**|**1G Pub+Priv <br>(SR-IOV) <br>(Entry 1)**|**1G Priv Only <br>(SR-IOV) <br>(Entry 2)**|
+|**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
 |ge-0/0/0|fab0|fab0|fab0|fab0|
 |ge-0/0/1|reth0|reth0|reth0|reth0|
@@ -838,11 +840,49 @@ Priority in the redundancy group decides which vSRX node is active. By default, 
 |ge-7/0/8|reth3|Does Not Exist|reth3|Does Not Exist|
 |ge-7/0/9|fab1|Does Not Exist|fab1|Does Not Exist|
 
-### SR-IOV for both 10G and 1G
+### vSRX Standalone interfaces (current architecture)
+#### SR-IOV for both 10G and 1G
 
-|**Interface**|**10G Pub+Priv <br>(Flap Fix SR-IOV) <br>(Entry 3)**|**10G Priv Only <br>(Flap Fix SR-IOV) <br>(Entry 4)**|**1G Pub+Priv <br>(SR-IOV) <br>(Entry 3)**|**1G Priv Only <br>(SR-IOV) <br>(Entry 4)**|
+|**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
 |ge-0/0/0|ae0|ae0|ae0|ae0|
 |ge-0/0/1|ae1|ae0|ae1|ae0|
 |ge-0/0/2|ae0|Does Not Exist|ae0|Does Not Exist|
 |ge-0/0/3|ae1|Does Not Exist|ae1|Does Not Exist|
+
+### vSRX High Availability interfaces (legacy architecture)
+#### Uses GRE, SR-IOV for 10G an Linux Bridging for 1G, 18.4 Only
+
+Also used if system is behind problematic Arista 7048T server that requires GRE to cluster properly.
+{: note}
+
+|**Interface**|**10G Priv+Pub** |**10G Priv Only** |**1G Priv + Pub** |**1G Priv Only** |
+|-------------|----------------|-----------------|-----------------|----------------|
+|ge-0/0/0|fab0|fab0|fab0|fab0|
+|ge-0/0/1|reth0|reth0|reth0|reth0|
+|ge-0/0/2|reth0|reth0|reth2|reth2|
+|ge-0/0/3|reth1|reth2|reth1|Unused|
+|ge-0/0/4|reth1|reth2|reth3|Unused|
+|ge-0/0/5|reth2|Unused|Does Not Exist|Does Not Exist|
+|ge-0/0/6|reth2|Unused|Does Not Exist|Does Not Exist|
+|ge-0/0/7|reth3|Unused|Does Not Exist|Does Not Exist|
+|ge-0/0/8|reth3|Unused|Does Not Exist|Does Not Exist|
+|ge-7/0/0|fab1|fab1|fab1|fab1|
+|ge-7/0/1|reth0|reth0|reth0|reth0|
+|ge-7/0/2|reth0|reth0|reth2|reth2|
+|ge-7/0/3|reth1|reth2|reth1|Unused|
+|ge-7/0/4|reth1|reth2|reth3|Unused|
+|ge-7/0/5|reth2|Unused|Does Not Exist|Does Not Exist|
+|ge-7/0/6|reth2|Unused|Does Not Exist|Does Not Exist|
+|ge-7/0/7|reth3|Unused|Does Not Exist|Does Not Exist|
+|ge-7/0/8|reth3|Unused|Does Not Exist|Does Not Exist|
+
+### vSRX standalone interfaces (legacy architecture)
+#### SR-IOV for 10G and LB for 1G
+
+|**Interface**|**10G Pub+Priv**** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
+|-------------|----------------|-----------------|-----------------|----------------|
+|ge-0/0/0|ae0|ae0|ge-0/0/0|ge-0/0/0|
+|ge-0/0/1|ae1|ae0|ge-0/0/1|Does Not Exist|
+|ge-0/0/2|ae0|Does Not Exist|Does Not Exist|Does Not Exist|
+|ge-0/0/3|ae1|Does Not Exist|Does Not Exist|Does Not Exist|
