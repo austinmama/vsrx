@@ -807,7 +807,8 @@ The information in the following table represents the configuration above:
 | ge-7/0/3 / ge-7/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 | reth1 |
 | ge-7/0/5 / ge-7/0/6 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 | reth2 |
 | ge-7/0/7 / ge-7/0/8 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 | reth3 |
-| fab0 / fab1   |   Chassis cluster fabric link | |
+| fab0 | Chassis cluster fabric link uses ge-0/0/0 and ge-0/0/9 | |
+| fab1 | Chassis cluster fabric link uses ge-7/0/0 and ge-7/0/9 | |
 | fxp0          |   Management interface        | |
 | lo0           |   loopback interface          | |
 
