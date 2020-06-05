@@ -815,7 +815,7 @@ The information in the following table represents the configuration above:
 The legacy architecture for these configurations leveraged Linux bridging. IBM has since transitioned to a new architecture for its gateways that leverages SR-IOV. Both the legacy and current architecture is detailed in the following sections. 
 
 ### vSRX High Availability interfaces (current architecture)
-#### Use No-GRE, SR-IOV for both 10G and 1G
+#### No-GRE, SR-IOV for both 10G and 1G
 
 |**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
@@ -851,7 +851,7 @@ The legacy architecture for these configurations leveraged Linux bridging. IBM h
 |ge-0/0/3|ae1|Does Not Exist|ae1|Does Not Exist|
 
 ### vSRX High Availability interfaces (legacy architecture)
-#### Uses GRE, SR-IOV for 10G an Linux Bridging for 1G, 18.4 Only
+#### GRE, SR-IOV for 10G an Linux Bridging for 1G, 18.4 Only
 
 Also used if system is behind problematic Arista 7048T server that requires GRE to cluster properly.
 {: note}
