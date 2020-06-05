@@ -813,10 +813,18 @@ The information in the following table represents the configuration above:
 | lo0           |   loopback interface          | |
 
 ## Interface configurations
-The legacy architecture for these configurations leveraged Linux bridging. IBM has since transitioned to a new architecture for its gateways that leverages SR-IOV. Both the legacy and current architecture is detailed in the following sections. 
+The legacy architecture for these configurations leveraged Linux bridging on the Ubuntu host hypervisor. IBM has since transitioned to a new architecture for its gateways that leverages SR-IOV on the host. This caused the vSRX configuration’s interface mapping to change in many cases. Differences in the interface configuration are also influenced by whether the vSRX is:
+
+* 10G or 1G
+* Standalone or High Availability
+* Public and Private, or Private Only
+* The vSRX Version 
+  - All 15.1 based vSRX’s use the legacy architecture
+  - Some 18.4 based vSRX’s also use the legacy architectue
+
+Both the legacy and current architecture is detailed in the following sections. 
 
 ### vSRX High Availability interfaces (current architecture)
-#### No-GRE, SR-IOV for both 10G and 1G
 
 |**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
@@ -842,7 +850,6 @@ The legacy architecture for these configurations leveraged Linux bridging. IBM h
 |ge-7/0/9|fab1|Does Not Exist|fab1|Does Not Exist|
 
 ### vSRX Standalone interfaces (current architecture)
-#### SR-IOV for both 10G and 1G
 
 |**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
@@ -852,10 +859,6 @@ The legacy architecture for these configurations leveraged Linux bridging. IBM h
 |ge-0/0/3|ae1|Does Not Exist|ae1|Does Not Exist|
 
 ### vSRX High Availability interfaces (legacy architecture)
-#### GRE, SR-IOV for 10G an Linux Bridging for 1G, 18.4 Only
-
-Also used if system is behind problematic Arista 7048T server that requires GRE to cluster properly.
-{: note}
 
 |**Interface**|**10G Priv+Pub** |**10G Priv Only** |**1G Priv + Pub** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
@@ -879,7 +882,6 @@ Also used if system is behind problematic Arista 7048T server that requires GRE 
 |ge-7/0/8|reth3|Unused|Does Not Exist|Does Not Exist|
 
 ### vSRX standalone interfaces (legacy architecture)
-#### SR-IOV for 10G and LB for 1G
 
 |**Interface**|**10G Pub+Priv**** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
