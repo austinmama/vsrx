@@ -23,7 +23,7 @@ subcollection: vsrx
 # Managing IBM VLANs
 {: #managing-ibm-vlans}
 
-You can perform a variety of actions from the [Gateway Appliance Details screen](/docs/vsrx?topic=vsrx-viewing-your-gateway-appliance-details) for your {{site.data.keyword.vsrx_full}}.
+You can perform a variety of actions from the [Gateway Appliance Details screen](/docs/vsrx?topic=gateway-appliance-viewing-gateway-appliance-details) for your {{site.data.keyword.vsrx_full}}.
 {: shortdesc}
 
 ## Associate a VLAN to a Gateway Appliance
