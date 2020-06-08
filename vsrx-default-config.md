@@ -818,11 +818,11 @@ The legacy architecture for these configurations leveraged Linux bridging on the
 * 10G or 1G
 * Standalone or High Availability
 * Public and Private, or Private Only
-* The vSRX Version 
+* The vSRX Version
   - All 15.1 based vSRX’s use the legacy architecture
   - Some 18.4 based vSRX’s also use the legacy architectue
 
-Both the legacy and current architecture is detailed in the following sections. 
+Both the legacy and current architecture is detailed in the following sections.
 
 ### vSRX High Availability interfaces (current architecture)
 
@@ -883,7 +883,7 @@ Both the legacy and current architecture is detailed in the following sections.
 
 ### vSRX standalone interfaces (legacy architecture)
 
-|**Interface**|**10G Pub+Priv**** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
+|**Interface**|**10G Pub+Priv** |**10G Priv Only** |**1G Pub+Priv** |**1G Priv Only** |
 |-------------|----------------|-----------------|-----------------|----------------|
 |ge-0/0/0|ae0|ae0|ge-0/0/0|ge-0/0/0|
 |ge-0/0/1|ae1|ae0|ge-0/0/1|Does Not Exist|
