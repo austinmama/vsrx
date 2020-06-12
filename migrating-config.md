@@ -23,18 +23,17 @@ subcollection: vsrx
 # Migrating legacy configurations to the current vSRX architecture
 {: #migrating-config}
 
-Current vSRX 18.4 deployments leverage the current architecture in most cases. This includes the vSRX 18.4 1G SR-IOV offering. The older vSRX 18.4 1G Standard offering is based on Linux Bridging and has different network configurations on the Ubuntu host, the KVM hypervisor, and in the vSRX configuration. To migrate exported vSRX configurations from the legacy architecture to the current architecture requires some careful consideration. The host and KVM settings do not require any special migration steps since the automation process will handle the configuration changes. However, if the vSRX configuration from the legacy architecture is to be imported into the current vSRX configuration then some refactoring of the configuration is most likely needed.
+{{site.data.keyword.vsrx_full}} 18.4 deployments leverage the current architecture in most cases. This includes the vSRX 18.4 1G SR-IOV offering. The older vSRX 18.4 1G Standard offering is based on Linux Bridging and has different network configurations on the Ubuntu host, the KVM hypervisor, and in the vSRX configuration. To migrate exported vSRX configurations from the legacy architecture to the current architecture requires careful consideration. The host and KVM settings do not require any special migration steps, as the automation process handles the configuration changes. However, if you want to import the vSRX configuration from the legacy architecture into the current vSRX configuration, you likely need to refactor some of the configuration.
 
-## Migrating 1G vSRX standalone configuration
+## Migrating 1G vSRX standalone configurations
 {: #migrating-1g-standalone}
 
-This example discusses some steps potentially needed to convert exported vSRX configuration settings on a Standalone 18.4 1G Public+Private Linux Bridge (legacy architecture) instance to a Standalone 18.4 1G Public+Private SR-IOV (current architecture) instance.
+There are some steps you potentially need to convert vSRX configuration settings on a Standalone 18.4 1G Public+Private Linux Bridge (legacy architecture) instance to a Standalone 18.4 1G Public+Private SR-IOV (current architecture) instance.
 
-A sample default configuration for the SR-IOV based current architecture can be found here: https://cloud.ibm.com/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#default-configuration-of-a-sample-standalone-vsrx-gateway
+You can find a sample default configuration for SR-IOV based current architecture [in this topic](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#default-configuration-of-a-sample-standalone-vsrx-gateway).
+{: note}
 
-This example shows vSRX instances that were provisioned in different Datacenter pods, therefore the transit VLAN’s (native-vlan-id) are different.
-
-A sample default configuration for the Linux Bridge (legacy architecture) is found below:
+The following is a sample default configuration for the Linux Bridge (legacy architecture). The example shows vSRX instances that were provisioned in different Datacenter pods. As a result, the transit VLAN’s (`native-vlan-id`) are different.
 
 ```
 ## Last commit: 2020-04-16 22:48:33 UTC by root
@@ -318,44 +317,43 @@ routing-options {
 }
 ```
 
-## Converting the interface section
+### Converting the interface section
 {: #converting-interface}
 
-In this 1G Public+Private Standalone example, the current architecture adds aggregated interfaces ae0 and ae1. These should map to what the legacy architecture defined as ge-0/0/0 (private / ae0) and ge-0/0/1 (public / ae1). Additionally, the new architecture adds ge-0/0/2 and ge-0/0/3 to support redundancy within the vSRX interfaces. In the old architecture redundancy existed at the host (hypervisor) bond interfaces (bond0 private / bond1 public). In the current architecture SR-IOV VF’s that map directly to the ge interfaces are used for redundancy.
+In the above 1G Public+Private Standalone example, the current architecture adds aggregated interfaces `ae0` and `ae1`. These should map to what the legacy architecture defines as `ge-0/0/0 (private / ae0)` and `ge-0/0/1 (public / ae1)`. Additionally, the new architecture adds `ge-0/0/2` and `ge-0/0/3` to support redundancy within the vSRX interfaces. In the old architecture, redundancy existed at the host (Hypervisor) bond interfaces (`bond0 private / bond1 public`). In the current architecture, SR-IOV VF’s that map directly to the `ge` interfaces are used for redundancy.
 
-You can compare these vSRX configuration differences by observing the documentation for vSRX Standalone interface (current architecture): https://cloud.ibm.com/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#interface-configurations
+You can compare these vSRX configuration differences in [vSRX Standalone interface (current architecture)](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#interface-configurations) and [vSRX Standalone interface (legacy architecture)](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-standalone-interfaces-legacy-architecture-).
 
-and vSRX Standalone interface (legacy architecture): https://cloud.ibm.com/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-standalone-interfaces-legacy-architecture-
+Any private VLAN’s that were previously configured for `ge-0/0/0` need to be routed through `ae0`. In addition, any public VLAN’s that you previously configured for `ge-0/0/1` need to be routed through `ae1`.
 
-Any private VLAN’s that were previously configured for ge-0/0/0 will need to now be routed through ae0 and any public VLAN’s that were previously configured for ge-0/0/1 will need to now be routed through ae1.
-
-## Converting the zones section
+### Converting the zones section
 {: #converting-zones}
 
-Similar to the interface section changes. Any default security zones that previously referenced ge-0/0/0 and ge-0/0/1 should now use the ae0.0 (SL-PRIVATE) and ae1.0 (SL-PUBLIC) interfaces. The same changes would also apply to any user configured zones that previously referenced ge-0/0/0 and ge-0/0/1.
+Any default security zones that previously referenced `ge-0/0/0` and `ge-0/0/1` should now use the `ae0.0 (SL-PRIVATE)` and `ae1.0 (SL-PUBLIC)` interfaces. The same changes also apply to any zones that previously referenced `ge-0/0/0` and `ge-0/0/1`.
 
-Other changes
+### Other changes
+{: #sa-other-changes}
 
 The aggregated device configuration requires the following addition in the current architecture:
 
+```
 set chassis aggregated-devices ethernet device-count 10
+```
 
 The JWEB configuration will also include the aggregated interfaces as well:
 
+```
 set system services web-management https interface ae0.0
 set system services web-management https interface ae1.0
+```
 
-Migrating 1G vSRX High Availability configuration
+## Migrating 1G vSRX High Availability configurations
+{: #migrating-ha-config}
 
-The main vSRX configuration changes that need to be considered when importing configurations from the legacy architecture to the current architecture are some small changes to the interface mappings.
+For High Availability configurations, the main vSRX changes when importing configurations from the legacy architecture to the current architecture are small changes to the interface mappings.
 
-## Converting the interface section
-{: #converting}
+The 1G SR-IOV HA configuration for the current architecture adds additional vSRX interfaces for redundancy, instead of using the host (hypervisor) bond interfaces. This is possible as the host now uses SR-IOV VF’s that can be mapped directly to the vSRX interfaces. Configurations that were exported from the legacy architecture will need to take this into account if they are imported into the current architecture.
 
-Similar to 1G SR-IOV Standalone in the previous section, the 1G SR-IOV HA configuration for the current architecture adds additional vSRX interfaces for redundancy, instead of using the host (hypervisor) bond interfaces for redundancy. This is possible since the host now uses SR-IOV VF’s that can be mapped directly to the vSRX interfaces. Configurations that were exported from the legacy architecture will need to take this into account if they are imported on the current architecture.
+The vSRX configuration for the current architecture for 1G HA can be found [in this topic](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-high-availability-interfaces-current-architecture-). While, the vSRX configuration for the legacy architecture for 1G HA can be found [here](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-high-availability-interfaces-legacy-architecture-)
 
-The vSRX configuration for the current architecture for 1G HA can be found here: https://cloud.ibm.com/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-high-availability-interfaces-current-architecture-
-
-The vSRX configuration for the legacy architecture for 1G HA can be found here: https://cloud.ibm.com/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#vsrx-high-availability-interfaces-legacy-architecture-
-
-The extra ge-0/* and ge-7/* interfaces were added and associated with the existing reth interfaces which have been present in both the legacy and current architecture. These allow for redundancy within the vSRX configuration. Redundancy is also configured for the fab interfaces as well.
+The extra `ge-0/*` and `ge-7/*` interfaces were added and associated with the existing `reth` interfaces which have been present in both the legacy and current architecture. These allow for redundancy within the vSRX configuration. Redundancy is also configured for the `fab` interfaces as well.
