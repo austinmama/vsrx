@@ -20,8 +20,6 @@ IBM Cloud Juniper vSRX
         /gateway-appliance/gateway-appliance-cancel-gateway-appliance
         vsrx-basics.md
 
-    vsrx-license.md
-
     {: .topicgroup}
     Checking vSRX readiness
         readiness.md
@@ -54,6 +52,7 @@ IBM Cloud Juniper vSRX
         vpn.md
         securing-host.md
 
+    vsrx-license.md
     os-reload.md
     rebuild-cluster.md
     vsrx-upgrade.md
