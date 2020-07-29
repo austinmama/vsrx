@@ -6,7 +6,7 @@ lastupdated: "2020-07-29"
 
 keywords:
 
-subcollection: vsrx, firewalls, working, policy, policies, rules, zones, standalone, ha
+subcollection: vsrx, management, interface, fpx0, subnets, IPs, VLAN, nodes
 
 ---
 
