@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-07-30"
 
 keywords:
 
@@ -59,6 +59,8 @@ You can allocate a secondary subnet for the private transit VLAN, and use IPs fr
   set groups node0 system backup-router 10.177.75.137 destination [ 0.0.0.0/1 128.0.0.0/1 ]
   set groups node1 system backup-router 10.177.75.137 destination [ 0.0.0.0/1 128.0.0.0/1 ]
   ```
+
+Additional information on configuring the backup router can be found here: https://kb.juniper.net/InfoCenter/index?page=content&id=KB17161&actp=METADATA
 
 5. Create a static route to the subnet. For example: 
 
