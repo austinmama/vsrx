@@ -45,7 +45,7 @@ For a Standalone environment, the previous configuration is not restored, so you
 
 * For a successful reload on an HA vSRX, the root password for the provisioned vSRX gateway must match the root password that is defined in the vSRX portal, and root SSH login to the vSRX Private IP needs to be enabled.
 
-  The password in the portal was defined when the gateway was first provisioned, and might not match the current Gateway password. If the password was changed after the initial provisioning, then use SSH to connect to the vSRX gateway and change the root password to match.
+  The password in the portal was defined when the gateway was first provisioned, and might not match the current gateway password. If the password was changed after the initial provisioning, then use SSH to connect to the vSRX gateway and change the root password to match.
   {: note}
 
 Performing an OS reload on both servers of the High Availability gateway at the same time destroys the vSRX cluster and cause the gateway to be out of service. If the vSRX cluster is destroyed, you must use the Rebuild Cluster option to reprovision the vSRX and re-create the HA cluster. Ensure that the OS reload of the first member is complete before requesting an OS reload of the second.

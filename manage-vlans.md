@@ -59,7 +59,7 @@ After routing a VLAN, all front-end and back-end traffic moves from the customer
 
 After a VLAN has been routed, all front and back-end traffic travels through the network gateway. At any time, the gateway appliance can be bypassed so that traffic returns to the front and back-end customer routers (FCR and BCR).
 
-Bypassing a VLAN allows the VLAN to remain associated to the network gateway. If the VLAN should no longer be associated with the gateway appliance, refer to [Disassociate a VLAN from a gateway appliance](#disassociate-a-vlan-from-a-gateway-appliance).
+Bypassing a VLAN allows the VLAN to remain associated to the network gateway. If the VLAN should no longer be associated with the gateway appliance, see [Disassociating a VLAN from a gateway appliance](#disassociate-a-vlan-from-a-gateway-appliance).
 
 Follow these steps to bypass gateway routing for a VLAN:
 

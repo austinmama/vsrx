@@ -41,7 +41,7 @@ The vSRX deploys to protect your environment from external and internal threats 
 
 Connect your onsite data center or office to the IBM Cloud using VPN tunneling by provisioning your vSRX as a network gateway device. You can use an IPsec site-to-site VPN tunnel for secure communication from your enterprise data center or office to your IBM Cloud network. Remote access IPsec VPN also is supported.
 
-For a detailed configuration guide on VPN, refer to the links provided in the topic [VPN](/docs/vsrx?topic=vsrx-working-with-vpn#working-with-vpn).
+For a detailed configuration guide on VPN, see the links provided in the topic [VPN](/docs/vsrx?topic=vsrx-working-with-vpn#working-with-vpn).
 
 ## Network address translation (NAT)
 {: #network-address-translation-nat-}
@@ -64,4 +64,4 @@ By default, a new Gateway Appliance is associated with two non-removable "transi
 
 The vSRX can manage VLANs that are associated with it through the gateway appliance (only).
 
-For information on how to manage VLANs from the **Gateway Appliances Details** page, refer to the [Manage VLANs](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) topic.
+For information on how to manage VLANs from the **Gateway Appliances Details** page, see the [Managing VLANs](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) topic.

@@ -120,7 +120,7 @@ The vSRX has two available licenses:
 * Standard
 * Content Security Bundle (CSB)
 
-For information on the features offered with these licenses, refer to [Choosing a vSRX license](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
+For information on the features offered with these licenses, see [Choosing a vSRX license](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
 
 To view your current license, follow these steps:
 
