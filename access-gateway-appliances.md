@@ -20,18 +20,18 @@ subcollection: vsrx
 {:important: .important}
 {:download: .download}
 
-# Viewing all your Gateway Appliances
+# Viewing your gateway appliances
 {: #viewing-all-your-gateway-appliances}
 
-The Gateway Appliances screen in the {{site.data.keyword.cloud}} infrastructure is where you can display and access all Network Gateway Appliances, including the {{site.data.keyword.vsrx_full}}.  
+The Gateway Appliances page in the {{site.data.keyword.cloud}} infrastructure is where you can display and access all network gateway appliances, including the {{site.data.keyword.vsrx_full}}.  
 {: shortdesc}
 
-Perform the following procedure to access the Gateway Appliances screen.
+Follow these steps to access the Gateway Appliances page.
 
-1. From your browser, open [https://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){:new_window} and log into your account.
-2. Select the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) from the top left, then click **Classic Infrastructure**.
+1. From your browser, open [https://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){:new_window} and log in to your account.
+2. Select the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) from the upper left, then click **Classic Infrastructure**.
 3. Choose **Network > Gateway Appliances**.
 
-The Gateway Appliances List page has additional features including sorting by Name, Vendor, or Location. Clicking the header for these columns will alphabetically sort your gateways for more convenient viewing. If you'd prefer more gateways appear on the page, click the dropdown in the bottom left corner and expand the grid to your liking. Furthermore, the bottom right corner allows you to switch pages to view the rest of your gateways.  
+The Gateway Appliances List page has additional features including sorting by Name, Vendor, or Location. Clicking the header for these columns sorts your gateways alphabetically for convenient viewing. If you'd prefer more gateways appear on the page, click the menu in the lower left and expand the grid to your liking. Furthermore, in the lower right area, you can switch pages to view the rest of your gateways.  
 
-You also have the ability to rename your gateway. In the right most part of the grid, clicking the overflow menu will allow you to do so.
+You can also rename your gateway. To do so, click the overflow menu in the rightmost part of the grid.

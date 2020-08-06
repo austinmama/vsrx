@@ -34,15 +34,15 @@ There are some limitations to be aware of when using {{site.data.keyword.vsrx_fu
       - 10 Gbps version in WDC01 (Washington, DC)
       - 1G and 10G High Availability versions in: AMS01, DAL05, DAL06, DAL07, HKG02, HOU02, SJC01, SNG01, and WDC01
 
-* Juniper vSRX Gateway is deployed with networking virtualization using Linux Bridge. Linux Bridge based networking virtualization can only achieve limited throughput and never line-rate throughput.
+* Juniper vSRX gateway is deployed with networking virtualization by using Linux Bridge. Linux Bridge based networking virtualization can achieve only limited throughput and never line-rate throughput.
 
 * There is no support to upgrade from Standalone to High-availability mode.
 
-* {{site.data.keyword.vsrx_full}} Gateway is deployed with the options of Junos OS version `15.1` or `18.4`. Currently, there is no support for upgrading/downgrading to a different version.
+* {{site.data.keyword.vsrx_full}} Gateway is deployed with the options of Junos OS version `15.1` or `18.4`. Currently, upgrading/downgrading to a different version is not supported.
 
-* The 60-day evaluation license may cause the kernel to generate ERROR messages, even when there is another (valid) license on the system. You should remove any 60-day evaluation licenses to avoid this issue. To do so, perform the following procedure:
+* The 60-day evaluation license might cause the kernel to generate error messages, even when another (valid) license is on the system. Remove any 60-day evaluation licenses to avoid this issue. To do so, follow these steps:
 
-  1. Login to your vSRX gateway device.
+  1. Log in to your vSRX gateway device.
 
   2. Enter CLI mode by running the command `cli` at the console prompt.
 
@@ -52,7 +52,7 @@ There are some limitations to be aware of when using {{site.data.keyword.vsrx_fu
   show system license
   ```
 
-  The output should be similar to the following:
+  Output is similar to the following:
 
   ```
   License usage:

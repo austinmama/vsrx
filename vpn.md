@@ -23,7 +23,7 @@ subcollection: vsrx
 # Working with VPN
 {: #working-with-vpn}
 
-This topic details a sample configuration for a Route based VPN between two sites. In this sample configuration Server 1 (Site A) can communicate with Server 2 (Site B), and each site utilizes two phase IPSEC authentication.
+This topic details a sample configuration for a Route based VPN between two sites. In this sample configuration Server 1 (Site A) can communicate with Server 2 (Site B), and each site uses two-phase IPsec authentication.
 {: shortdesc}
 
 ![Site to Site VPN](images/site-to-site-vpn.png "Site to Site VPN")
@@ -248,7 +248,7 @@ policy VPN-to-Custprivate {
 ## Performance Consideration
 {: #performance-consideration}
 
-In order to achieve the best IPSEC VPN performance, use AES-GCM as the encryption algorithm for both IKE and IPSEC proposals.
+To achieve the best IPsec VPN performance, use AES-GCM as the encryption algorithm for both IKE and IPsec proposals.
 
 For example:
 
@@ -262,6 +262,6 @@ With AES-GCM as the encryption algorithm, you don't need to specify the authenti
 ## Additional VPN configurations
 {: #additional-vpn-configurations}
 
-To configure IPSEC VPN, site to site, remote access VPN, and other features, refer to this [configuration guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/security/security-vpn-ipsec.pdf){: new_window} from Juniper.
+To configure IPsec VPN, site to site, remote access VPN, and other features, refer to this [configuration guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/security/security-vpn-ipsec.pdf){: new_window} from Juniper.
 
-For an example of how to configure a route-based site to site IPSEC VPN, refer to this [configuration guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/topics/example/ipsec-route-based-vpn-configuring.html){: new_window} from Juniper.
+For an example of how to configure a route-based site to site IPsec VPN, refer to this [configuration guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.juniper.net/documentation/en_US/junos/topics/example/ipsec-route-based-vpn-configuring.html){: new_window} from Juniper.

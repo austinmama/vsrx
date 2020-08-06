@@ -878,7 +878,7 @@ routing-options {
 
 The following table illustrates the network interface definitions for the previous configuration:
 
-| Interface Name   |  Interface  Function      |
+| Interface Name   |  Interface Function      |
 | :---          |    :---         |
 | ge-0/0/1 / ge-0/0/2   |  Gigabit ethernet interface for Private VLAN on primary node |
 | ge-0/0/3 / ge-0/0/4   |  Gigabit ethernet interface for Public VLAN on primary node |
@@ -890,11 +890,11 @@ The following table illustrates the network interface definitions for the previo
 | reth3         |   Redundant ethernet interface for CUSTOMER Public VLANs   |
 | fab0 / fab1   |   Chassis cluster fabric link |
 | fxp0          |   Management interface        |
-| lo0           |   loopback interface          |
+| lo0           |   Loopback interface          |
 
 In addition, two redundancy groups are configured. The following table illustrates these redundancy groups:
 
-| Redundancy Group   |  Redundancy Group  Function      |
+| Redundancy Group   |  Redundancy Group Function      |
 | :---          |    :---         |
 | redundancy-group 0   |  Redundancy group for control plane |
 | redundancy-group 1   |  Redundancy group for data plane |

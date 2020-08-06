@@ -28,4 +28,4 @@ If you have problems or questions when using {{site.data.keyword.vsrx_full}} Sta
 
 See [Getting help](https://{DomainName}/docs/get-support?topic=get-support-using-avatar) for details about using forums.
 
-For information about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support).
+For information about opening an IBM Support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support).

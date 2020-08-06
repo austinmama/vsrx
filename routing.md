@@ -47,7 +47,7 @@ set routing-options static route <PREFIX/MASK> next-hop <Gateway IP>
 ###Basic OSPF routing
 {: #basic-ospf-routing}
 
-To setup basic OSPF routing, only using area 0, run the following commands using md5 authentication:
+To set up basic OSPF routing, using only area 0, run the following commands that use md5 authentication:
 
 ```
 set protocols ospf area 0 interface ge-0/0/1.0 authentication md5 0 key <KEY>
@@ -56,13 +56,13 @@ set protocols ospf area 0 interface ge-0/0/1.0 authentication md5 0 key <KEY>
 ### Basic BGP routing
 {: #basic-bgp-routing}
 
-To setup basic BGP routing, first define the local AS:
+To set up basic BGP routing, first define the local AS:
 
 ```
 set routing-options autonomous-system 65001
 ```
 
-Then configure the BGP neighbor and its session attributes:
+Then, configure the BGP neighbor and its session attributes:
 
 ```
 set protocols bgp group CUSTOMER local-address 1.1.1.1

@@ -23,7 +23,7 @@ subcollection: vsrx
 # Confirming the output and committing the changes
 {: #confirming-the-output-and-commiting-the-changes}
 
-After the changes and additions you've made have been staged, run the following command to confirm what will be committed to the active configuration:
+After the changes and additions you've made are staged, run the following command to confirm what will be committed to the active configuration:
 {: shortdesc}
 
 ```
@@ -103,4 +103,4 @@ After you check that the configuration is correct, run the `commit` command to p
 
 Your {{site.data.keyword.vsrx_full}} Standard is now configured to route and filter traffic to the new VLAN and subnet, allowing only inbound pings and SSH connections.
 
-You should now route the VLAN as shown in [Managing VLANs with a Gateway Appliance](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) to begin using the new functionality.
+You should now route the VLAN as shown in [Managing VLANs with a Gateway Appliance](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) to begin using the new functions.

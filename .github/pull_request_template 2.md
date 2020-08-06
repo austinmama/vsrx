@@ -12,23 +12,23 @@
 * [ ] Use relative links hosted in `docs` application, starting with `/docs`
 * [ ] Use `{DomainName}` only to reference other applications hosted in test.cloud.ibm.com or cloud.ibm.com
 * [ ] Use External Link Icon only when linking somewhere outside of `*.ibm.com` domain
-* [ ] Use `{: new_window}` only when ABSOLUTELY necessary and try to warn the user that a new tab or window will open when they click on it. 
+* [ ] Use `{: new_window}` only when ABSOLUTELY necessary and try to warn the user that a new tab or window opens when they click on it.
 
 ## Verify
 
 * [ ] Push to staging and verify content look, feel and all links
-* [ ] Push to production and verify content look, feel and all links 
+* [ ] Push to production and verify content look, feel and all links
 
 ## Reminders
 
 * [ ] No references to **Bluemix** or **SoftLayer**. We are One Cloud. Instead use:
     - IBM Cloud
-    - IBM Cloud Infrastructure 
-    - IBM Cloud Console 
+    - IBM Cloud Infrastructure
+    - IBM Cloud Console
     - Customer Portal (to refer to control.softlayer.com if you must)
-* [ ] If you are using {DomainName}, don't forget to declare it on top of markdown file 
+* [ ] If you are using {DomainName}, don't forget to declare it on top of markdown file
 * [ ] Use conrefs
-* [ ] Use Copyright symbol in first mention of IBM 
+* [ ] Use Copyright symbol in first mention of IBM
 
 ## When in doubt, refer to IBM Cloud Doc Guidelines
 
