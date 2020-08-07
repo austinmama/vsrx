@@ -88,5 +88,5 @@ To do so, follow these steps:
 
 5. Log in to the other vSRX gateway of your pair. Enter CLI mode by again running the command `cli` and then verify that the console output shows as `primary`.
 
-When you enter CLI mode in your Juniper vSRX gateway device, the output shows as `primary` from the control plane perspective. Always check the `show chassis cluster status` output to determine which gateway device is primary from data plane perspective. Refer to [vSRX Default Configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) to learn more about redundancy groups, as well as the control and data planes.
+When you enter CLI mode in your Juniper vSRX gateway device, the output shows as `primary` from the control plane perspective. Always check the `show chassis cluster status` output to determine which gateway device is primary from data plane perspective. Refer to [Understanding the vSRX default configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) to learn more about redundancy groups, and control and data planes.
 {: tip}
