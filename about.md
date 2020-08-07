@@ -28,7 +28,7 @@ The vSRX provides performance, ease of configuration, and maintenance advantages
 
 The {{site.data.keyword.vsrx_full}} is offered in two different modes: Standalone mode or High Availability (HA) cluster.
 
-Additional documentation for {{site.data.keyword.vsrx_full}} can be found in the [Supplemental Documentation](/docs/vsrx?topic=vsrx-supplemental-ibm-cloud-juniper-vsrx-documentation) topic.
+Additional documentation for {{site.data.keyword.vsrx_full}} can be found in [Supplemental vSRX documentation](/docs/vsrx?topic=vsrx-supplemental-ibm-cloud-juniper-vsrx-documentation).
 {: note}
 
 ## Firewall
@@ -36,14 +36,14 @@ Additional documentation for {{site.data.keyword.vsrx_full}} can be found in the
 
 The vSRX deploys to protect your environment from external and internal threats by filtering private- and public-facing traffic. Customers can manage the vSRX themselves by defining policies and rules that allow or deny (among other actions) inbound or outbound network traffic, thereby protecting their applications from internal and external approaches. Both IPv4 and IPv6 stacks are supported in a stateful manner.
 
-## Virtual private network (VPN) gateway
+## Virtual Private Network (VPN) gateway
 {: #virtual-private-network-vpn-gateway}
 
-Connect your onsite data center or office to the IBM Cloud using VPN tunneling by provisioning your vSRX as a network gateway device. You can use an IPsec site-to-site VPN tunnel for secure communication from your enterprise data center or office to your IBM Cloud network. Remote access IPsec VPN also is supported.
+Connect your onsite data center or office to the IBM Cloud using VPN tunneling by provisioning your vSRX as a network gateway device. You can use an IPsec site-to-site VPN tunnel for secure communication from your enterprise data center or office to your IBM Cloud network. Remote-access IPsec VPN also is supported.
 
-For a detailed configuration guide on VPN, see the links provided in the topic [VPN](/docs/vsrx?topic=vsrx-working-with-vpn#working-with-vpn).
+For more information, see [Working with VPN](/docs/vsrx?topic=vsrx-working-with-vpn#working-with-vpn).
 
-## Network address translation (NAT)
+## Network Address Translation (NAT)
 {: #network-address-translation-nat-}
 
 With the vSRX gateway appliance, you can provision application and database servers without public network interfaces, and still allow your servers access to the internet by using _source NAT_. For enhanced security, you can protect your servers behind the gateway device by using _destination NAT_.
