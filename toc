@@ -1,35 +1,40 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vsrx" audience="network" arm="4133342" href="/docs/vsrx?topic=vsrx-getting-started" path="vsrx"}
+{: .toc subcollection="vsrx" category="network_classic" audience="network" href="/docs/vsrx?topic=vsrx-getting-started" console-page="/provision/gateway" product-page="https://www.ibm.com/cloud/network-appliances" path="vsrx"}
 IBM Cloud Juniper vSRX
 
     {: .navgroup id="learn"}
     getting-started.md
     about.md
     /fortigate-10g/fortigate-10g-exploring-firewalls
+    [What is network security?](https://www.ibm.com/cloud/learn/networking-a-complete-guide)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    /gateway-appliance/gateway-appliance-viewing-all-gateway-appliances
-    /gateway-appliance/gateway-appliance-viewing-gateway-appliance-details
-    /gateway-appliance/gateway-appliance-renaming-a-gateway-appliance
-    /gateway-appliance/gateway-appliance-cancel-gateway-appliance
-    vsrx-basics.md
+    {: .topicgroup}
+    Performing vSRX basics
+        /gateway-appliance/gateway-appliance-viewing-all-gateway-appliances
+        /gateway-appliance/gateway-appliance-viewing-gateway-appliance-details
+        /gateway-appliance/gateway-appliance-renaming-a-gateway-appliance
+        /gateway-appliance/gateway-appliance-cancel-gateway-appliance
+        vsrx-basics.md
 
     {: .topicgroup}
     Checking vSRX readiness
         readiness.md
-        readiness_running.md
         readiness_errors.md
         readiness_correcting_errors.md
 
     {: .topicgroup}
-    Work with VLANs
+    Working with VLANs
         /gateway-appliance/gateway-appliance-managing-vlans-and-gateway-appliances
 
-    vsrx-default-config.md
-    vsrx-import-and-export-config.md
+    {: topicgroup}
+    Working with the vSRX default configuration
+        vsrx-default-config.md
+        vsrx-import-and-export-config.md
+        migrating-config.md
 
     {: .topicgroup}
     Step-by-step: How to Allow SSH and Pinging to a Public Subnet
@@ -38,23 +43,28 @@ IBM Cloud Juniper vSRX
         ssh-create-flows.md
         ssh-check-output.md
 
-    firewalls.md
-    nat.md
-    failover.md
-    routing.md
-    vpn.md
-    securing-host.md
+    {: topicgroup}
+    Performing vSRX advanced tasks
+        firewalls.md
+        nat.md
+        failover.md
+        routing.md
+        vpn.md
+        securing-host.md
+        management-interfaces.md
+
+    vsrx-license.md
     os-reload.md
     rebuild-cluster.md
     vsrx-upgrade.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    vsrx-release-notes.md
     /hardware-firewall-dedicated/hardware-firewall-dedicated-ibm-cloud-ip-ranges
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    vsrx-release-notes.md
     known-limitations.md
     vsrx-docs.md
     /gateway-appliance/gateway-appliance-getting-help

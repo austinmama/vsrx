@@ -27,7 +27,7 @@ subcollection: vsrx
 {{site.data.keyword.vsrx_full}} allows you to route private and public network traffic selectively, through a full-featured, enterprise-level firewall that is powered by JunOS software features, such as full routing stacks, QoS and traffic sharing, policy-based routing, and VPN.
 {: shortdesc}
 
-For a list of known limitations with {{site.data.keyword.vsrx_full}} Gateway, see [Known Limitations](/docs/vsrx?topic=vsrx-known-limitations-for-ibm-cloud-juniper-vsrx).
+For a list of known limitations with {{site.data.keyword.vsrx_full}} Gateway, see [Known limitations](/docs/vsrx?topic=vsrx-known-limitations-for-ibm-cloud-juniper-vsrx).
 {: note}
 
 ## Choosing a vSRX license
@@ -59,9 +59,9 @@ IBM Cloud has temporarily suspended new sales of 1G Highly Available (HA) Junipe
 
 You can order your {{site.data.keyword.vsrx_full}} by performing the following procedure:
 
-1. From your browser, open the Gateway Appliances page in the [Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: new_window} and log in to your account.
+1. From your browser, open the Gateway Appliances page in the [IBM Cloud catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: new_window} and log in to your account.
 
-  You can also get to this page by logging in to the [IBM Cloud UI Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com) and selecting **Classic Infrastructure > Network > Gateway appliance**. Alternatively, from the [IBM Cloud Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog), select the **Network** category then choose the **Gateway Appliance** tile.
+  You can also get to this page by logging in to the [IBM Cloud UI console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com) and selecting **Classic Infrastructure > Network > Gateway appliance**. Alternatively, from the [IBM Cloud catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog), select the **Network** category then choose the **Gateway Appliance** tile.
 
 2. Choose **Juniper vSRX (up to 1 Gbps)** or **Juniper vSRX (up to 10 Gbps)** under **Gateway Vendor**.
 
@@ -105,9 +105,9 @@ You can order your {{site.data.keyword.vsrx_full}} by performing the following p
 
 8. Review your selections, check that you have read the Third Party Service Agreements, then click **Create**. The order is verified automatically.
 
-After your order is approved, the provisioning of your {{site.data.keyword.vsrx_full}} Gateway starts automatically. When the provisioning process is complete, the new vSRX appears in the Gateway Appliances list page. Click the gateway name to open the Gateway Details page. The IP addresses, login username, and password for the device are shown.
+After your order is approved, the provisioning of your {{site.data.keyword.vsrx_full}} Gateway starts automatically. When the provisioning process is complete, the new vSRX appears in the Gateway Appliances list page. Click the gateway name to open the Gateway Details page. The IP addresses, login username, and password for the device appear.
 
-Remember that after you order and configure your gateway from the IBM Cloud Catalog, you must also configure the device itself with the same settings.
+Remember that after you order and configure your gateway from the IBM Cloud catalog, you must also configure the device itself with the same settings.
 {: tip}
 
 ## What's next?

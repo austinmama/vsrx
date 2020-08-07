@@ -39,7 +39,7 @@ The process performs the following actions:
 
 The process usually requires 1 hour 40 minutes to complete. Standalone Gateways are out of service during this period. For Juniper High Availability (HA) Gateways, when you reload the OS on one of your servers, the vSRX fails over to another server in the cluster, and continues to process data traffic. After the reload is complete, the server rejoins the cluster.
 
-For a successful reload or rebuild of the cluster on an HA vSRX:
+For a successful OS Reload on a vSRX, ensure the following:
 
 * Do not modify the vSRX configuration during the execution of the OS Reload and Rebuild Cluster operations. Examples include automated software agents attempting to modify one or both vSRX nodes. Configurations changes can corrupt the OS Reload and Rebuild Cluster operations.
 

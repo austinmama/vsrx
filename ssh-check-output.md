@@ -103,4 +103,4 @@ After you check that the configuration is correct, run the `commit` command to p
 
 Your {{site.data.keyword.vsrx_full}} Standard is now configured to route and filter traffic to the new VLAN and subnet, allowing only inbound pings and SSH connections.
 
-You should now route the VLAN as shown in [Managing VLANs with a Gateway Appliance](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) to begin using the new functions.
+You should now route the VLAN as shown in [Managing VLANs with a gateway appliance](/docs/vsrx?topic=gateway-appliance-managing-vlans-and-gateway-appliances) to begin using the new functionality.
