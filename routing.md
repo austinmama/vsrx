@@ -35,13 +35,13 @@ To configure static routes, run the following commands:
 {: #setting-a-default-route}
 
 ```
-set routing-options static route 0/0 next-hop <Gateway IP>
+set routing-options static route 0/0 next-hop <gateway_ip>
 ```
 
 ### Creating a static route
 {: #creating-a-static-route}
 ```
-set routing-options static route <PREFIX/MASK> next-hop <Gateway IP>
+set routing-options static route <PREFIX/MASK> next-hop <gateway_ip>
 ```  
 
 ###Basic OSPF routing

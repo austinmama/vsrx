@@ -42,7 +42,7 @@ Two redundancy groups are configured. The following table illustrates these redu
 
 Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
 
-## Default Configuration of a sample 1G Standalone SR-IOV Public and Private vSRX Gateway
+## Default configuration of a sample 1G Standalone SR-IOV public and private vSRX gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
 The following code samples are examples from the latest code release.
@@ -370,7 +370,7 @@ The following table illustrates network interface definitions for the previous c
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
-## Default Configuration of a sample 10G HA SR-IOV Public and Private vSRX Gateway
+## Default configuration of a sample 10G HA SR-IOV public and private vSRX gateway
 {: #default-configuration-of-a-sample-highly-available-ha-vsrx-gateway}
 
 ```

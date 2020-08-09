@@ -73,7 +73,7 @@ After bypassing the network gateway, all front-end and back-end traffic routes t
 ## Disassociating a VLAN from a gateway Aapliance
 {: #disassociate-a-vlan-from-a-gateway-appliance}
 
-VLANs can be linked to one gateway appliance at a time through [association](#associate-a-vlan-to-a-gateway-appliance). Association allows the VLAN to be routed to the gateway appliance at any time. If a VLAN should be associated to another gateway appliance, or if the VLAN should no longer be associated to its Gateway, disassociation is required. Disassociation removes the "link" from the VLAN to the gateway appliance, allowing it to be associated to another Gateway, if necessary.
+VLANs can be linked to one gateway appliance at a time through [association](#associate-a-vlan-to-a-gateway-appliance). Association allows the VLAN to be routed to the gateway appliance at any time. If a VLAN should be associated to another gateway appliance, or if the VLAN should no longer be associated to its gateway, disassociation is required. Disassociation removes the "link" from the VLAN to the gateway appliance, allowing it to be associated to another gateway, if necessary.
 
 Follow these steps to disassociate a VLAN from a gateway appliance:
 

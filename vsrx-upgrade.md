@@ -67,7 +67,7 @@ Performing an OS reload on both servers of the High Availability gateway at the 
   request chassis cluster failover reset redundancy-group <RG number>`
   ```
 
-* If the IBM Cloud account has multiple vSRX gateway instances in the same pod, make sure that only one Gateway is upgraded at a time. Upgrading more than one vSRX at a time can result in IP collisions, disrupt the upgrade process, and potentially cause failures.
+* If the IBM Cloud account has multiple vSRX gateway instances in the same pod, make sure that only one gateway is upgraded at a time. Upgrading more than one vSRX at a time can result in IP collisions, disrupt the upgrade process, and potentially cause failures.
 
 * The upgrade process captures a snapshot of the current vSRX cluster configuration at the beginning of the process. Therefore, modifying the vSRX configuration during the upgrade process is discouraged and might result in failures or unpredictable results. Additionally, these configuration changes are not preserved if a rollback is initiated.
 
