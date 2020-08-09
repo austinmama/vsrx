@@ -25,7 +25,7 @@ subcollection: vsrx
 # Correcting readiness errors
 {: #correcting-readiness-errors}
 
-There are two categories of errors you may encounter when performing readiness checks:
+There are two categories of errors you might encounter when performing readiness checks:
 
   * Host (Ubuntu) SSH connectivity errors
   * Gateway (vSRX) SSH connectivity errors

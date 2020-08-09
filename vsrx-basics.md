@@ -26,7 +26,7 @@ subcollection: vsrx
 You can configure and maintain your {{site.data.keyword.vsrx_full}} in a variety of ways, either through a remote console session through SSH or by logging into the Juniper web management GUI.
 {: shortdesc}
 
-Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
+Configuring the vSRX outside of its shell and interface can produce unexpected results and is not recommended.
 {: note}
 
 ## Accessing the device using SSH
@@ -45,7 +45,7 @@ You can access either the vSRX or the host (Ubuntu) using SSH through a private 
   For the host (Ubuntu), you can only use the `root` user ID and password.
   {: note}
 
-If you do not see the "eye" icon, you may not have permission to view the password. Please check your access permissions with the account owner.
+If you do not see the "eye" icon, you might not have permission to view the password. Please check your access permissions with the account owner.
 {: note}
 
 ## Accessing the configuration mode

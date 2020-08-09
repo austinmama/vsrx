@@ -52,7 +52,7 @@ Follow these steps to route an associated VLAN:
 3. Select one or more VLANs by toggling the checkbox.
 4. Click **Route Through** and confirm your selection.
 
-After routing a VLAN, all front-end and back-end traffic moves from the customer routers to the network gateway. Additional controls that are related to traffic and the gateway appliance itself may be taken by accessing the gateway's management tool. Routing through the network gateway can be discontinued at any time by [bypassing the gateway appliance](#bypass-gateway-appliance-routing-for-a-vlan).
+After routing a VLAN, all front-end and back-end traffic moves from the customer routers to the network gateway. Additional controls that are related to traffic and the gateway appliance itself can be taken by accessing the gateway's management tool. Routing through the network gateway can be discontinued at any time by [bypassing the gateway appliance](#bypass-gateway-appliance-routing-for-a-vlan).
 
 ## Bypassing gateway appliance routing for a VLAN
 {: #bypass-gateway-appliance-routing-for-a-vlan}
