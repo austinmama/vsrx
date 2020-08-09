@@ -23,12 +23,12 @@ subcollection: vsrx
 # About IBM Cloud Juniper vSRX
 {: #about-ibm-cloud-juniper-vsrx}
 
-The vSRX provides performance, ease of configuration, and maintenance advantages with the simplicity of running on a bare metal server. The hardware is sized to handle the routing and security load that is associated with multiple VLANs, and it can be ordered with redundant network links and redundant RAID arrays. All vSRX features are customer-managed.
+The vSRX provides performance, ease of configuration, and maintenance advantages with the simplicity of running on a bare metal server. The hardware is sized to handle the routing and security load that is associated with multiple VLANs, and can be ordered with redundant network links and redundant RAID arrays. All vSRX features are customer-managed.
 {: shortdesc}
 
-The {{site.data.keyword.vsrx_full}} is offered in two different modes: Standalone mode or High Availability (HA) cluster.
+The {{site.data.keyword.vsrx_full}} is offered in two different modes: Standalone mode and High Availability (HA) cluster.
 
-Additional documentation for {{site.data.keyword.vsrx_full}} can be found in [Supplemental vSRX documentation](/docs/vsrx?topic=vsrx-supplemental-ibm-cloud-juniper-vsrx-documentation).
+For more information about {{site.data.keyword.vsrx_full}}, see [Supplemental vSRX documentation](/docs/vsrx?topic=vsrx-supplemental-ibm-cloud-juniper-vsrx-documentation).
 {: note}
 
 ## Firewall
@@ -53,14 +53,14 @@ With the vSRX gateway appliance, you can provision application and database serv
 
 The vSRX empowers you with greater flexibility to build connectivity between multi-tiered applications running on different isolated networks. You can set up dynamic routing by using BGP, which allows you to announce your own public IP space to the IBM Cloud routers. BGP also offers more flexibility for custom private network configurations, when you're using a mix of tunnels and [Direct Link solutions](/docs/direct-link?topic=direct-link-overview-of-direct-link-offerings#overview-of-direct-link-offerings).
 
-## Concepts about VLANs and the gateway appliance's role
+## About VLANs and the gateway appliance's role
 {: #concepts-about-vlans-and-the-gateway-appliance-s-role}
 
 A VLAN (virtual local area network) is a mechanism that segregates a physical network into many virtual segments. For convenience, traffic from multiple selected VLANs can be delivered through a single network cable by using a process that is commonly called "trunking."
 
-vSRX is managed in two different interfaces: The vSRX server and the gateway appliance fixture. The Gateway Appliance provides an interface (GUI and API) for selecting the VLANs you want to associate with your vSRX. Associating a VLAN with a Gateway Appliance reroutes (or "trunks") that VLAN and all of its subnets to your vSRX, giving you control over filtering, forwarding, and protection. Servers in an associated VLAN can be reached from other VLANs only by going through your vSRX; it is not possible to circumvent the vSRX unless you bypass or disassociate the VLAN.
+vSRX is managed in two different interfaces: the vSRX server and the gateway appliance fixture. The gateway appliance provides an interface (GUI and API) for selecting the VLANs you want to associate with your vSRX. Associating a VLAN with a gateway appliance reroutes (or "trunks") that VLAN and all of its subnets to your vSRX, giving you control over filtering, forwarding, and protection. Servers in an associated VLAN can be reached from other VLANs only by going through your vSRX; it is not possible to circumvent the vSRX unless you bypass or disassociate the VLAN.
 
-By default, a new Gateway Appliance is associated with two non-removable "transit" VLANs, one each for your _public_ and _private_ networks. These networks typically are used for administration, and they can be secured by vSRX commands separately.
+By default, a new gateway appliance is associated with two non-removable "transit" VLANs, one each for your _public_ and _private_ networks. These networks typically are used for administration, and they can be secured by vSRX commands separately.
 
 The vSRX can manage VLANs that are associated with it through the gateway appliance (only).
 
