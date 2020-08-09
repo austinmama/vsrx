@@ -51,7 +51,7 @@ Each license includes a different set of features and options, and the following
 You can specify your license type when ordering your vSRX, as well as change the license by using the [Gateway Appliance Details](/docs/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics#vsrx-licenses) page.
 {: note}
 
-### Ordering a vSRX
+## Ordering a vSRX
 {: #ordering-with-a-linked-account}
 
 IBM Cloud has temporarily suspended new sales of 1G Highly Available (HA) Juniper installations. This restriction is due to a pending design change that is required to improve HA stability. The offering is projected to become available again in Q2 2020.
@@ -110,7 +110,7 @@ After your order is approved, the provisioning of your {{site.data.keyword.vsrx_
 Remember that after you order and configure your gateway from the IBM Cloud catalog, you must also configure the device itself with the same settings.
 {: tip}
 
-## What's next?
+## Next steps
 {: #what-s-next-}
 
 After your order is approved, the provisioning of your vSRX starts automatically. When the provisioning process is complete, the gateway appears in the [Gateway Appliances](/docs/vsrx?topic=gateway-appliance-viewing-all-gateway-appliances) list.
