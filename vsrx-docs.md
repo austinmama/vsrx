@@ -23,7 +23,7 @@ subcollection: vsrx
 # Supplemental vSRX documentation
 {: #supplemental-ibm-cloud-juniper-vsrx-documentation}
 
-There is various supplemental documentation for {{site.data.keyword.vsrx_full}}, available here.
+Lists supplemental documentation for {{site.data.keyword.vsrx_full}}.
 {: shortdesc}
 
 vSRX Documentation  | Description
