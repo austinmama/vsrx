@@ -59,7 +59,7 @@ After routing a VLAN, all front-end and back-end traffic moves from the customer
 
 After a VLAN has been routed, all front and back-end traffic travels through the network gateway. At any time, the gateway appliance can be bypassed so that traffic returns to the front and back-end customer routers (FCR and BCR).
 
-Bypassing a VLAN allows the VLAN to remain associated to the network gateway. If the VLAN should no longer be associated with the gateway appliance, see [Disassociating a VLAN from a gateway appliance](#disassociate-a-vlan-from-a-gateway-appliance).
+Bypassing a VLAN allows the VLAN to remain associated to the network gateway. If the VLAN should not be associated with the gateway appliance, see [Disassociating a VLAN from a gateway appliance](#disassociate-a-vlan-from-a-gateway-appliance).
 
 Follow these steps to bypass gateway routing for a VLAN:
 
@@ -70,10 +70,10 @@ Follow these steps to bypass gateway routing for a VLAN:
 
 After bypassing the network gateway, all front-end and back-end traffic routes through the FCR and BCR associated with the VLAN. The VLAN remains associated with the gateway appliance and can be routed back to the gateway appliance at any time.
 
-## Disassociating a VLAN from a gateway Aapliance
+## Disassociating a VLAN from a gateway appliance
 {: #disassociate-a-vlan-from-a-gateway-appliance}
 
-VLANs can be linked to one gateway appliance at a time through [association](#associate-a-vlan-to-a-gateway-appliance). Association allows the VLAN to be routed to the gateway appliance at any time. If a VLAN should be associated to another gateway appliance, or if the VLAN should no longer be associated to its gateway, disassociation is required. Disassociation removes the "link" from the VLAN to the gateway appliance, allowing it to be associated to another gateway, if necessary.
+VLANs can be linked to one gateway appliance at a time through [association](#associate-a-vlan-to-a-gateway-appliance). Association allows the VLAN to be routed to the gateway appliance at any time. If a VLAN should be associated to another gateway appliance, or if the VLAN should not be associated to its gateway, disassociation is required. Disassociation removes the "link" from the VLAN to the gateway appliance, allowing it to be associated to another gateway, if necessary.
 
 Follow these steps to disassociate a VLAN from a gateway appliance:
 
