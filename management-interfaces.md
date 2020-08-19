@@ -4,9 +4,9 @@ copyright:
   years: 2020
 lastupdated: "2020-07-30"
 
-keywords:
+keywords: vsrx, management, interface, fpx0, subnets, IPs, VLAN, nodes
 
-subcollection: vsrx, management, interface, fpx0, subnets, IPs, VLAN, nodes
+subcollection: vsrx
 
 ---
 

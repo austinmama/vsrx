@@ -4,9 +4,9 @@ copyright:
   years: 2018
 lastupdated: "2019-11-13"
 
-keywords:
+keywords: vsrx, firewalls, working, policy, policies, rules, zones, standalone, ha
 
-subcollection: vsrx, firewalls, working, policy, policies, rules, zones, standalone, ha
+subcollection: vsrx
 
 ---
 
