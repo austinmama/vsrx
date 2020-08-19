@@ -6,7 +6,7 @@ lastupdated: "2020-04-01"
 
 keywords: checking, readiness, errors
 
-subcollection: vSRX
+subcollection: vsrx
 
 ---
 

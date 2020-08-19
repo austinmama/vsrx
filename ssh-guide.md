@@ -4,9 +4,9 @@ copyright:
   years: 2018
 lastupdated: "2019-11-14"
 
-keywords:
+keywords: vsrx, ssh, allowing, pinging, subnet, public
 
-subcollection: vsrx, ssh, allowing, pinging, subnet, public
+subcollection: vsrx
 
 ---
 
