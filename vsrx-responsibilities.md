@@ -23,7 +23,7 @@ keywords:
 {:preview: .preview}
 
 # Understanding your responsibilities when using IBM Cloud Juniper vSRX
-{: #your-id}
+{: #vsrx-responsibilities}
 <!-- The title of your H1 should be Understanding your responsibilities with using _service-name_, where _service-name_ is the non-trademarked short version conref. -->
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.vsrx_full}}. For a high-level view of the service types in {{site.data.keyword.Bluemix}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
