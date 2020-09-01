@@ -61,6 +61,7 @@ IBM Cloud Juniper vSRX
 
     {: .navgroup id="reference"}
     /hardware-firewall-dedicated/hardware-firewall-dedicated-ibm-cloud-ip-ranges
+    vsrx-responsibilities.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
