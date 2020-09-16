@@ -26,8 +26,6 @@ subcollection: vsrx
 There are some limitations to be aware of when using {{site.data.keyword.vsrx_full}}.
 {: shortdesc}
 
-* IBM Cloud has temporarily suspended new sales of 1G Highly Available (HA) Juniper installations. This restriction is due to a pending design change that is required to improve HA stability. The offering is projected to become available again in Q2 2020.
-
 * Due to incompatible networking elements, the Juniper vSRX solution is not available as follows:
 
       - Neither 1 Gbps or 10 Gbps versions in the SEA01 (Seattle, WA) data center
@@ -43,7 +41,7 @@ There are some limitations to be aware of when using {{site.data.keyword.vsrx_fu
 * The 60-day evaluation license might cause the kernel to generate error messages, even when another (valid) license is on the system. Remove any 60-day evaluation licenses to avoid this issue. To do so, follow these steps:
 
    1. Log in to your vSRX gateway device.
-   
+
    2. Enter CLI mode by running the command `cli` at the console prompt.
 
    3. Run the command to get the license identifier:
@@ -73,7 +71,7 @@ There are some limitations to be aware of when using {{site.data.keyword.vsrx_fu
       ```
 
    4. Copy the identifier of the license that you want to delete and run the command:
-   
+
       ```
       request system license delete <license identifier>
       ```
