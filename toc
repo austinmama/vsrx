@@ -53,10 +53,18 @@ IBM Cloud Juniper vSRX
         securing-host.md
         management-interfaces.md
 
+    {: topicgroup}
+    Performing vSRX advanced tasks
+        vsrx-upgrade.md
+        vsrx-upgrade-general.md
+        vsrx-upgrade-reload.md
+        vsrx-rollback-reload.md
+        vsrx-upgrade-unsupported.md
+
     vsrx-license.md
     os-reload.md
     rebuild-cluster.md
-    vsrx-upgrade.md
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
