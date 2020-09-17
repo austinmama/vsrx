@@ -23,7 +23,7 @@ subcollection: vsrx
 # Upgrading using OS reload
 {: #os-reload-upgrade}
 
-To upgrade your vSRX using the OS reload, perform the following procedure.
+To upgrade your vSRX using OS reload, perform the following procedure.
 
 1.	Standalone environment only: Export the vSRX configuration.
 2.	Access the gateway details page.
