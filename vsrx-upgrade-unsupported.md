@@ -23,8 +23,8 @@ subcollection: vsrx
 # Unsupported upgrades
 {: #unsupported-upgrade}
 
-Early deployments of 1G vSRX 15.1 and 18.4 Gateway’s leveraged a networking design based on Linux Bridging. Newer 1G deployment’s leverage a networking design based on SR-IOV. Details on these differences can be found here.
+Early deployments of 1G vSRX 15.1 and 18.4 gateways leveraged a networking design based on Linux Bridging. Newer 1G deployments leverage a networking design based on SR-IOV. Refer to [Understanding the vSRX default configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration) for more information.
 
-Early 1G deployment’s generally used an Intel 1270v6 4-Core Sky-Lake based processor. This processor does not support SR-IOV. Newer vSRX version’s such as 19.4 require the SR-IOV networking design. Therefore, vSRX version upgrades are not supported for deployment’s based on this 1270v6 processor.
+Early 1G deployments generally used an Intel 1270v6 4-Core Sky-Lake based processor. This processor does not support SR-IOV. Newer vSRX versions, such as 19.4, require the SR-IOV networking design. Therefore, vSRX version upgrades are not supported for deployments based on this 1270v6 processor.
 
-To upgrade to a newer vSRX version such as 19.4, a new vSRX order must be placed. Once completed, to migrate the configuration from the old design to the new design some manual configuration changes must also be applied to the new vSRX. Guidance on this process can be found here.
+To upgrade to a newer vSRX version, such as 19.4, you must place a new vSRX order. Once completed, you can migrate the configuration from the old design to the new, but some manual configuration changes must also be applied to the new vSRX. For guidance on this process, refer to [Migrating legacy configurations to the current vSRX architecture](/docs/vsrx?topic=vsrx-migrating-config).
