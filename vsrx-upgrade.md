@@ -36,7 +36,7 @@ Using these factors, the table below lists whether or not you can use the OS rel
 | Current vSRX Version  | Processor model and speed | Standalone or HA | Upgrade method  | Rollback supported |
 | ------------- | ------------- | ------------- | ------------- | ------------- |	 			
 | 15.1	| 1270v6 (All 1G Deployments)	| Standalone and HA	| [Not Supported](/docs/vsrx?topic=vsrx-unsupported-upgrade) | N/A|
-| 15.1 | All 10G Deployments | Standalone and HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) |	**Standalone:** No <BR> **HA:** <ul><li>Manual (not automated) rollbacks are allowed after the first server completes the OS reload.<li>No after second server. |
+| 15.1 | All 10G Deployments | Standalone and HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) |	**Standalone:** No <BR> **HA:** <ul><li>Manual (not automated) rollbacks are allowed after the first server completes the OS reload.<li>Rollbacks are not allowed after the second server completes its OS reload. |
 | 18.4 | 1270v6 (Some 1G Deployments) |	Standalone and HA |	[Not Supported](/docs/vsrx?topic=vsrx-unsupported-upgrade) |	N/A |
 | 18.4 | 4210 (Some 1G Deployments) | Standalone | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | No |
 | 18.4 | 4210 (Some 1G Deployments) |	HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | Yes |
