@@ -20,7 +20,7 @@ subcollection: vsrx
 {:important: .important}
 {:download: .download}
 
-# Upgrading using the OS reload and rollback method
+# Upgrading using OS reload
 {: #os-reload-upgrade}
 
 To upgrade your vSRX using the OS reload and rollback method, perform the following procedure.
