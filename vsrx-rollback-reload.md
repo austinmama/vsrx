@@ -31,7 +31,8 @@ Please be aware, that a traffic disruption will occur while waiting for the seco
 {: important}
 
 1.	Power off the vSRX on the node being rolled-back (primary node). `virsh shutdown <domain>`
-2.	IMPORTANT: Wait for the node to be fully powered off before proceeding.
-3.	Power up the vSRX on the node that has not been rolled-back. `virsh start <domain>`, this will return the primary back to the original vSRX version.
-4.	Run the OS Reload Readiness Check if necessary and resolve any issues.
-5.	OS Reload the host targeted for rollback back to the original vSRX version. The cluster will now be running with the original configuration.
+  Wait for the node to be fully powered off before proceeding.
+  {: important}
+2.	Power up the vSRX on the node that has not been rolled-back. `virsh start <domain>`, this will return the primary back to the original vSRX version.
+3.	Run the OS Reload Readiness Check if necessary and resolve any issues.
+4.	OS Reload the host targeted for rollback back to the original vSRX version. The cluster will now be running with the original configuration.
