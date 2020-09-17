@@ -35,13 +35,11 @@ Given these inputs, the table below lists whether or not you can use the OS relo
 | Current vSRX Version  | Processor model and speed | Standalone or HA | Upgrade method  | Rollback supported |
 | ------------- | ------------- | ------------- | ------------- | ------------- |	 			
 | 15.1	| 1270v6 (All 1G Deployments)	| Standalone and HA	| Not Supported (Link to Not Supported Section) | N/A|
-| 15.1 | All 10G Deployments | Standalone and HA | OS Reload (Link to OS Reload Upgrade Section) |	Standalone: No <BR> HA:
-<ul><li>Yes a Manual Rollback (No Automated Rollback action) after first server is OS Reloaded. See details below.
-<ul><li>No after second server. |
+| 15.1 | All 10G Deployments | Standalone and HA | OS Reload (Link to OS Reload Upgrade Section) |	Standalone: No <BR> HA: <ul><li>Yes a Manual Rollback (No Automated Rollback action) after first server is OS Reloaded. See details below. <ul><li>No after second server. |
 | 18.4 | 1270v6 (Some 1G Deployments) |	Standalone and HA |	Not Supported (Link to Not Supported Section) |	N/A |
 | 18.4 | 4210 (Some 1G Deployments) | Standalone | OS Reload (Link to OS Reload Upgrade Section) | No |
 | 18.4 | 4210 (Some 1G Deployments) |	HA | OS Reload (Link to OS Reload Upgrade Section) | Yes |
 | 18.4 | All 10G Deployments | Standalone |	OS Reload (Link to OS Reload Upgrade Section) | No |
 | 18.4 | All 10G Deployments | HA |	OS Reload (Link to OS Reload Upgrade Section)	| Yes – When 18.4 is running with new architecture a Manual Rollback (No Automated Rollback action) after first server is OS Reloaded. See details below. <BR> No – When 18.4 is not running with new architecture. |      
 
-Reference the table above to determine if you can upgrade your vSRX using OS reload. If you can, review the “General Upgrade Considerations” before proceeding. 
+Reference the table above to determine if you can upgrade your vSRX using OS reload. If you can, review the “General Upgrade Considerations” before proceeding.

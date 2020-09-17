@@ -54,7 +54,7 @@ IBM Cloud Juniper vSRX
         management-interfaces.md
 
     {: topicgroup}
-    Performing vSRX advanced tasks
+    Upgrading the vSRX
         vsrx-upgrade.md
         vsrx-upgrade-general.md
         vsrx-upgrade-reload.md
