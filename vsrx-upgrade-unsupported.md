@@ -23,7 +23,7 @@ subcollection: vsrx
 # Unsupported upgrades
 {: #unsupported-upgrade}
 
-Early deployments of 1G vSRX 15.1 and 18.4 gateways used a networking design based on Linux Bridging. Newer 1G deployments leverage a networking design based on SR-IOV. For more information, see [Understanding the vSRX default configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration).
+Early deployments of 1G vSRX 15.1 and 18.4 gateways used a networking design based on Linux Bridging. Newer 1G deployments use a networking design based on SR-IOV. For more information, see [Understanding the vSRX default configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration).
 {: shortdesc}
 
 Early 1G deployments generally used an Intel 1270v6 4-Core, Sky-Lake-based processor. This processor does not support SR-IOV. Newer vSRX versions, such as 19.4, require the SR-IOV networking design. Therefore, vSRX version upgrades are not supported for deployments based on this 1270v6 processor.
