@@ -23,7 +23,7 @@ subcollection: vsrx
 # Upgrading the vSRX
 {: #upgrading-the-vsrx}
 
-There are several methods and considerations that you need to understand before upgrading your {{site.data.keyword.cloud}} Juniper vSRX:
+There are several methods and considerations that you must understand before upgrading your {{site.data.keyword.cloud}} Juniper vSRX:
 {: shortdesc}
 
 *	vSRX version level
