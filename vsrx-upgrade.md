@@ -39,7 +39,7 @@ Using these factors, the following table lists whether you can use the OS reload
 | 15.1 | All 10G Deployments | Stand-alone and HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) |	**Stand-alone:** No <BR> **HA:** <ul><li>Manual (not automated) rollbacks are allowed after the first server completes the OS reload.<li>Rollbacks are not allowed after the second server completes its OS reload. |
 | 18.4 | 1270v6 (Some 1G Deployments) |	Stand-alone and HA |	[Not Supported](/docs/vsrx?topic=vsrx-unsupported-upgrade) |	N/A |
 | 18.4 | 4210 (Some 1G Deployments) | Stand-alone | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | No |
-| 18.4 | 4210 (Some 1G Deployments) |	HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | Yes |
+| 18.4 | 4210 (Some 1G Deployments) |	HA | [OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | **Yes** – If you are running version 18.4 with new architecture, manual (Not Automated) rollbacks are allowed after the first server completes the OS reload. <BR> <BR> **No** – If you are running version 18.4 without new architecture.  |
 | 18.4 | All 10G Deployments | Stand-alone |	[OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | No |
 | 18.4 | All 10G Deployments | HA |	[OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade)	| **Yes** – If you are running version 18.4 with new architecture, manual (Not Automated) rollbacks are allowed after the first server completes the OS reload. <BR> <BR> **No** – If you are running version 18.4 without new architecture. |      
 
