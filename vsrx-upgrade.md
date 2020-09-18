@@ -43,4 +43,4 @@ Using these factors, the following table lists whether you can use the OS reload
 | 18.4 | All 10G Deployments | Stand-alone |	[OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade) | No |
 | 18.4 | All 10G Deployments | HA |	[OS Reload](/docs/vsrx?topic=vsrx-os-reload-upgrade)	| **Yes** – If you are running version 18.4 with new architecture, manual (Not Automated) rollbacks are allowed after the first server completes the OS reload. <BR> <BR> **No** – If you are running version 18.4 without new architecture. |      
 
-Reference this table to determine if you can upgrade your vSRX using OS reload. If you can, review the [General upgrade considerations](/docs/vsrx?topic=vsrx-general-upgrade) before proceeding.
+Reference this table to determine if you can upgrade your vSRX using OS reload. For more information, see [General upgrade considerations](/docs/vsrx?topic=vsrx-general-upgrade).
