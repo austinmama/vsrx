@@ -42,7 +42,7 @@ Two redundancy groups are configured. The following table illustrates these redu
 
 Priority in the redundancy group decides which vSRX node is active. By default, node 0 is active for both control plane and data plane.
 
-## Default configuration of a sample 1G Standalone SR-IOV public and private vSRX gateway
+## Default Configuration of a sample 1G Standalone SR-IOV Public and Private vSRX Gateway
 {: #default-configuration-of-a-sample-standalone-vsrx-gateway}
 
 The following code samples are examples from the latest code release.
@@ -370,7 +370,7 @@ The following table illustrates network interface definitions for the previous c
 | fxp0          |   Management interface        |
 | lo0           |   loopback interface          |
 
-## Default configuration of a sample 10G HA SR-IOV public and private vSRX gateway
+## Default Configuration of a sample 10G HA SR-IOV Public and Private vSRX Gateway
 {: #default-configuration-of-a-sample-highly-available-ha-vsrx-gateway}
 
 ```
@@ -797,27 +797,30 @@ routing-options {
 
 The information in the following table represents the configuration above:
 
-| Interface Name   |  Interface Function      |
-| :---          |    :---         |
-| ge-0/0/1 / ge-0/0/2   |  Gigabit ethernet interface for Private VLAN on primary node |
-| ge-0/0/3 / ge-0/0/4   |  Gigabit ethernet interface for Public VLAN on primary node |
-| ge-7/0/1 / ge-7/0/2  |  Gigabit ethernet interface for Private VLAN on secondary node |
-| ge-7/0/3 / ge-7/0/4  |  Gigabit ethernet interface for Public VLAN on secondary node |
-| reth0         |   Redundant ethernet interface for SL-PRIVATE transit VLAN |
-| reth1         |   Redundant ethernet interface for SL-PUBLIC transit VLAN  |
-| reth2         |   Redundant ethernet interface for CUSTOMER Private VLANs  |
-| reth3         |   Redundant ethernet interface for CUSTOMER Public VLANs   |
-| fab0 / fab1   |   Chassis cluster fabric link |
-| fxp0          |   Management interface        |
-| lo0           |   Loopback interface          |
+| Interface name   | Interface  function   | Redundant interface |
+| :---       |    :---     |    :---     |
+| ge-0/0/1 / ge-0/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 0 | reth0 |
+| ge-0/0/3 / ge-0/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 0 | reth1 |
+| ge-0/0/5 / ge-0/0/6 | Gigabit ethernet interface for Customer Private VLAN on node 0 | reth2 |
+| ge-0/0/7 / ge-0/0/8 | Gigabit ethernet interface for Customer Public VLAN on node 0 | reth3 |
+| ge-7/0/1 / ge-7/0/2 | Gigabit ethernet interface for SL-PRIVATE transit VLAN on node 1 | reth0 |
+| ge-7/0/3 / ge-7/0/4 | Gigabit ethernet interface for SL-PUBLIC transit VLAN on node 1 | reth1 |
+| ge-7/0/5 / ge-7/0/6 | Gigabit ethernet interface for Customer Private VLANs on node 1 | reth2 |
+| ge-7/0/7 / ge-7/0/8 | Gigabit ethernet interface for Customer Public VLANs on node 1 | reth3 |
+| fab0 | Chassis cluster fabric link uses ge-0/0/0 and ge-0/0/9 | |
+| fab1 | Chassis cluster fabric link uses ge-7/0/0 and ge-7/0/9 | |
+| fxp0          |   Management interface        | |
+| lo0           |   loopback interface          | |
 
 ## Interface configurations
 The legacy architecture for these configurations leveraged Linux bridging on the Ubuntu host hypervisor. IBM has since transitioned to a new architecture for its gateways that leverages SR-IOV on the host. This caused the vSRX configuration’s interface mapping to change in many cases. Differences in the interface configuration are also influenced by whether the vSRX is:
 
-| Redundancy Group   |  Redundancy Group Function      |
-| :---          |    :---         |
-| redundancy-group 0   |  Redundancy group for control plane |
-| redundancy-group 1   |  Redundancy group for data plane |
+* 10G or 1G
+* Standalone or High Availability
+* Public and Private, or Private Only
+* The vSRX Version
+  - All 15.1 based vSRX’s use the legacy architecture
+  - Some 18.4 based vSRX’s also use the legacy architectue
 
 Both the legacy and current architecture is detailed in the following sections.
 

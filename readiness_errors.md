@@ -6,7 +6,7 @@ lastupdated: "2020-04-01"
 
 keywords: checking, readiness, errors
 
-subcollection: vsrx
+subcollection: vSRX
 
 ---
 
@@ -25,12 +25,12 @@ subcollection: vsrx
 # Understanding readiness errors
 {: #readiness-errors}
 
-Readiness check errors you might encounter can either be common errors or version upgrade errors. The following lists provide additional information on these error codes.
+Readiness check errors you may encounter can either be common errors or version upgrade errors. The below lists provide additional information on these error codes.
 
 ## Common readiness errors
 {: #common-errors}
 
-The following common errors might occur when running readiness checks.
+The following common errors may occur when running readiness checks.
 
 ### Error 1000
 {: #error-1000}
@@ -99,7 +99,7 @@ An error occurred in the connectivity check, please contact support.
 ## Version upgrade errors
 {: #upgrade-errors}
 
-You might encounter the following errors when running version upgrade readiness checks.
+You may encounter the following errors when running version upgrade readiness checks.
 
 ### Errors 2001 - 2004
 {: #error-2001}

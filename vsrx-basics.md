@@ -20,13 +20,13 @@ subcollection: vsrx
 {:note: .note}
 {:important: .important}
 
-# Performing vSRX basics
+# Performing additional vSRX tasks
 {: #performing-ibm-cloud-juniper-vsrx-basics}
 
 You can configure and maintain your {{site.data.keyword.vsrx_full}} in a variety of ways, either through a remote console session through SSH or by logging into the Juniper web management GUI.
 {: shortdesc}
 
-Configuring the vSRX outside of its shell and interface can produce unexpected results and is not recommended.
+Configuring the vSRX outside of its shell and interface may produce unexpected results and is not recommended.
 {: note}
 
 ## Accessing the device using SSH
@@ -34,7 +34,7 @@ Configuring the vSRX outside of its shell and interface can produce unexpected r
 
 You can access either the vSRX or the host (Ubuntu) using SSH through a private IP address if you're on IBM Cloud VPN. Additionally, you can access the vSRX through a public IP address as well.
 
-1. Go to Gateway Appliance Details page and get the public or private gateway IP.
+1. Go to Gateway Appliance Details screen and get the Public gateway IP or Private Gateway IP.
 
   ![Gateway details](images/gw-sa-details.png "Gateway details")
 
@@ -45,7 +45,7 @@ You can access either the vSRX or the host (Ubuntu) using SSH through a private 
   For the host (Ubuntu), you can only use the `root` user ID and password.
   {: note}
 
-If you do not see the "eye" icon, you might not have permission to view the password. Please check your access permissions with the account owner.
+If you do not see the "eye" icon, you may not have permission to view the password. Please check your access permissions with the account owner.
 {: note}
 
 ## Accessing the configuration mode
